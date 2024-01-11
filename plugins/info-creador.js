@@ -1,11 +1,11 @@
 const handler = async (m, {conn, usedPrefix}) => {
   const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
   const document = doc[Math.floor(Math.random() * doc.length)];
-  const text = `*—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴 𝙼𝙸 𝙲𝚁𝙴𝙰𝙳𝙾𝚁 𝙴𝚂 wa.me/573178454976*`.trim();
+  const text = `*𝑬𝑳 𝑵𝑼𝑴𝑬𝑹𝑶 𝑫𝑬 𝑴𝑰 𝑪𝑹𝑬𝑨𝑫𝑶𝑹 𝑬𝑺 wa.me/573178454976*`.trim();
   const buttonMessage= {
     'document': {url: `https://github.com/Akanksh/`},
     'mimetype': `application/${document}`,
-    'fileName': `「  𝑯𝒆𝒍𝒍𝒐 𝑾𝒐𝒓𝒍𝒅 」`,
+    'fileName': `「  𝙎𝙊𝙇𝙊 𝙈𝘼𝙔-𝘽𝙊𝙏 」`,
     'fileLength': 99999999999999,
     'pageCount': 200,
     'contextInfo': {
