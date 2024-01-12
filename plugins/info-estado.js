@@ -27,7 +27,8 @@ const handler = async (m, { conn, usedPrefix }) => {
 
 👥•  _*Propi:*_ MAY Y CAMILO
 📞•  _*WA:*_ +525514278383 +573178454976
-💳•  _*PayPal:*_ www.paypal.me/camildaza  https://www.paypal.me/MayGarcia772
+💳•  _*PayPal:*_ www.paypal.me/camildaza  
+https://www.paypal.me/MayGarcia772
 
 🏓•  _*Ping:*_ ${rtime}
 ⏱️•  _*Uptime:*_ ${uptime}
