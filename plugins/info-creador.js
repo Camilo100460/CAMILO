@@ -15,7 +15,7 @@ const handler = async (m, {conn, usedPrefix}) => {
         'mediaUrl': 'https://github.com/Akanksh',
         'mediaType': 2,
         'previewType': 'pdf',
-        'title': '*SOLO MAY - BOT⁩',
+        'title': '*SOLO MAY - BOT*⁩',
         'body': wm,
         'thumbnail': imagen1,
         'sourceUrl': 'https://www.youtube.com/watch?v=-yc54n9Tv5A'}},
