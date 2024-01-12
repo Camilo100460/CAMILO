@@ -22,6 +22,7 @@ const handler = async (m, {conn, usedPrefix, participants, isPrems}) => {
 📔• _*REGISTRADO:*_ ${registered ? 'Si': 'No'}
 🌟• _*PREMIUM:*_ ${premiumTime > 0 ? 'Si' : (isPrems ? 'Si' : 'No') || ''}
 🧮• _*NUMERO DE SERIE:*_ 
+★ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ★
 ${sn}`;
     conn.sendMessage(m.chat, {image: {url: pp}, caption: str}, {quoted: m});
   }
