@@ -15,9 +15,10 @@ const handler = async (m, {conn, usedPrefix, participants, isPrems}) => {
     const sn = createHash('md5').update(who).digest('hex');
     const str = `_*NOMBRE:*_ ${username} ${registered ? '(' + name + ') ': ''}
 _*NUMERO:*_ ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
-_*LINK*_ wa.me/${who.split`@`[0]}${registered ? '\n*𝙴𝙳𝙰𝙳:* ' + age + ' años' : ''}
-_*LIMITE:*_ ${limit} 𝚄𝚂𝙾𝚂
-_*REGISTRADO*_ ${registered ? 'Si': 'No'}
+_*LINK:*_ wa.me/${who.split`@`[0]}${registered ? '\n
+                                    *𝙴𝙳𝙰𝙳:* ' + age + ' años' : ''}
+_*LIMITE:*_ ${limit}  _usos_
+_*REGISTRADO:*_ ${registered ? 'Si': 'No'}
 _*PREMIUM:*_ ${premiumTime > 0 ? 'Si' : (isPrems ? 'Si' : 'No') || ''}
 _*NUMERO DE SERIE:*_ 
 ${sn}`;
