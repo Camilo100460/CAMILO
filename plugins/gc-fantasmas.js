@@ -22,7 +22,7 @@ const handler = async (m, {conn, text, participants}) => {
     }
   }
   if (total == 0) return conn.reply(m.chat, `*[❗] ESTE GRUPO ES ACTIVO, NO TIENE FANTASMAS*`, m);
-  m.reply(`*[ REVISION DE INACTIVOS ]*\n\n_*GRUPO:*_ ${await conn.getName(m.chat)}\n_*MIEMBROS DEL GRUPO*_ ${sum}\n\n*[ 👻 LISTA DE FANTASMAS 👻 ]*\n${sider.map((v) => '  • @' + v.replace(/@.+/, '')).join('\n')}\n\n*☆━━━━━━━━━━━━━━━━━━━☆*`, null, {mentions: sider});
+m.reply(`*[ REVISION DE INACTIVOS ]*\n\n_*GRUPO:*_ ${await conn.getName(m.chat)}\n_*MIEMBROS DEL GRUPO*_ ${sum}\n\n*[ 👻 LISTA DE FANTASMAS 👻 ]*\n\n${sider.map((v) => '  • @' + v.replace(/@.+/, '')).join('\n')}\n\n*☆━━━━━━━━━━━━━━━━━━━☆*`, null, {mentions: sider});
 };
 handler.command = /^(verfantasmas|fantasmas|sider)$/i;
 handler.admin = true;
