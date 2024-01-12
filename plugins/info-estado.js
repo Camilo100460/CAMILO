@@ -25,29 +25,29 @@ const handler = async (m, { conn, usedPrefix }) => {
   const wm = 'May-Bot';
   const info = `           _*INFO - ESTADO*_
 
-👥 _*Propi:*_ MAY Y CAMILO
-📞 _*WA:*_ +525514278383 +573178454976
-💳 _*PayPal:*_ www.paypal.me/camildaza
+👥•  _*Propi:*_ MAY Y CAMILO
+📞•  _*WA:*_ +525514278383 +573178454976
+💳•  _*PayPal:*_ www.paypal.me/camildaza  https://www.paypal.me/MayGarcia772
 
-🏓 _*Ping:*_ ${rtime}
-⏱️ _*Uptime:*_ ${uptime}
-⚙️ _*Prefijo:*_ ${usedPrefix}
-🔒 _*Modo:*_ ${self ? "privado" : "público"}
-👤 _*Usuarios regs:*_ ${totalusrReg}
-👥 _*Usuarios totales:*_ ${totalusr}
-🤖 _*Tipo de bot:*_ ${(conn.user.jid == global.conn.user.jid ? '' : `Sub-bot de:\n ▢ +${global.conn.user.jid.split`@`[0]}`) || 'No es sub-bot'}
+🏓•  _*Ping:*_ ${rtime}
+⏱️•  _*Uptime:*_ ${uptime}
+⚙️•  _*Prefijo:*_ ${usedPrefix}
+🔒•  _*Modo:*_ ${self ? "privado" : "público"}
+👤•  _*Usuarios regs:*_ ${totalusrReg}
+👥•  _*Usuarios totales:*_ ${totalusr}
+🤖•  _*Tipo de bot:*_ ${(conn.user.jid == global.conn.user.jid ? '' : `Sub-bot de:\n ▢ +${global.conn.user.jid.split`@`[0]}`) || 'No es sub-bot'}
  
-💬 _*Chats privados:*_ ${chats.length - groups.length}
-👥 _*Grupos:*_ ${groups.length}
-💬 _*Chats totales:*_ ${chats.length}
+💬•  _*Chats privados:*_ ${chats.length - groups.length}
+👥•  _*Grupos:*_ ${groups.length}
+💬•  _*Chats totales:*_ ${chats.length}
  
-👀 _*Autoread:*_ ${autoread ? "activo" : "desactivado"}
-🔒 _*Restrict:*_ ${restrict ? "activo" : "desactivado"}
-💻 _*Pconly:*_ ${pconly ? "activado" : "desactivado"}
-👥 _*Gponly:*_ ${gconly ? "activado" : "desactivado"}
-🔒 _*AntiPrivado:*_ ${antiprivado ? "activado" : "desactivado"}
-📵 _*AntiLlamada:*_ ${antiCall ? "activado" : "desactivado"}
-🤖 _*ModeJadiBot:*_ ${modejadibot ? "activado" : "desactivado"}`.trim();
+👀•  _*Autoread:*_ ${autoread ? "activo" : "desactivado"}
+🔒•  _*Restrict:*_ ${restrict ? "activo" : "desactivado"}
+💻•  _*Pconly:*_ ${pconly ? "activado" : "desactivado"}
+👥•  _*Gponly:*_ ${gconly ? "activado" : "desactivado"}
+🔒•  _*AntiPrivado:*_ ${antiprivado ? "activado" : "desactivado"}
+📵•  _*AntiLlamada:*_ ${antiCall ? "activado" : "desactivado"}
+🤖•  _*ModeJadiBot:*_ ${modejadibot ? "activado" : "desactivado"}`.trim();
   const doc = [
     "pdf",
     "zip",
