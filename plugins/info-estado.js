@@ -23,7 +23,7 @@ const handler = async (m, { conn, usedPrefix }) => {
   const neww = performance.now();
   const rtime = (neww - old).toFixed(7);
   const wm = 'May-Bot';
-  const info = `    _* INFO - ESTADO *_
+  const info = `           _*INFO - ESTADO*_
 
 👥 _*Propi:*_ MAY Y CAMILO
 📞 _*WA:*_ +525514278383 +573178454976
