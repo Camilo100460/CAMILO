@@ -25,29 +25,29 @@ const handler = async (m, { conn, usedPrefix }) => {
   const wm = 'The Mystic Bot';
   const info = ` _*< INFO - ESTADO />*_
 
- ▢ *Prop.:* Bruno Sobrino
- ▢ *WA:* +5219992095479
- ▢ *PayPal:* paypal.me/TheShadowBrokers133
+👥 _*Propi:*_ MAY Y CAMILO
+📞 _*WA:*_ +525514278383 +573178454976
+💳 _*PayPal:*_ www.paypal.me/camildaza
 
- ▢ *Ping:* ${rtime}
- ▢ *Uptime:* ${uptime}
- ▢ *Prefijo:* ${usedPrefix}
- ▢ *Modo:* ${self ? "privado" : "público"}
- ▢ *Usuarios regs.:* ${totalusrReg}
- ▢ *Usuarios totales:* ${totalusr}
- ▢ *Tipo de bot:* ${(conn.user.jid == global.conn.user.jid ? '' : `Sub-bot de:\n ▢ +${global.conn.user.jid.split`@`[0]}`) || 'No es sub-bot'}
+🏓 _*Ping:*_ ${rtime}
+⏱️ _*Uptime:*_ ${uptime}
+⚙️ _*Prefijo:*_ ${usedPrefix}
+🔒 _*Modo:*_ ${self ? "privado" : "público"}
+👤 _*Usuarios regs:*_ ${totalusrReg}
+👥 _*Usuarios totales:*_ ${totalusr}
+🤖 _*Tipo de bot:*_ ${(conn.user.jid == global.conn.user.jid ? '' : `Sub-bot de:\n ▢ +${global.conn.user.jid.split`@`[0]}`) || 'No es sub-bot'}
  
- ▢ *Chats privados:* ${chats.length - groups.length}
- ▢ *Grupos:* ${groups.length}
- ▢ *Chats totales:* ${chats.length}
+💬 _*Chats privados:*_ ${chats.length - groups.length}
+👥 _*Grupos:*_ ${groups.length}
+💬 _*Chats totales:*_ ${chats.length}
  
- ▢ *Autoread:* ${autoread ? "activo" : "desactivado"}
- ▢ *Restrict:* ${restrict ? "activo" : "desactivado"}
- ▢ *PCOnly:* ${pconly ? "activado" : "desactivado"}
- ▢ *GPOnly:* ${gconly ? "activado" : "desactivado"}
- ▢ *AntiPrivado:* ${antiprivado ? "activado" : "desactivado"}
- ▢ *AntiLlamada:* ${antiCall ? "activado" : "desactivado"}
- ▢ *ModeJadiBot:* ${modejadibot ? "activado" : "desactivado"}`.trim();
+👀 _*Autoread:*_ ${autoread ? "activo" : "desactivado"}
+🔒 _*Restrict:*_ ${restrict ? "activo" : "desactivado"}
+💻 _*Pconly:*_ ${pconly ? "activado" : "desactivado"}
+👥 _*Gponly:*_ ${gconly ? "activado" : "desactivado"}
+🔒 _*AntiPrivado:*_ ${antiprivado ? "activado" : "desactivado"}
+📵 _*AntiLlamada:*_ ${antiCall ? "activado" : "desactivado"}
+🤖 _*ModeJadiBot:*_ ${modejadibot ? "activado" : "desactivado"}`.trim();
   const doc = [
     "pdf",
     "zip",
