@@ -13,7 +13,7 @@ const handler = async (m, {conn, usedPrefix, participants, isPrems}) => {
     const username = conn.getName(who);
     const prem = global.prems.includes(who.split `@` [0]);
     const sn = createHash('md5').update(who).digest('hex');
-    const str = `         |•_*PERFIL INFO*_•| 📖
+    const str = `         |• _*PERFIL INFO*_ •| 📖
     
 📝• _*NOMBRE:*_ ${username} ${registered ? '(' + name + ') ': ''}
 📞• _*NUMERO:*_ ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
