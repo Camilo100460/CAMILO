@@ -14,7 +14,6 @@ const handler = async (m, {conn, usedPrefix, participants, isPrems}) => {
     const prem = global.prems.includes(who.split `@` [0]);
     const sn = createHash('md5').update(who).digest('hex');
     const str = `   📝• _*PERFIL INFO*_\n
-\n  
 🏖️• *_Nombre:_* ${username} ${registered ? '(' + name + ') ': ''}
 📞• *_Numero:_* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
 🔗• *_Link:_* wa.me/${who.split`@`[0]}${registered ? '\n
@@ -24,7 +23,6 @@ const handler = async (m, {conn, usedPrefix, participants, isPrems}) => {
 💎• *_Premium:_* ${premiumTime > 0 ? 'Si' : (isPrems ? 'Si' : 'No') || ''}
 🔢• *_Numero De Serie:_* 
 ${sn}`;
-
     conn.sendMessage(m.chat, {image: {url: pp}, caption: str}, {quoted: m});
   }
 };
