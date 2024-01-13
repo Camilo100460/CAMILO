@@ -20,15 +20,13 @@ if (!db.data.chats[m.chat].modohorny && m.isGroup) throw `*[❗] Los comandos +1
     const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
     const document = doc[Math.floor(Math.random() * doc.length)];
     const str = `
-╭══〘 ✯✯✯✯✯✯✯✯✯ 〙═╮
-║    ◉— 𝗠𝗮𝘆 -𝗕𝗼𝘁 —◉
-║≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡ ≡≡≡≡║
-║➤ *𝗛ola, ${taguser}*
-╰═══╡✯✯✯✯✯✯✯✯✯╞═══╯
+╭───━━⊱✿【 𝗠𝗮𝘆 -𝗕𝗼𝘁 】✿⊰━━───╮
+│  ➤ *Hola, ${taguser}*
+╰─────────────╯
 
 ┏━━━━━━━━━━━━━━━━┓
 ┃ *< MENU+18 />*
-┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡┃
+┃
 ┣ ඬ⃟ 🔞 _${usedPrefix}pack_
 ┣ ඬ⃟ 🔞 _${usedPrefix}pack2_
 ┣ ඬ⃟ 🔞 _${usedPrefix}pack3_
