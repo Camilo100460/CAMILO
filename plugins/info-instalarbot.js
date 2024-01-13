@@ -2,6 +2,7 @@ const handler = async (m, {conn, usedPrefix}) => {
   const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
   const document = doc[Math.floor(Math.random() * doc.length)];
   const text = `_*TUTORIAL DE INSTACION*_
+  
 Con gusto te enseñamos a instalar nuestro bot. En nuestro grupo de ayuda, puedes ponerte en contacto con uno de nuestros administradores.
 
 🖼️•  _*GRUPO DE AYUDA:*_  https://chat.whatsapp.com/KXkX5ZzZp3mFWYt5comZHr`.trim();
