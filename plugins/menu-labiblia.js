@@ -21,10 +21,10 @@ if (!db.data.chats[m.chat].modohorny && m.isGroup) throw `*[❗] Los comandos +1
     const document = doc[Math.floor(Math.random() * doc.length)];
     const str = `
 ╭─━⊱✿【 𝗠𝗮𝘆 -𝗕𝗼𝘁 】✿⊰━─╮
-│  ➤ *Hola, ${taguser}*
-╰───────────────────────╯
+│  ➤    _*Hola, ${taguser}*_
+╰───────────────────╯
 ┏━━━━━━━━━━━━━━━━┓
-┃ *< MENU+18 />*
+┃ *MENU +18*
 ┃
 ┣ ඬ⃟ 🔞 _${usedPrefix}pack_
 ┣ ඬ⃟ 🔞 _${usedPrefix}pack2_
