@@ -29,10 +29,10 @@ async function handler(m, { conn: _envio, usedPrefix }) {
 }
 
   const message = users.map((v, index) => `*${index + 1}.-* @${v.user.jid.replace(/[^0-9]/g, '')}\n*Link:* wa.me/${v.user.jid.replace(/[^0-9]/g, '')}?text=${usedPrefix}estado\n*Nombre:* ${v.user.name || '-'}\n*Uptime:* ${ v.uptime ? convertirMsADiasHorasMinutosSegundos(Date.now() - v.uptime) : "Desconocido"}`).join('\n\n');
-  const replyMessage = message.length === 0 ? '*—◉ No hay SubBots activos en estos momentos.*' : message;
+  const replyMessage = message.length === 0 ? '*🔇• Actualmente, no hay sub-bots en funcionamiento...*' : message;
   const totalUsers = users.length;
   const responseMessage = `
-➼  _*AQUÍ TIENES EL LISTADO DE SUB-BOTS ACTIVOS*_  📝
+➼  _*AQUÍ TIENES EL LISTADO DE SUB-BOTS ACTIVOS.*_  📝
 
 ➼  _*NO DUDES EN PONERTE EN CONTACTO CON NOSOTROS SI DESEAS QUE SE UNA A TU GRUPO.*_ 
 
