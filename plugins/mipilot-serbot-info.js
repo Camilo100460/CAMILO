@@ -32,11 +32,11 @@ async function handler(m, { conn: _envio, usedPrefix }) {
   const replyMessage = message.length === 0 ? '*—◉ No hay SubBots activos en estos momentos.*' : message;
   const totalUsers = users.length;
   const responseMessage = `
-➼  _*AQUÍ TIENES EL LISTADO DE SUB-BOTS ACTIVOS*_ 📝*
+➼  _*AQUÍ TIENES EL LISTADO DE SUB-BOTS ACTIVOS*_  📝
 
 ➼  _*NO DUDES EN PONERTE EN CONTACTO CON NOSOTROS SI DESEAS QUE SE UNA A TU GRUPO.*_ 
 
-[❗] _*EL EQUIPO DE MAY SE DESLINDA DE TODA RESPONSABILIDAD O SUCESO OCURRIDO EN RELACIÓN CON EL BOT O LOS SUB-BOTS.*
+[🔴]  _*EL EQUIPO DE MAY SE DESLINDA DE TODA RESPONSABILIDAD O SUCESO OCURRIDO EN RELACIÓN CON EL BOT O LOS SUB-BOTS.*_
 
 ➼ _*SUBBOTS:*_ ${totalUsers || '0'}
 
