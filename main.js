@@ -512,8 +512,7 @@ setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
   const _uptime = process.uptime() * 1000;
   const bio = `Me secuestraron en el Meta`;
-  await conn.updateProfileStatus(bio).catch((_) => _);
-}, 60000);
+
 function clockString(ms) {
   const d = isNaN(ms) ? '--' : Math.floor(ms / 86400000);
   const h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24;
