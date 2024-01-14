@@ -24,7 +24,7 @@ const handler = async (m, {conn, text, args, usedPrefix, command}) => {
     //await conn.relayMessage(m.chat, prep.message, {messageId: prep.key.id, mentions: [m.sender]});
     const dataF = await tiktok.v1(args[0]);
     // let desc1 =  `*𝙽𝙸𝙲𝙺𝙽𝙰𝙼𝙴:* ${dataF.nickname || 'Indefinido'}`
-    const desc1 = `_*< DESCARGAS - TIKTOK />*_\n\n*[ 💡 ] Responde a este vídeo con el comando* _${usedPrefix}tomp3_ *para convertirlo en audio.*`;
+    const desc1 = `_*DESCARGAS - TIKTOK*_  🎧\n\n*[ 💡 ] Responde a este vídeo con el comando* _${usedPrefix}tomp3_ *para convertirlo en audio.*`;
     await conn.sendMessage(m.chat, {video: {url: dataF.play}, caption: desc1}, {quoted: m});
   } catch (e1) {
     try {
