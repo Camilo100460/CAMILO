@@ -1,110 +1,42 @@
-import fetch from 'node-fetch';
-import axios from 'axios';
-import {youtubedl, youtubedlv2} from '@bochilteam/scraper';
-import fs from "fs";
-import yts from 'yt-search';
-let limit1 = 100;
-let limit2 = 400;
-let limit_a1 = 50;
-let limit_a2 = 400;
-const handler = async (m, {conn, command, args, text, usedPrefix}) => {
-  if (!text) throw `_*< DESCARGAS - PLAY />*_\n\n*[ ℹ️ ] Hace falta el título o enlace del video de YouTube.*\n\n*[ 💡 ] Ejemplo:* _${usedPrefix + command} Good Feeling - Flo Rida_`;
-    const yt_play = await search(args.join(' '));
-    let additionalText = '';
-    if (command === 'play') {
-      additionalText = 'audio';
-    } else if (command === 'play2') {
-      additionalText = 'vídeo';
-    }
-    const texto1 = `_*< DESCARGAS - PLAY />*_\n\n📜• *Título:* ${yt_play[0].title}\n\n⏳• *Duración:* ${secondString(yt_play[0].duration.seconds)}\n\n🖋️• *Autor:* ${yt_play[0].author.name}\n\n🔗• *Enlace:* ${yt_play[0].url}\n\n*[ ℹ️ ] Se está enviando el ${additionalText}. espere...*`.trim();
-    conn.sendMessage(m.chat, {image: {url: yt_play[0].thumbnail}, caption: texto1}, {quoted: m});
-    if (command == 'play') {
-    try {   
-    const audio = global.API('CFROSAPI', `/api/v1/ytmp3?url=${yt_play[0].url}`)
-    const ttl = await yt_play[0].title
-    const buff_aud = await getBuffer(audio);
-    const fileSizeInBytes = buff_aud.byteLength;
-    const fileSizeInKB = fileSizeInBytes / 1024;
-    const fileSizeInMB = fileSizeInKB / 1024;
-    const size = fileSizeInMB.toFixed(2);       
-    if (size >= limit_a2) {  
-    await conn.sendMessage(m.chat, {text: `*[ ✔ ] Descargue su audio en ${audio}*`}, {quoted: m});
-    return;    
-    }     
-    if (size >= limit_a1 && size <= limit_a2) {  
-    await conn.sendMessage(m.chat, {document: buff_aud, mimetype: 'audio/mpeg', fileName: ttl + `.mp3`}, {quoted: m});   
-    return;
-    } else {
-    await conn.sendMessage(m.chat, {audio: buff_aud, mimetype: 'audio/mpeg', fileName: ttl + `.mp3`}, {quoted: m});   
-    return;    
-    }} catch {
-    throw '_*< DESCARGAS - PLAY />*_\n\n*[ ℹ️ ] Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*';    
-    }}
-    if (command == 'play2') {
-    try {   
-    const video = global.API('CFROSAPI', `/api/v1/ytmp4?url=${yt_play[0].url}`)
-    const ttl2 = await yt_play[0].title
-    const buff_vid = await getBuffer(video);
-    const fileSizeInBytes2 = buff_vid.byteLength;
-    const fileSizeInKB2 = fileSizeInBytes2 / 1024;
-    const fileSizeInMB2 = fileSizeInKB2 / 1024;
-    const size2 = fileSizeInMB2.toFixed(2);       
-    if (size2 >= limit2) {  
-    await conn.sendMessage(m.chat, {text: `_*< DESCARGAS - PLAY />*_\n\n*[ ✔ ] Descargue su vídeo en ${video}*`}, {quoted: m});
-    return;    
-    }     
-    if (size2 >= limit1 && size2 <= limit2) {  
-    await conn.sendMessage(m.chat, {document: buff_vid, mimetype: 'video/mp4', fileName: ttl2 + `.mp4`}, {quoted: m});   
-    return;
-    } else {
-    await conn.sendMessage(m.chat, {video: buff_vid, mimetype: 'video/mp4', fileName: ttl2 + `.mp4`}, {quoted: m});   
-    return;    
-    }} catch {
-    throw '_*< DESCARGAS - PLAY />*_\n\n*[ ℹ️ ] Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*';    
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+const { servers, yta, ytv } = require('../lib/y2mate')
+let yts = require('yt-search')
+let fetch = require('node-fetch')
+let handler = async (m, { conn, command, text, usedPrefix }) => {
+  if (!text) throw `🎁 *Ingrese un texto o enlace de YT*\n\n*✅ Ejemplo:*\n*${usedPrefix + command} Bellyache*`
+//  let chat = global.db.data.chats[m.chat]
+  let results = await yts(text)
+  let vid = results.all.find(video => video.seconds < 3600)
+  if (!vid) throw '*El video no se encontró, intente ingresar el nombre original de la canción o video*'
+  let isVideo = /2$/.test(command)
+  let yt = false
+  let yt2 = false
+  let usedServer = servers[0]
+  m.reply('🔁 *Descargando...*\n\n*❰ ❗ ❱ Si no obtiene ningun resultado o le sale algun error intente con otro nombre*')
+  for (let i in servers) {
+    let server = servers[i]
+    try {
+      yt = await yta(vid.url, server)
+      yt2 = await ytv(vid.url, server)
+      usedServer = server
+      break
+    } catch (e) {
+      m.reply(`*El servidor ${server} fallo!, reintentando con otro servidor*${servers.length >= i + 1 ? '' : '\nmencoba server lain...'}`)
     }
   }
-};
-handler.command = /^(play|play2)$/i;
-export default handler;
-
-async function search(query, options = {}) {
-  const search = await yts.search({query, hl: 'es', gl: 'ES', ...options});
-  return search.videos;
+  if (yt === false) throw '*Todos los servidores fallaron*'
+  if (yt2 === false) throw '*Todos los servidores fallaron*'
+  let { dl_link, thumb, title, filesize, filesizeF } = yt
+  await conn.send2ButtonLoc(m.chat, await (await fetch(thumb)).buffer(), `
+*💗 Titulo:* _${title}_
+*🎈 Peso del audio:* _${filesizeF}_
+*🎈 Peso del video:* _${yt2.filesizeF}_
+`.trim(), 'Gata Dios', '🎵 AUDIO', `.yta ${vid.url}`, '🎥 VIDEO', `.yt ${vid.url}`)
 }
+handler.help = ['play'].map(v => v + ' <pencarian>')
+handler.tags = ['downloader']
+handler.command = /^(reproducir|reproducir2|reproductor|Reproducir|Reproducir2|Reproductor|play3|Play3|playvid|Playvid|playaudio|Playaudio)$/i
 
-function MilesNumber(number) {
-  const exp = /(\d)(?=(\d{3})+(?!\d))/g;
-  const rep = '$1.';
-  const arr = number.toString().split('.');
-  arr[0] = arr[0].replace(exp, rep);
-  return arr[1] ? arr.join('.') : arr[0];
-}
+handler.exp = 0
 
-function secondString(seconds) {
-  seconds = Number(seconds);
-  const d = Math.floor(seconds / (3600 * 24));
-  const h = Math.floor((seconds % (3600 * 24)) / 3600);
-  const m = Math.floor((seconds % 3600) / 60);
-  const s = Math.floor(seconds % 60);
-  const dDisplay = d > 0 ? d + (d == 1 ? 'd ' : 'd ') : '';
-  const hDisplay = h > 0 ? h + (h == 1 ? 'h ' : 'h ') : '';
-  const mDisplay = m > 0 ? m + (m == 1 ? 'm ' : 'm ') : '';
-  const sDisplay = s > 0 ? s + (s == 1 ? 's' : 's') : '';
-  return dDisplay + hDisplay + mDisplay + sDisplay;
-}
-
-function bytesToSize(bytes) {
-  return new Promise((resolve, reject) => {
-    const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
-    if (bytes === 0) return 'n/a';
-    const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)), 10);
-    if (i === 0) resolve(`${bytes} ${sizes[i]}`);
-    resolve(`${(bytes / (1024 ** i)).toFixed(1)} ${sizes[i]}`);
-  });
-}
-
-const getBuffer = async (url, options) => {
-    options ? options : {};
-    const res = await axios({method: 'get', url, headers: {'DNT': 1, 'Upgrade-Insecure-Request': 1,}, ...options, responseType: 'arraybuffer'});
-    return res.data;
-};
+module.exports = handler
