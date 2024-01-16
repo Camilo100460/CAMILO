@@ -1,7 +1,4 @@
-import fetch from 'node-fetch';
 import axios from 'axios';
-import { youtubedl, youtubedlv2 } from '@bochilteam/scraper';
-import fs from 'fs';
 import yts from 'yt-search';
 
 // Constantes y configuración
@@ -17,7 +14,7 @@ const handler = async (m, { conn, command, args, text, usedPrefix }) => {
 
   try {
     const yt_play = await search(args.join(' '));
-    let additionalText = command === 'play' ? 'audio' : 'vídeo';
+    const additionalText = command === 'play' ? 'audio' : 'vídeo';
 
     const texto1 = `_*< DESCARGAS - PLAY />*_\n\n▢ *Título:* ${yt_play[0].title}\n\n▢ *Publicado:* ${
       yt_play[0].ago
@@ -30,9 +27,9 @@ const handler = async (m, { conn, command, args, text, usedPrefix }) => {
     conn.sendMessage(m.chat, { image: { url: yt_play[0].thumbnail }, caption: texto1 }, { quoted: m });
 
     if (command === 'play') {
-      await descargarAudio(conn, m, yt_play[0]);
+      await descargarArchivo(conn, m, yt_play[0].url, '3', 'mp3', limit_a1, limit_a2);
     } else if (command === 'play2') {
-      await descargarVideo(conn, m, yt_play[0]);
+      await descargarArchivo(conn, m, yt_play[0].url, '4', 'mp4', limit1, limit2);
     }
   } catch (error) {
     console.error(error);
@@ -48,43 +45,31 @@ async function search(query, options = {}) {
   return search.videos;
 }
 
-async function descargarAudio(conn, m, videoInfo) {
+async function descargarArchivo(conn, m, url, tipo, extension, limiteInf, limiteSup) {
   try {
-    const audio = await global.API('CFROSAPI', `/api/v1/ytmp3?url=${videoInfo.url}`);
+    const archivo = await global.API(`CFROSAPI/api/v1/ytmp${tipo}?url=${url}`);
     const ttl = videoInfo.title;
-    const buff_aud = await getBuffer(audio);
-    const fileSizeInMB = buff_aud.byteLength / (1024 * 1024);
+    const buff_archivo = await getBuffer(archivo);
+    const fileSizeInMB = buff_archivo.byteLength / (1024 * 1024);
 
-    if (fileSizeInMB >= limit_a2) {
-      await conn.sendMessage(m.chat, { text: `*[ ✔ ] Descargue su audio en ${audio}*` }, { quoted: m });
+    if (fileSizeInMB >= limiteSup) {
+      await conn.sendMessage(m.chat, { text: `*[ ✔ ] Descargue su ${tipo} en ${archivo}*` }, { quoted: m });
     } else {
-      const tipoMensaje = fileSizeInMB >= limit_a1 && fileSizeInMB <= limit_a2 ? 'document' : 'audio';
+      const tipoMensaje = fileSizeInMB >= limiteInf && fileSizeInMB <= limiteSup ? 'document' : tipo;
 
-      await conn.sendMessage(m.chat, { [tipoMensaje]: buff_aud, mimetype: 'audio/mpeg', fileName: `${ttl}.mp3` }, { quoted: m });
+      await conn.sendFile(
+        m.chat,
+        buff_archivo,
+        `${ttl}.${extension}`,
+        `*< DESCARGAS - PLAY />*\n\n▢ *Título:* ${yt_play[0].title}`,
+        m,
+        false,
+        { mimetype: `audio/${extension}` }
+      );
     }
   } catch (error) {
     console.error(error);
-    throw '_*< DESCARGAS - PLAY />*_\n\n*[ ℹ️ ] Ocurrió un error al descargar el audio. Por favor, inténtalo de nuevo más tarde.*';
-  }
-}
-
-async function descargarVideo(conn, m, videoInfo) {
-  try {
-    const video = await global.API('CFROSAPI', `/api/v1/ytmp4?url=${videoInfo.url}`);
-    const ttl2 = videoInfo.title;
-    const buff_vid = await getBuffer(video);
-    const fileSizeInMB2 = buff_vid.byteLength / (1024 * 1024);
-
-    if (fileSizeInMB2 >= limit2) {
-      await conn.sendMessage(m.chat, { text: `_*< DESCARGAS - PLAY />*_\n\n*[ ✔ ] Descargue su vídeo en ${video}*` }, { quoted: m });
-    } else {
-      const tipoMensaje = fileSizeInMB2 >= limit1 && fileSizeInMB2 <= limit2 ? 'document' : 'video';
-
-      await conn.sendMessage(m.chat, { [tipoMensaje]: buff_vid, mimetype: 'video/mp4', fileName: `${ttl2}.mp4` }, { quoted: m });
-    }
-  } catch (error) {
-    console.error(error);
-    throw '_*< DESCARGAS - PLAY />*_\n\n*[ ℹ️ ] Ocurrió un error al descargar el vídeo. Por favor, inténtalo de nuevo más tarde.*';
+    throw `_*< DESCARGAS - PLAY />*_\n\n*[ ℹ️ ] Ocurrió un error al descargar el ${tipo}. Por favor, inténtalo de nuevo más tarde.*`;
   }
 }
 
@@ -101,22 +86,4 @@ async function getBuffer(url, options) {
     return res.data;
   } catch (error) {
     console.error(error);
-    throw '_*< DESCARGAS - PLAY />*_\n\n*[ ℹ️ ] Ocurrió un error al obtener el buffer. Por favor, inténtalo de nuevo más tarde.*';
-  }
-}
-
-function MilesNumber(number) {
-  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-}
-
-function secondString(seconds) {
-  seconds = Number(seconds);
-  const d = Math.floor(seconds / (3600 * 24));
-  const h = Math.floor((seconds % (3600 * 24)) / 3600);
-  const m = Math.floor((seconds % 3600) / 60);
-  const s = Math.floor(seconds % 60);
-
-  return `${d > 0 ? d + (d === 1 ? 'd ' : 'd ') : ''}${h > 0 ? h + (h === 1 ? 'h ' : 'h ') : ''}${
-    m > 0 ? m + (m === 1 ? 'm ' : 'm ') : ''
-  }${s > 0 ? s + (s === 1 ? 's' : 's') : ''}`;
-}
+    throw '_*< DESCARGAS - PLAY />*_\n\n*[ ℹ️ ] Ocurrió un error al obtener el buffer.
