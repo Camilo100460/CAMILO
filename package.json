@@ -16,16 +16,16 @@
     "eslint": "eslint .",
     "eslintfix": "eslint --fix ."
   },
-  "homepage": "https://github.com/BrunoSobrino/TheMystic-Bot-MD",
+  "homepage": "https://github.com/Camilo100460/CAMILO",
   "author": {
     "name": "BrunoSobrino"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BrunoSobrino/TheMystic-Bot-MD.git"
+    "url": "git+https://github.com/Camilo100460/CAMILO"
   },
   "bugs": {
-    "url": "https://github.com/BrunoSobrino/TheMystic-Bot-MD/issues"
+    "url": "https://github.com/Camilo100460/CAMILO/issues"
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
@@ -88,9 +88,11 @@
     "wa-sticker-formatter": "^4.3.2",
     "yargs": "^17.3.1",
     "yt-search": "^2.10.3",
-    "ytdl-core": "github:khlevon/node-ytdl-core#v4.11.4-patch.2",
+    "ytdl-core": "github:khlevon/node-ytfrieren-sfrieren-scr,
     "@distube/ytdl-core": "latest",
     "ytdl-core": "4.10.0"
+     "ytdl-core": "npm:@distube/ytdl-core",
+     "ytdl-core": "npm:ytdl-core@4.10.0",
   },
   "devDependencies": {
     "eslint": "^8.45.0",
