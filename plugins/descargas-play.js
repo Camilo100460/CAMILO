@@ -21,12 +21,6 @@ ${yt_play[0].title}
 ▢ *Publicado:*
 ${yt_play[0].ago}
 
-▢ *Duración:*
-${secondString(yt_play[0].duration.seconds)}
-
-▢ *Vistas:*
-${MilesNumber(yt_play[0].views)}
-
 ▢ *Enlace:*
 ${yt_play[0].url}
 
