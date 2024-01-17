@@ -13,15 +13,12 @@ if (command === 'play') {
 additionalText = 'audio'
 } else if (command === 'play2') {
 additionalText = 'video'}
-let captionvid = `_*< DESCARGAS - PLAY />*_
+let captionvid = `_*DESCARGAS - PLAY*_  📥
 
-▢ *Título:*
+📜• *Título:*
 ${yt_play[0].title}
 
-▢ *Publicado:*
-${yt_play[0].ago}
-
-▢ *Enlace:*
+🔗• *Enlace:*
 ${yt_play[0].url}
 
 *[ ℹ️ ] Se está enviando el ${additionalText}. espere...*`  
