@@ -18,10 +18,10 @@ global.prems = ['51995386439'];
 
 global.packname = 'Sticker';
 global.author = 'May - Bot';
-global.wm = 'The Mystic - Bot';
+global.wm = 'May - Bot';
 global.titulowm = 'May - Bot';
 global.titulowm2 = `May - Bot`
-global.igfg = 'The Mystic - Bot';
+global.igfg = 'May - Bot';
 global.wait = '*[ ⏳ ] Cargando...*';
 
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
