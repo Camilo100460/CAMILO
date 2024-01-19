@@ -26,13 +26,13 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 
  📊 _*< TUS ESTADÍSTICAS />*_
 
- 🎖️ *Nivel:* ${level}
- 📈 *Experiencia:* ${exp}
- 🏅 *Rango:* ${role}
- 💎 *Diamantes:* ${limit}
- 💰 *MysticCoins:* ${money}
- 🎟️ *Tokens:* ${joincount}
- 🎁 *Premium:* ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌') || ''}
+ 🎖️•  *Nivel:* ${level}
+ 📈•  *Experiencia:* ${exp}
+ 🏅•  *Rango:* ${role}
+ 💎•  *Diamantes:* ${limit}
+ 💰•  *MysticCoins:* ${money}
+ 🎟️•  *Tokens:* ${joincount}
+ 🎁•  *Premium:* ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌') || ''}
  ${readMore}
 
   _*< 📜 LISTA DE MENUS 📋 />*_
