@@ -23,7 +23,6 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 
  📌 *Hola,* ${taguser}
 
-
 ╭━━━━━━ ◜◌◝ ━━━━━━╮
 │ *<𝐌𝐄𝐍𝐔 𝐀𝐔𝐃𝐈𝐎𝐒/>*
 │
