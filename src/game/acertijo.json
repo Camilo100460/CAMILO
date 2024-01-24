@@ -217,55 +217,55 @@
     },
     {
        "question": "Es un instrumento y deja líquido dentro ¿Qué es?",
-       "response": "Una jeringuilla."
+       "response": "Una jeringuilla"
     },
     {
        "question": "Los hombres lo hacen de pie, las mujeres lo pueden hacer sentadas, los perros a tres patas. ¿Qué es?",
-       "response": "Dar la mano."
+       "response": "Dar la mano"
     },
     {
        "question": "Hombres y machos lo tienen, hembras y mujeres no, hasta el obispo en persona tiene, como el toro, dos, ¿qué es?",
-       "response": "La letra o."
+       "response": "La letra o"
     },
     {
        "question": "¿Quién es el hombre que introduce su instrumento en la boca de una mujer?",
-       "response": "El dentista."
+       "response": "El dentista"
     },
     {
        "question": "Soy peludo y asomo por tu pijama de noche, ¿qué soy?",
-       "response": "Tu cabeza."
+       "response": "Tu cabeza"
     },
     {
        "question": "¿En qué se parecen los zapatos y el dinero?",
-       "response": "En que los dos se gastan."
+       "response": "En que los dos se gastan"
     },
     {
        "question": "¿Cuál es la parte más sensible del cuerpo de una mujer? Tiene 6 letras y aaba en ina",
-       "response": "La retina."
+       "response": "La retina"
     },
     {
        "question": "Madonna no lo tiene, el Papa lo tiene pero no lo usa, Trump lo tiene corto y Schwartzenegger lo tiene largo y duro, ¿qué es?",
-       "response": "El apellido."
+       "response": "El apellido"
     },
     {
        "question": "¿Por qué el libro de matemáticas se suicidó?",
-       "response": "Porque tenía muchos problemas."
+       "response": "Porque tenía muchos problemas"
     },
     {
        "question": "Entra parado y sale mojado y oliendo a pescado, ¿qué es?",
-       "response": "El buzo."
+       "response": "El buzo"
     },
     {
        "question": "¿Dónde tienen las mujeres el pelo más rizado?",
-       "response": "En África."
+       "response": "En África"
     },
     {
        "question": "¿Cómo se dice suegra en griego?",
-       "response": "Storbas."
+       "response": "Storbas"
     },
     {
        "question": "¿Qué tienen en común un elfo y un hombre inteligente?",
-       "response": "Ambos son leyendas."
+       "response": "Ambos son leyendas"
     },
     {
        "question": "¿Entra al centro de las mujeres pero solo detrás del hombre, qué es?",
@@ -297,7 +297,7 @@
     },
     {
        "question": "¿Qué cuando es macho alumbra y cuando es hembra no?",
-       "response": "El foco y la foca."
+       "response": "El foco y la foca"
     },
     {
        "question": "Adivina la película con emoji 🧙‍♂️👦🧙‍♀️🚂🏰",
@@ -326,5 +326,106 @@
     {
        "question": "Adivina la película con emoji 📖🍵🌹",
        "response": "La bella y la bestia"
+    },
+    {
+       "question": "¿Qué es tan frágil que se rompe al decir su nombre?",
+       "response": "El silencio"
+    },
+    {
+       "question": "Tengo ciudades, pero no tengo casas. Tengo montañas, pero no tengo árboles. Tengo agua, pero no océanos. ¿Qué soy?",
+       "response": "Un mapa"
+    },
+    {
+       "question": "Soy un número de dos dígitos. Mi dígito de las unidades es igual a mi dígito de las decenas al revés. La suma de mis dígitos es 9. ¿Qué número soy?",
+       "response": "45"
+    },
+    {
+       "question": "Fui el primer presidente de los Estados Unidos. ¿Quién soy?",
+       "response": "George Washington"
+    },
+    {
+       "question": "Soy conocido por pintar la Mona Lisa. ¿Quién soy?",
+       "response": "Leonardo da Vinci"
+    },
+    {
+       "question": "Esta antigua maravilla del mundo está ubicada en Egipto y es la única que aún permanece en pie. ¿Cuál es?",
+       "response": "Las Pirámides de Giza"
+    },
+    {
+       "question": "Soy una ciudad europea famosa por mi Torre Eiffel. ¿Qué ciudad soy?",
+       "response": "París"
+    },
+    {
+       "question": "Fui el dramaturgo inglés más famoso, conocido por obras como Romeo y Julieta. ¿Quién soy?",
+       "response": "William Shakespeare"
+    },
+    {
+       "question": "Soy el máximo goleador en la historia de la Copa del Mundo. ¿Quién soy?",
+       "response": "Miroslav Klose"
+    },
+    {
+       "question": "Soy un país sudamericano que ha ganado la Copa del Mundo en cinco ocasiones. ¿Qué país soy?",
+       "response": "Brasil"
+    },
+    {
+       "question": "Juego en el FC Barcelona y soy considerado uno de los mejores futbolistas del mundo. ¿Quién soy?",
+       "response": "Messi"
+    },
+    {
+       "question": "Soy una princesa de Disney que vive bajo el mar. ¿Quién soy?",
+       "response": "Ariel"
+    },
+    {
+       "question": "Fui la primera mujer en ganar dos premios Nobel en diferentes campos. ¿Quién soy?",
+       "response": "Marie Curie"
+    },
+    {
+       "question": "Soy una superheroína de Marvel conocida por mi habilidad con el lazo de la verdad. ¿Quién soy?",
+       "response": "La Mujer Maravilla"
+    },
+    {
+       "question": "Mi diario es famoso en el mundo entero, y soy conocida por ser una niña judía durante la Segunda Guerra Mundial. ¿Quién soy?",
+       "response": "Anne Frank"
+    },
+    {
+       "question": "Fui la primera mujer en el espacio, astronauta soviética. ¿Quién soy?",
+       "response": "Valentina Tereshkova"
+    },
+    {
+       "question": "Adivina la película con emoji 🕵️‍♂️🇮🇹🔫🚬",
+       "response": "El Padrino"
+    },
+    {
+       "question": "Adivina la película con emoji 🚢💔🎶💏",
+       "response": "Titanic"
+    },
+    {
+       "question": "Adivina la película con emoji 🏃‍♂️🍤🏅❤️",
+       "response": "Forrest Gump"
+    },
+    {
+       "question": "Adivina la película con emoji 🧙‍♂️🪙🌋👣",
+       "response": "El Señor de los Anillos"
+    },
+    {
+       "question": "Adivina la película con emoji 🦖🦕🌴🔬",
+       "response": "Jurassic Park"
+    },
+    {
+       "question": "Adivina la película con emoji 👠🌪️🌈🦁",
+       "response": "El Mago de Oz"
+    },
+    {
+       "question": "Adivina la película con emoji 🕶️💊💻🔵",
+       "response": "Matrix"
+    },
+    {
+       "question": "Adivina la película con emoji 🕵️‍♂️🎩🌎💎",
+       "response": "Indiana Jones"
+    },
+    {
+       "question": "Adivina la película con emoji 🌿🌐🚀💙",
+       "response": "Avatar"
+    
 }
 ]
