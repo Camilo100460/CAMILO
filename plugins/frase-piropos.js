@@ -36,5 +36,3 @@ global.piropo = [
   'Quisiera que fueras cereal, para cucharearte en las mañanas.',
   'Quien fuera hambre, para darte tres veces al día.'
 ];
-
-];
