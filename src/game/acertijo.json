@@ -426,6 +426,54 @@
     {
        "question": "Adivina la película con emoji 🌿🌐🚀💙",
        "response": "Avatar"
+    },
+    {
+       "question": "¿Cuál es la estrella que no tiene luz?",
+       "response": "Un agujero negro"
+    },
+    {
+       "question": "¿Cuál es el animal que tiene más dientes?",
+       "response": "El tiburón"
+    },
+    {
+       "question": "Piensa y lo adivinarás: ¿qué tiene Adán delante que Eva tiene detrás?",
+       "response": "La letra A"
+    },
+    {
+       "question": "¿Qué instrumento musical es indispensable en una banda de mariachis?",
+       "response": "La trompeta"
+    },
+    {
+       "question": "¿Cuál es el país más grande del mundo?",
+       "response": "Rusia"
+    },
+    {
+       "question": "¿Cuál es el río más largo del mundo?",
+       "response": "El Amazonas"
+    },
+    {
+       "question": "¿En qué año comenzó la Segunda Guerra Mundial?",
+       "response": "1939"
+    },
+    {
+       "question": "¿Qué famoso científico desarrolló la teoría de la relatividad?",
+       "response": "Albert Einstein"
+    },
+    {
+       "question": "¿Quién escribió Cien años de soledad?",
+       "response": "Gabriel García Márquez"
+    },
+    {
+       "question": "¿Cuál es el planeta más grande de nuestro sistema solar?",
+       "response": "Júpiter"
+    },
+    {
+       "question": "¿Cuál es la capital de Japón?",
+       "response": "Tokio"
+    },
+    {
+       "question": "La capital Tiflis es un punto de interés en un país ubicado en la intersección de Europa y Asia, ¿cómo se llama este país?",
+       "response": "Georgia"
     
 }
 ]
