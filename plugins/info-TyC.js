@@ -26,4 +26,4 @@ _5.- No nos hacemos responsables de los números que se puedan ir a soporte por 
 _6.- Los audios/notas de voz/imágenes/videos o cualquier otro archivo multimedia que sean de propiedad de May-Bot son únicamente y exclusivamente de este Bot, si se detecta a otro Bot con alguno o algunos de los archivos multimedia antes mencionado se tomarán cartas en el asunto._
 
 *⁉️ Te quedaron dudas?*
-_- Si todavía tienes alguna duda o reclamo de lo mencionado aqui o referente al Bot, contáctame a mi numero personal al cual estaré respondiendo lo antes posible para brindarte una solución y/o hacerme responsable de alguna reclamación_
+_- Si todavía tienes alguna duda o reclamo de lo mencionado aqui o referente al Bot, contáctame a mi numero personal al cual estaré respondiendo lo antes posible para brindarte una solución y/o hacerme responsable de alguna reclamación_`;
