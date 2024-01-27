@@ -65,5 +65,4 @@ global.piropo = [
   'Mi café favorito, es el de tus ojos.',
   'Quiero ser photoshop para retocarte todo el cuerpo.',
   'Quisiera que fueras cereal, para cucharearte en las mañanas.',
-  'Quien fuera hambre, para darte tres veces al día.'
-];
+  'Quien fuera hambre, para darte tres veces al día.'];
