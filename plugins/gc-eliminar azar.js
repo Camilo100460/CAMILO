@@ -14,7 +14,7 @@ const handler = async (m, {conn, participants, usedPrefix, command}) => {
   await conn.groupParticipantsUpdate(m.chat, [randomMember], 'remove');
 };
 
-handler.command = /^(eliminarazar)$/i;
+handler.command = /^(pazar)$/i;
 handler.admin = true;
 handler.group = true;
 handler.botAdmin = true;
