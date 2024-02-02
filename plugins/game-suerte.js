@@ -5,17 +5,17 @@ async function handler(m, { groupMetadata }) {
     let b = ps[Math.floor(Math.random() * ps.length)]; // Selecciona aleatoriamente a un participante
 
     let message;
-    if (m.text.includes('eliminaelmasfeo')) {
+    if (m.text.includes('eliminafeo')) {
         message = 'serás eliminado por ser el más feo';
-    } else if (m.text.includes('eliminapersonainfiel')) {
+    } else if (m.text.includes('eliminainfiel')) {
         message = 'serás eliminado por ser una persona infiel';
-    } else if (m.text.includes('eliminapersonafea')) {
+    } else if (m.text.includes('eliminafea')) {
         message = 'serás eliminado por ser una persona fea';
-    } else if (m.text.includes('eliminapersonabot')) {
+    } else if (m.text.includes('eliminabot')) {
         message = 'serás eliminado por ser un bot';
-    } else if (m.text.includes('eliminapersonacachona')) {
+    } else if (m.text.includes('eliminacachona')) {
         message = 'serás eliminado por ser una persona cachona';
-    } else if (m.text.includes('eliminapersonagay')) {
+    } else if (m.text.includes('eliminagay')) {
         message = 'serás eliminado por ser una persona gay';
     } else if (m.text.includes('eliminafiel')) {
         message = 'serás eliminado por ser fiel';
@@ -33,9 +33,9 @@ async function handler(m, { groupMetadata }) {
     await conn.groupParticipantsUpdate(m.chat, [b], 'remove');
 }
 
-handler.help = ['eliminaelmasfeo', 'eliminapersonainfiel', 'eliminapersonafea', 'eliminapersonabot', 'eliminapersonacachona', 'eliminapersonagay', 'eliminafiel'];
+handler.help = ['eliminafeo', 'eliminainfiel', 'eliminafea', 'eliminapersonabot', 'eliminacachona', 'eliminagay', 'eliminafiel'];
 handler.tags = ['fun'];
-handler.command = ['eliminaelmasfeo', 'eliminapersonainfiel', 'eliminapersonafea', 'eliminapersonabot', 'eliminapersonacachona', 'eliminapersonagay', 'eliminafiel'];
+handler.command = ['eliminafeo', 'eliminainfiel', 'eliminafea', 'eliminapersonabot', 'eliminacachona', 'eliminagay', 'eliminafiel'];
 handler.group = true;
 
 export default handler;
