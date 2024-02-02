@@ -85,7 +85,6 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
  _*< 🎮 JUEGOS 🕹️ />*_
 
   🧮 _${usedPrefix}mates *<noob / easy / medium / hard / extreme /impossible /impossible2>*_
-  🎭 _${usedPrefix}eliminainfiel_
   🎭 _${usedPrefix}fake *<txt1> <@tag> <txt2>*_
   ✊✋✌️ _${usedPrefix}ppt *<papel / tijera /piedra>*_
   👨‍💼 _${usedPrefix}prostituto *<nombre / @tag>*_
@@ -107,6 +106,13 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   🎲 _${usedPrefix}ttt *<nombre sala>*_
   ❌ _${usedPrefix}delttt_
   ❓ _${usedPrefix}acertijo_
+  🦢 _${usedPrefix}eliminainfiel_
+  🎻 _${usedPrefix}eliminaelmasfeo_
+  🖋️ _${usedPrefix}eliminafea_
+  🥂 _${usedPrefix}eliminapersonabot_
+  🍾 _${usedPrefix}eliminacachona_
+  🎨 _${usedPrefix}eliminagay_
+  🎭 _${usedPrefix}eliminafiel_
   🤖 _${usedPrefix}simi *<txt>*_
   🏆 _${usedPrefix}top *<txt>*_
   🌈 _${usedPrefix}topgays_
