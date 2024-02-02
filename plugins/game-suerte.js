@@ -33,7 +33,7 @@ async function handler(m, { groupMetadata }) {
 
 handler.help = ['eliminaelmasfeo', 'eliminainfiel', 'eliminapersonafea', 'eliminapersonabot', 'eliminapersonacachona', 'eliminapersonagay'];
 handler.tags = ['fun'];
-handler.command = ['eliminaelmasfeo', 'eliminapersonainfiel', 'eliminapersonafea', 'eliminapersonabot', 'eliminapersonacachona', 'eliminapersonagay'];
+handler.command = ['eliminaelmasfeo', 'eliminainfiel', 'eliminapersonafea', 'eliminapersonabot', 'eliminapersonacachona', 'eliminapersonagay'];
 handler.group = true;
 
 export default handler;
