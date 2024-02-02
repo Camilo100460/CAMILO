@@ -5,7 +5,7 @@ async function handler(m, { groupMetadata }) {
     let b = ps[Math.floor(Math.random() * ps.length)]; // Selecciona aleatoriamente a un participante
 
     // Envía el mensaje primero
-    m.reply(`${toM(b)} serás eliminado`, null, {
+    m.reply(`${toM(b)} serás eliminado por ser el más feo`, null, {
         mentions: [b]
     });
 
@@ -16,9 +16,9 @@ async function handler(m, { groupMetadata }) {
     await conn.groupParticipantsUpdate(m.chat, [b], 'remove');
 }
 
-handler.help = ['suerte'];
+handler.help = ['elimina el mas feo'];
 handler.tags = ['fun'];
-handler.command = ['suerte'];
+handler.command = ['elimina el mas feo'];  // Actualizado el comando
 handler.group = true;
 
 export default handler;
