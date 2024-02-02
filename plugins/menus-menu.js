@@ -85,6 +85,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
  _*< 🎮 JUEGOS 🕹️ />*_
 
   🧮 _${usedPrefix}mates *<noob / easy / medium / hard / extreme /impossible /impossible2>*_
+  🎭 _${usedPrefix}eliminainfiel_
   🎭 _${usedPrefix}fake *<txt1> <@tag> <txt2>*_
   ✊✋✌️ _${usedPrefix}ppt *<papel / tijera /piedra>*_
   👨‍💼 _${usedPrefix}prostituto *<nombre / @tag>*_
