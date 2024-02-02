@@ -16,9 +16,9 @@ async function handler(m, { groupMetadata }) {
     await conn.groupParticipantsUpdate(m.chat, [b], 'remove');
 }
 
-handler.help = ['elimina el mas feo'];
+handler.help = ['elimina'];
 handler.tags = ['fun'];
-handler.command = ['elimina el mas feo'];  // Actualizado el comando
+handler.command = ['elimina'];  // Actualizado el comando
 handler.group = true;
 
 export default handler;
