@@ -7,7 +7,7 @@ async function handler(m, { groupMetadata }) {
     let message;
     if (m.text.includes('eliminaelmasfeo')) {
         message = 'serás eliminado por ser el más feo';
-    } else if (m.text.includes('eliminainfiel')) {
+    } else if (m.text.includes('eliminapersonainfiel')) {
         message = 'serás eliminado por ser una persona infiel';
     } else if (m.text.includes('eliminapersonafea')) {
         message = 'serás eliminado por ser una persona fea';
@@ -17,6 +17,8 @@ async function handler(m, { groupMetadata }) {
         message = 'serás eliminado por ser una persona cachona';
     } else if (m.text.includes('eliminapersonagay')) {
         message = 'serás eliminado por ser una persona gay';
+    } else if (m.text.includes('eliminafiel')) {
+        message = 'serás eliminado por ser fiel';
     }
 
     // Envía el mensaje primero
@@ -31,9 +33,9 @@ async function handler(m, { groupMetadata }) {
     await conn.groupParticipantsUpdate(m.chat, [b], 'remove');
 }
 
-handler.help = ['eliminaelmasfeo', 'eliminainfiel', 'eliminapersonafea', 'eliminapersonabot', 'eliminapersonacachona', 'eliminapersonagay'];
+handler.help = ['eliminaelmasfeo', 'eliminapersonainfiel', 'eliminapersonafea', 'eliminapersonabot', 'eliminapersonacachona', 'eliminapersonagay', 'eliminafiel'];
 handler.tags = ['fun'];
-handler.command = ['eliminaelmasfeo', 'eliminainfiel', 'eliminapersonafea', 'eliminapersonabot', 'eliminapersonacachona', 'eliminapersonagay'];
+handler.command = ['eliminaelmasfeo', 'eliminapersonainfiel', 'eliminapersonafea', 'eliminapersonabot', 'eliminapersonacachona', 'eliminapersonagay', 'eliminafiel'];
 handler.group = true;
 
 export default handler;
