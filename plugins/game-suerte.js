@@ -33,9 +33,9 @@ async function handler(m, { groupMetadata }) {
     await conn.groupParticipantsUpdate(m.chat, [b], 'remove');
 }
 
-handler.help = ['eliminafeo', 'eliminainfiel', 'eliminafea', 'eliminapersonabot', 'eliminacachona', 'eliminagay', 'eliminafiel'];
+handler.help = ['eliminafeo', 'eliminainfiel', 'eliminafea', 'eliminabot', 'eliminacachona', 'eliminagay', 'eliminafiel'];
 handler.tags = ['fun'];
-handler.command = ['eliminafeo', 'eliminainfiel', 'eliminafea', 'eliminapersonabot', 'eliminacachona', 'eliminagay', 'eliminafiel'];
+handler.command = ['eliminafeo', 'eliminainfiel', 'eliminafea', 'eliminabot', 'eliminacachona', 'eliminagay', 'eliminafiel'];
 handler.group = true;
 
 export default handler;
