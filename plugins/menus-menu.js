@@ -109,7 +109,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   🦢 _${usedPrefix}eliminainfiel_
   🎻 _${usedPrefix}eliminaelmasfeo_
   🖋️ _${usedPrefix}eliminafea_
-  🥂 _${usedPrefix}eliminapersonabot_
+  🥂 _${usedPrefix}eliminabot_
   🍾 _${usedPrefix}eliminacachona_
   🎨 _${usedPrefix}eliminagay_
   🎭 _${usedPrefix}eliminafiel_
