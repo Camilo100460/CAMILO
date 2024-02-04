@@ -13,10 +13,9 @@ const optionsFull = `_*< FUNCIONES DEL BOT />*_\n
 
 --------------------------------
 
-🌐 • *Opción:* 🌎 | MODO PUBLICO
-🔊 • *Comando:* ${usedPrefix + command} public
-🔒 • *Descripción:* El bot se vuelve de uso publico y/o privado.
-📌 • *Nota:* Este comando solo puede ser usado por el/los propietario(s) del bot.
+🥵 • *Opción:* 🥵 | MODO HORNY
+🔇 • *Comando:* ${usedPrefix + command} modohorny
+💡 • *Descripción:* Activa o desactiva los comandos +18 en el grupo.
 
 --------------------------------
 
@@ -163,6 +162,7 @@ const optionsFull = `_*< FUNCIONES DEL BOT />*_\n
 🔇 • *Comando:* ${usedPrefix + command} antispam
 💡 • *Descripción:* El Bot detecta cuando un usuario hace spam de comando y lo banea por 5 segundos y lo advierte.
 📝 • *Nota:* Este comando solo puede ser usado por el/los propietario(s) del bot.
+
 --------------------------------
 
 🤖 • *Opción:* 🤖 | MODEJADIBOT
@@ -436,6 +436,14 @@ const optionsFull = `_*< FUNCIONES DEL BOT />*_\n
       }
       chat.antiToxic = isEnable;
       break;
+      case 'game': case 'juegos': case 'fun': case 'ruleta':
+if (m.isGroup) {
+if (!(isAdmin || isOwner)) {
+global.dfail('admin', m, conn)
+throw false
+}}
+chat.game = isEnable          
+break;
     case 'antitraba':
       if (m.isGroup) {
         if (!(isAdmin || isROwner || isOwner)) {
@@ -470,5 +478,5 @@ const optionsFull = `_*< FUNCIONES DEL BOT />*_\n
   conn.sendMessage(m.chat, {text: `_*< FUNCIONES DEL BOT />*_\n\n*[ ℹ️ ] La opción* _${type}_ *fue* ${isEnable ? '_activada_' : '_desactivada_'} *exitosamente para este* ${isAll ? '_bot._' : isUser ? '' : '_chat._'}`}, {quoted: m});
   //conn.sendMessage(m.chat, {text: `▢ *Opción:* ${type}\n\n▢ *Estado:* ${isEnable ? 'Activado' : 'Desactivado'}\n\n▢ *Para* ${isAll ? 'este bot' : isUser ? '' : 'este chat'}`}, {quoted: m});
 };
-handler.command = /^((en|dis)able|(tru|fals)e||(funciones)|(turn)?[01])$/i;
+handler.command = /^((en|dis)able|(tru|fals)e|(funciones)|(turn)?[01])$/i;
 export default handler;
