@@ -9,6 +9,7 @@ let handler = async (m, { conn, command, text }) => {
     let love = `_❤️ *${text1}* tu oportunidad de enamorarte de *${text2}* es de *${Math.floor(Math.random() * 100)}%* 👩🏻‍❤️‍👨🏻_ 
     `.trim()
     
+    // Enviar la respuesta del "shippeo"
     m.reply(love, null, { mentions: conn.parseMention(love) })
 
     // Agregamos un temporizador de 30 segundos (puedes ajustar el tiempo según tus necesidades)
@@ -22,3 +23,4 @@ handler.tags = ['fun']
 handler.command = /^ship|shippear$/i
 
 export default handler
+
