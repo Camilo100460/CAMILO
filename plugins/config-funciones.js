@@ -175,7 +175,7 @@ const optionsFull = `_*< FUNCIONES DEL BOT />*_\n
 💬 • *Opción:* 💬 | ANTIPRIVADO
 🔇 • *Comando:* ${usedPrefix + command} antiprivado
 💡 • *Descripción:* El Bot bloquerá a las personas que escriban al privado del Bot.
-📌 • *Nota:* Este comando solo puede ser usado por el/los propietario(s) del bot.
+📌 • *Nota:* Este comando solo puede ser usado por el/los propietario(s) del bot.`.trim();
 
   const isEnable = /true|enable|(turn)?on|1/i.test(command);
   const chat = global.db.data.chats[m.chat];
