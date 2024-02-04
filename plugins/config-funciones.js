@@ -470,5 +470,5 @@ const optionsFull = `_*< FUNCIONES DEL BOT />*_\n
   conn.sendMessage(m.chat, {text: `_*< FUNCIONES DEL BOT />*_\n\n*[ ℹ️ ] La opción* _${type}_ *fue* ${isEnable ? '_activada_' : '_desactivada_'} *exitosamente para este* ${isAll ? '_bot._' : isUser ? '' : '_chat._'}`}, {quoted: m});
   //conn.sendMessage(m.chat, {text: `▢ *Opción:* ${type}\n\n▢ *Estado:* ${isEnable ? 'Activado' : 'Desactivado'}\n\n▢ *Para* ${isAll ? 'este bot' : isUser ? '' : 'este chat'}`}, {quoted: m});
 };
-handler.command = /^(funciones\s)?((en|dis)able|(tru|fals)e|(turn)?[01])$/i;
+handler.command = /^((en|dis)able|(tru|fals)e||(funciones)|(turn)?[01])$/i;
 export default handler;
