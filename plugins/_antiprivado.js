@@ -1,10 +1,10 @@
 // TheMystic-Bot-MD@BrunoSobrino - _antiprivado.js
 
 export async function before(m, { conn, isAdmin, isBotAdmin, isOwner, isROwner }) {
-  if (m.isBaileys && m.fromMe) return !0;
-  if (m.isGroup) return !1;
-  if (!m.message) return !0;
-  if (m.text.includes('PIEDRA') || m.text.includes('PAPEL') || m.text.includes('TIJERA') || m.text.includes('serbot') || m.text.includes('jadibot')) return !0;
+  if (m.isBaileys && m.fromMe) return true;
+  if (m.isGroup) return false;
+  if (!m.message) return true;
+  if (m.text.includes('PIEDRA') || m.text.includes('PAPEL') || m.text.includes('TIJERA') || m.text.includes('serbot') || m.text.includes('jadibot')) return true;
 
   const bot = global.db.data.settings[this.user.jid] || {};
 
@@ -36,12 +36,20 @@ export async function before(m, { conn, isAdmin, isBotAdmin, isOwner, isROwner }
       const respuestaAleatoria = respuestasAleatorias[Math.floor(Math.random() * respuestasAleatorias.length)];
 
       // Responde al usuario con el mensaje seleccionado
-      await conn.sendMessage(m.chat, respuestaAleatoria, 'conversation', { quoted: m, mentions: [m.sender] });
+      try {
+        await conn.sendMessage(m.chat, respuestaAleatoria, 'conversation', { quoted: m, mentions: [m.sender] });
+      } catch (error) {
+        console.error('Error al enviar mensaje:', error);
+      }
 
       // Bloquea al usuario después de responder
-      await conn.contactBlock(m.sender, 'add');
+      try {
+        await conn.contactBlock(m.sender, 'add');
+      } catch (error) {
+        console.error('Error al bloquear contacto:', error);
+      }
     }
   }
 
-  return !1;
+  return false;
 }
