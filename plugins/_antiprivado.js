@@ -19,7 +19,16 @@ export async function before(m, { conn, isAdmin, isBotAdmin, isOwner, isROwner }
         '¡Bienvenido! Gracias por tu mensaje. ¿En qué puedo ayudarte hoy?',
         'Hola, ¿cómo estás? Estoy aquí para responder tus preguntas.',
         'Saludos. ¿Necesitas ayuda o información sobre el bot?',
-        'Hola, gracias por contactarme. ¿Hay algo específico en lo que pueda asistirte?'
+        'Hola, gracias por contactarme. ¿Hay algo específico en lo que pueda asistirte?',
+        'Hola! ¿Existe algo específico con lo que pueda asistirte hoy?',
+        'Buen día! ¿Hay algo con lo que pueda ayudarte?',
+        '¡Hola! ¿En qué puedo ayudarte en este momento?',
+        '¡Saludos! ¿Cómo puedo asistirte hoy?',
+        '¡Hola! ¿Hay alguna pregunta que pueda responder por ti?',
+        '¡Bienvenido! ¿Cómo puedo asistirte hoy?',
+        '¡Hola! ¿Existe algún tema en particular en el que estés interesado?',
+        '¡Hola! ¿Hay algo en lo que pueda ayudarte en este momento?',
+        '¡Saludos! ¿Hay alguna información específica que estés buscando?'
         // Agrega más respuestas según sea necesario
       ];
 
@@ -30,13 +39,13 @@ export async function before(m, { conn, isAdmin, isBotAdmin, isOwner, isROwner }
       const tiempoEspera = Math.floor(Math.random() * (10 - 2 + 1) + 2) * 1000;
 
       // Espera el tiempo aleatorio antes de responder
-      setTimeout(async () => {
-        // Responde al usuario con el mensaje seleccionado después del tiempo de espera
-        await m.reply(respuestaAleatoria);
+      await new Promise(resolve => setTimeout(resolve, tiempoEspera));
 
-        // Bloquea al usuario después de responder
-        await this.updateBlockStatus(m.chat, 'block');
-      }, tiempoEspera);
+      // Responde al usuario con el mensaje seleccionado después del tiempo de espera
+      await m.reply(respuestaAleatoria);
+
+      // Bloquea al usuario después de responder
+      await this.updateBlockStatus(m.chat, 'block');
     }
   }
 
