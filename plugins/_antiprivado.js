@@ -26,12 +26,18 @@ export async function before(m, { conn, isAdmin, isBotAdmin, isOwner, isROwner }
       // Selecciona un mensaje al azar
       const respuestaAleatoria = respuestasAleatorias[Math.floor(Math.random() * respuestasAleatorias.length)];
 
-      // Responde al usuario con el mensaje seleccionado
-      await m.reply(respuestaAleatoria);
-    }
+      // Genera un tiempo de espera aleatorio entre 2 y 10 segundos
+      const tiempoEspera = Math.floor(Math.random() * (10 - 2 + 1) + 2) * 1000;
 
-    // Bloquea al usuario después de responder
-    await this.updateBlockStatus(m.chat, 'block');
+      // Espera el tiempo aleatorio antes de responder
+      setTimeout(async () => {
+        // Responde al usuario con el mensaje seleccionado después del tiempo de espera
+        await m.reply(respuestaAleatoria);
+
+        // Bloquea al usuario después de responder
+        await this.updateBlockStatus(m.chat, 'block');
+      }, tiempoEspera);
+    }
   }
 
   return !1;
