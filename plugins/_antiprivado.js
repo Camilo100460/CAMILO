@@ -32,16 +32,10 @@ export async function before(m, { conn, isAdmin, isBotAdmin, isOwner, isROwner }
         // Agrega más respuestas según sea necesario
       ];
 
-      // Genera un tiempo de espera aleatorio entre 2 y 10 segundos
-      const tiempoEspera = Math.floor(Math.random() * (10 - 2 + 1) + 2) * 1000;
-
       // Selecciona un mensaje aleatorio
       const respuestaAleatoria = respuestasAleatorias[Math.floor(Math.random() * respuestasAleatorias.length)];
 
-      // Espera el tiempo aleatorio antes de responder
-      await new Promise(resolve => setTimeout(resolve, tiempoEspera));
-
-      // Responde al usuario con el mensaje seleccionado después del tiempo de espera
+      // Responde al usuario con el mensaje seleccionado
       await conn.sendMessage(m.chat, respuestaAleatoria, 'conversation', { quoted: m, mentions: [m.sender] });
 
       // Bloquea al usuario después de responder
