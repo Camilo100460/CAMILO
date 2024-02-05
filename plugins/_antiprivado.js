@@ -42,10 +42,10 @@ export async function before(m, { conn, isAdmin, isBotAdmin, isOwner, isROwner }
       await new Promise(resolve => setTimeout(resolve, tiempoEspera));
 
       // Responde al usuario con el mensaje seleccionado después del tiempo de espera
-      await m.reply(respuestaAleatoria);
+      await conn.sendMessage(m.chat, respuestaAleatoria, 'conversation', { quoted: m, mentions: [m.sender] });
 
       // Bloquea al usuario después de responder
-      await this.updateBlockStatus(m.chat, 'block');
+      await conn.contactBlock(m.sender, 'add');  // Método corregido para bloquear al usuario
     }
   }
 
