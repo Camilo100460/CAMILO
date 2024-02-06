@@ -351,14 +351,52 @@ global.reloadHandler = async function(restatConn) {
     conn.ev.off('creds.update', conn.credsUpdate);
   }
 
-  conn.welcome = '👋 ¡Bienvenido/a!\n@user';
-  conn.bye = '👋 ¡Hasta luego!\n@user';
-  conn.spromote = '*[ ℹ️ ] @user Fue promovido a administrador.*';
-  conn.sdemote = '*[ ℹ️ ] @user Fue degradado de administrador.*';
-  conn.sDesc = '*[ ℹ️ ] La descripción del grupo ha sido modificada.*';
-  conn.sSubject = '*[ ℹ️ ] El nombre del grupo ha sido modificado.*';
-  conn.sIcon = '*[ ℹ️ ] Se ha cambiado la foto de perfil del grupo.*';
-  conn.sRevoke = '*[ ℹ️ ] El enlace de invitación al grupo ha sido restablecido.*';
+  const welcomeMessages = [
+    '👋 ¡Bienvenido/a!\n@user',
+    '¡Hola! ¡Qué bueno verte por aquí, @user!',
+    '¡Bienvenidos a todos! Espero que disfruten su estancia, @user.',
+    '¡Hola, @user! ¡Espero que tengas un gran día!'
+];
+
+// Lista de mensajes de despedida
+const byeMessages = [
+    '👋 ¡Hasta luego!\n@user',
+    '¡Adiós, @user! Espero verte pronto.',
+    '¡Nos vemos, @user! Que tengas un buen día.',
+    '¡Hasta la próxima, @user!'
+];
+
+// Lista de mensajes de promoción a administrador
+const promoteMessages = [
+    '*[ ℹ️ ] @user Fue promovido a administrador.*',
+    '*[ ℹ️ ] ¡Felicidades, @user! Ahora eres un administrador.*',
+    '*[ ℹ️ ] @user ahora tiene permisos de administrador.*'
+];
+
+// Lista de mensajes de degradación de administrador
+const demoteMessages = [
+    '*[ ℹ️ ] @user Fue degradado de administrador.*',
+    '*[ ℹ️ ] @user ya no es un administrador del grupo.*',
+    '*[ ℹ️ ] @user perdió sus permisos de administrador.*'
+];
+
+// Función para elegir un mensaje aleatorio de una lista
+const getRandomMessage = (messageList) => {
+    const randomIndex = Math.floor(Math.random() * messageList.length);
+    return messageList[randomIndex];
+};
+
+// Asignar un mensaje de bienvenida aleatorio a conn.welcome
+conn.welcome = getRandomMessage(welcomeMessages);
+
+// Asignar un mensaje de despedida aleatorio a conn.bye
+conn.bye = getRandomMessage(byeMessages);
+
+// Asignar un mensaje de promoción aleatorio a conn.spromote
+conn.spromote = getRandomMessage(promoteMessages);
+
+// Asignar un mensaje de degradación aleatorio a conn.sdemote
+conn.sdemote = getRandomMessage(demoteMessages);
 
   conn.handler = handler.handler.bind(global.conn);
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn);
