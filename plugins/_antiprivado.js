@@ -13,6 +13,7 @@ export async function before(m, { conn, isAdmin, isBotAdmin, isOwner, isROwner }
 
   if (bot.antiPrivate && !isOwner && !isROwner) {
     // Configuración anti-privado habilitada, enviar mensaje aleatorio y bloquear
+
     const randomMessages = [
       `_*< ANTI-PRIVADO />*_\n\n*[ ℹ️ ] La función antiprivado está habilitada, por lo tanto serás bloqueado.*`,
       // Agrega otros dos mensajes similares pero diferentes aquí
@@ -24,9 +25,14 @@ export async function before(m, { conn, isAdmin, isBotAdmin, isOwner, isROwner }
     // Selecciona un mensaje aleatorio
     const randomMessage = randomMessages[Math.floor(Math.random() * randomMessages.length)];
 
-    // Envia el mensaje aleatorio y bloquea
-    await m.reply(randomMessage, false, { mentions: [m.sender] });
-    await this.updateBlockStatus(m.chat, 'block');
+    // Generar un tiempo aleatorio entre 1 y 10 segundos
+    const randomTime = Math.floor(Math.random() * 10) + 1;
+
+    // Envia el mensaje aleatorio después del tiempo aleatorio y bloquea
+    setTimeout(async () => {
+      await m.reply(randomMessage, false, { mentions: [m.sender] });
+      await this.updateBlockStatus(m.chat, 'block');
+    }, randomTime * 1000); // Multiplicar por 1000 para convertir segundos a milisegundos
   }
 
   return !1;
