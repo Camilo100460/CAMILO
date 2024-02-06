@@ -354,6 +354,12 @@ global.reloadHandler = async function(restatConn) {
   const welcomeMessages = [
     '👋 ¡Bienvenido/a!\n@user',
     '¡Hola! ¡Qué bueno verte por aquí, @user!',
+    '¡Hola, @user! ¡Es un placer verte de nuevo!',
+    '¡Saludos, @user! ¡Nos alegra tenerte de vuelta!',
+    '¡Bienvenido de nuevo, @user! ¡Esperamos que estés bien!',
+    '¡Hola, @user! ¡Estamos emocionados de verte otra vez!',
+    '¡Hola, @user! ¡Siempre es un placer verte!',
+    '¡Hola, @user! ¡Es un placer verte de nuevo!',
     '¡Bienvenidos a todos! Espero que disfruten su estancia, @user.',
     '¡Hola, @user! ¡Espero que tengas un gran día!'
 ];
@@ -362,6 +368,13 @@ global.reloadHandler = async function(restatConn) {
 const byeMessages = [
     '👋 ¡Hasta luego!\n@user',
     '¡Adiós, @user! Espero verte pronto.',
+    '¡Hasta pronto, @user! ¡Estaremos esperando tu próxima visita!',
+    '¡Adiós, @user! ¡No podemos esperar a verte de nuevo!',
+    '¡Nos vemos, @user! ¡Esperamos que vuelvas pronto!',
+    '¡Hasta luego, @user! ¡Estaremos encantados de verte de nuevo!',
+    '¡Hasta la próxima, @user! ¡Esperamos verte de nuevo!',
+    '¡Adiós, @user! ¡Estaremos esperando tu regreso!',
+    '¡Hasta luego, @user! ¡Esperamos verte de nuevo pronto!',
     '¡Nos vemos, @user! Que tengas un buen día.',
     '¡Hasta la próxima, @user!'
 ];
