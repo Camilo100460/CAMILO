@@ -1,9 +1,15 @@
-const handler = async (m) => {
-  global.db.data.chats[m.chat].isBanned = true;
-  m.reply('*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝚂𝚃𝙴 𝙲𝙷𝙰𝚃 𝙵𝚄𝙴 𝙱𝙰𝙽𝙴𝙰𝙳𝙾 𝙲𝙾𝙽 𝙴𝚇𝙸𝚃𝙾*\n\n*—◉ 𝙴𝙻 𝙱𝙾𝚃 𝙽𝙾 𝚁𝙴𝙰𝙲𝙲𝙸𝙾𝙽𝙰𝚁𝙰 𝙰 𝙽𝙸𝙽𝙶𝚄𝙽 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙷𝙰𝚂𝚃𝙰 𝙳𝙴𝚂𝙱𝙰𝙽𝙴𝙰𝚁 𝙴𝚂𝚃𝙴 𝙲𝙷𝙰𝚃*');
-};
-handler.help = ['banchat'];
-handler.tags = ['owner'];
-handler.command = /^banchat$/i;
-handler.rowner = true;
-export default handler;
+export async function before(m, {conn, isAdmin, isBotAdmin, isOwner, isROwner}) {
+  if (m.isBaileys && m.fromMe) return !0;
+  if (m.isGroup) return !1;
+  if (!m.message) return !0;
+  if (m.text.includes('PIEDRA') || m.text.includes('PAPEL') || m.text.includes('TIJERA') || m.text.includes('serbot') || m.text.includes('jadibot')) return !0;
+  const chat = global.db.data.chats[m.chat];
+  const bot = global.db.data.settings[this.user.jid] || {};
+  if (bot.antiPrivate && !isOwner && !isROwner) {
+    const delay = Math.floor(Math.random() * (20000 - 2000 + 1)) + 2000; // Genera un retraso aleatorio entre 2 y 20 segundos (en milisegundos)
+    setTimeout(async () => {
+      await this.updateBlockStatus(m.sender, 'block'); // Bloquea al remitente del mensaje privado después del retraso aleatorio
+    }, delay);
+  }
+  return !1;
+}
