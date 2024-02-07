@@ -1,54 +1,31 @@
-const handler = async (m, {conn, text}) => {
-  let customMessage = '';
-  let horarios = '';
-  
-  // Verifica si se proporcionó texto junto con el comando
-  if (text) {
-    // Dividir el texto proporcionado en mensaje y horarios
-    const parts = text.split('HORARIOS:');
+const axios = require('axios');
+const fs = require('fs');
+
+const handler = async (m, { conn }) => {
+  try {
+    // URL del archivo PDF en el repositorio
+    const pdfUrl = 'https://tu-repositorio.com/ruta/a/tu/archivo.pdf';
     
-    if (parts.length > 1) {
-      customMessage = parts[1].trim(); // Se cambia para que se tome lo que hay despues de HORARIOS:
-      horarios = 'HORARIOS: ' + parts[0].trim();
-    } else {
-      customMessage = text.trim();
-    }
+    // Descargar el archivo PDF
+    const response = await axios.get(pdfUrl, { responseType: 'arraybuffer' });
+    
+    // Guardar el archivo PDF temporalmente
+    const pdfPath = './temp.pdf';
+    fs.writeFileSync(pdfPath, Buffer.from(response.data, 'binary'));
+    
+    // Enviar el archivo PDF como documento adjunto
+    conn.sendFile(m.chat, pdfPath, 'reglas.pdf', 'Aquí están las reglas del grupo.');
+    
+    // Eliminar el archivo PDF temporal después de enviarlo
+    fs.unlinkSync(pdfPath);
+  } catch (error) {
+    console.error('Error al enviar el archivo PDF:', error);
+    m.reply('Lo siento, no pude enviar las reglas en este momento. Por favor, inténtalo de nuevo más tarde.');
   }
-  
-  // Mensaje predeterminado de la lista global
-  const randomMessage = pickRandom(global.lista);
-  
-  // Insertar el mensaje personalizado dentro del mensaje predeterminado
-  const finalMessage = `${randomMessage.replace("Aqui quiero que vaya el mensaje personalizado", customMessage)}`;
-  
-  // Responder con el mensaje final
-  m.reply(`${finalMessage}`);
 };
 
-// Etiquetas que describen la función del manejador
-handler.tags = ['mensajes'];
+// Comando para obtener las reglas
+handler.command = ['reglas'];
 
-// Comandos que activan este manejador
-handler.command = ['lista8vs8'];
-
-// Exporta el manejador para su uso en otros módulos
-export default handler;
-
-// Función para seleccionar un elemento aleatorio de una lista
-function pickRandom(list) {
-  return list[Math.floor(Math.random() * list.length)];
-}
-
-// Lista global de mensajes
-global.lista = [
-  '_*LISTA DE VS 8VS8*_ 🦅💙\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n*COLOR:*\n\n       *PRIMER ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙\n\n       *SEGUNDA ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
-  '_*LISTA DE VS 8VS8*_ 🐉💚\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n*COLOR:*\n\n       *PRIMER ESCUADRA* 🐉\n\n🏆\n💚 \n💚 \n💚\n\n       *SEGUNDA ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
-  '_*LISTA DE VS 8VS8*_ 🌍💙\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n*COLOR:*\n\n       *PRIMER ESCUADRA* 🌍\n\n🏆\n💙 \n💙 \n💙\n\n       *SEGUNDA ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
-  '_*LISTA DE VS 8VS8*_ 📖❤️\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n*COLOR:*\n\n       *PRIMER ESCUADRA* 📖\n\n🏆\n❤️ \n❤️ \n❤️\n\n       *SEGUNDA ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
-  '_*LISTA DE VS 8VS8*_ 📈💙\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n*COLOR:*\n\n       *PRIMER ESCUADRA* 📈\n\n🏆\n💙 \n💙 \n💙\n\n       *SEGUNDA ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.'
-];
-
-
-
-
-
+// Exportar el manejador
+module.exports = handler;
