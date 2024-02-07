@@ -10,8 +10,8 @@ const handler = async (m, {conn, text}) => {
     const parts = text.split('HORARIOS:');
     
     if (parts.length > 1) {
-      customMessage = parts[0].trim();
-      horarios = 'HORARIOS: ' + parts[1].trim();
+      customMessage = parts[1].trim(); // Se cambia para que se tome lo que hay despues de HORARIOS:
+      horarios = 'HORARIOS: ' + parts[0].trim();
     } else {
       customMessage = text.trim();
     }
@@ -21,10 +21,10 @@ const handler = async (m, {conn, text}) => {
   const randomMessage = pickRandom(global.lista);
   
   // Concatenar el mensaje personalizado (si existe) con el mensaje aleatorio
-  const finalMessage = `${customMessage} ${horarios} ${randomMessage}`;
+  const finalMessage = `${horarios} ${customMessage} ${randomMessage}`;
   
   // Responder con el mensaje final
-  m.reply(`${finalMessage}`);
+  m.reply(`💬• ${finalMessage}`);
 };
 
 // Etiquetas que describen la función del manejador
