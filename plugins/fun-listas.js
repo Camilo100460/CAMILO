@@ -24,7 +24,7 @@ const handler = async (m, {conn, text}) => {
   const finalMessage = `${customMessage} ${horarios} ${randomMessage}`;
   
   // Responder con el mensaje final
-  m.reply(`💬• ${finalMessage}`);
+  m.reply(`${finalMessage}`);
 };
 
 // Etiquetas que describen la función del manejador
