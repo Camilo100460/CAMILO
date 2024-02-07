@@ -4,7 +4,7 @@ const fs = require('fs');
 const handler = async (m, { conn }) => {
   try {
     // URL del archivo PDF en el repositorio
-    const pdfUrl = 'https://tu-repositorio.com/ruta/a/tu/archivo.pdf';
+    const pdfUrl = 'https://github.com/Camilo100460/CAMILO/blob/master/src/REGLAS_JUEGO.pdf';
     
     // Descargar el archivo PDF
     const response = await axios.get(pdfUrl, { responseType: 'arraybuffer' });
