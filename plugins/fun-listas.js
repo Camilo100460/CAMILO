@@ -20,11 +20,11 @@ const handler = async (m, {conn, text}) => {
   // Mensaje predeterminado de la lista global
   const randomMessage = pickRandom(global.lista);
   
-  // Concatenar el mensaje personalizado (si existe) con el mensaje aleatorio
-  const finalMessage = `${horarios} ${customMessage} ${randomMessage}`;
+  // Insertar el mensaje personalizado dentro del mensaje predeterminado
+  const finalMessage = `${randomMessage.replace("Aqui quiero que vaya el mensaje personalizado", customMessage)}`;
   
   // Responder con el mensaje final
-  m.reply(`💬• ${finalMessage}`);
+  m.reply(`${finalMessage}`);
 };
 
 // Etiquetas que describen la función del manejador
@@ -43,9 +43,9 @@ function pickRandom(list) {
 
 // Lista global de mensajes
 global.lista = [
-  'LISTA DE VS 🦅💙\n\n⏰HORARIOS:\n\nPRIMER ESCUADRA🦅\n\n👑\n💙\n💙\n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
-  'LISTA DE VS 🦅💙\n\n⏰HORARIOS:\n\nPRIMER ESCUADRA🦅\n\n👑\n💙\n💙\n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
-  'LISTA DE VS 🦅💙\n\n⏰HORARIOS:\n\nPRIMER ESCUADRA🦅\n\n👑\n💙\n💙\n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
-  'LISTA DE VS 🦅💙\n\n⏰HORARIOS:\n\nPRIMER ESCUADRA🦅\n\n👑\n💙\n💙\n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
-  'LISTA DE VS 🦅💙\n\n⏰HORARIOS:\n\nPRIMER ESCUADRA🦅\n\n👑\n💙\n💙\n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD'
+  'LISTA DE VS 🦅💙\n\n⏰HORARIOS: "Aqui quiero que vaya el mensaje personalizado\n\nPRIMER ESCUADRA🦅\n\n👑\n💙\n💙\n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
+  'LISTA DE VS 🦅💙\n\n⏰HORARIOS: "Aqui quiero que vaya el mensaje personalizado\n\nPRIMER ESCUADRA🦅\n\n👑\n💙\n💙\n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
+  'LISTA DE VS 🦅💙\n\n⏰HORARIOS: "Aqui quiero que vaya el mensaje personalizado\n\nPRIMER ESCUADRA🦅\n\n👑\n💙\n💙\n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
+  'LISTA DE VS 🦅💙\n\n⏰HORARIOS: "Aqui quiero que vaya el mensaje personalizado\n\nPRIMER ESCUADRA🦅\n\n👑\n💙\n💙\n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
+  'LISTA DE VS 🦅💙\n\n⏰HORARIOS: "Aqui quiero que vaya el mensaje personalizado\n\nPRIMER ESCUADRA🦅\n\n👑\n💙\n💙\n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD'
 ];
