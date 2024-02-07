@@ -58,31 +58,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   🤖 _bot_ (sin prefijo)
 
 
- _*< 🤖 SUB-BOTS 📚 />*_
-
-  🤖 _${usedPrefix}serbot --code_
-  🤖 _${usedPrefix}serbot_
-  🗑️ _${usedPrefix}deletebot_
-  🔑 _${usedPrefix}token_
-  🛑 _${usedPrefix}stop_
-  🤖 _${usedPrefix}bots_
-  🔒 _${usedPrefix}enable restrict_
-  🔓 _${usedPrefix}disable restrict_
-  📖 _${usedPrefix}enable autoread_
-  🚫 _${usedPrefix}disable autoread_
-  🚫 _${usedPrefix}enable antispam_
-  ✅ _${usedPrefix}disable antispam_
-  📵 _${usedPrefix}enable anticall_
-  ✅ _${usedPrefix}disable anticall_
-  🧠 _${usedPrefix}enable modoia_
-  🚫 _${usedPrefix}disable modoia_
-  🎵 _${usedPrefix}enable audios_bot_
-  🚫 _${usedPrefix}disable audios_bot_
-  🚫 _${usedPrefix}enable antiprivado_
-  ✅ _${usedPrefix}disable antiprivado_
-  
-
- _*< 🎮 JUEGOS 🕹️ />*_
+  _*< 🎮 JUEGOS 🕹️ />*_
 
   🧮 _${usedPrefix}mates *<noob / easy / medium / hard / extreme /impossible /impossible2>*_
   🎭 _${usedPrefix}fake *<txt1> <@tag> <txt2>*_
@@ -106,13 +82,6 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   🎲 _${usedPrefix}ttt *<nombre sala>*_
   ❌ _${usedPrefix}delttt_
   ❓ _${usedPrefix}acertijo_
-  🦢 _${usedPrefix}eliminainfiel_
-  🎻 _${usedPrefix}eliminaelmasfeo_
-  🖋️ _${usedPrefix}eliminafea_
-  🥂 _${usedPrefix}eliminabot_
-  🍾 _${usedPrefix}eliminacachona_
-  🎨 _${usedPrefix}eliminagay_
-  🎭 _${usedPrefix}eliminafiel_
   🤖 _${usedPrefix}simi *<txt>*_
   🏆 _${usedPrefix}top *<txt>*_
   🌈 _${usedPrefix}topgays_
