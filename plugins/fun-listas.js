@@ -41,9 +41,9 @@ function pickRandom(list) {
 
 // Lista global de mensajes
 global.lista = [
-  'LISTA DE VS 🦅💙\n\n⏰HORARIOS: Aqui quiero que vaya el mensaje personalizado\n\nPRIMER ESCUADRA🦅\n\n👑\n💙\n💙\n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
-  'LISTA DE VS 🦅💙\n\n⏰HORARIOS: Aqui quiero que vaya el mensaje personalizado\n\nPRIMER ESCUADRA🦅\n\n👑\n💙\n💙\n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
-  'LISTA DE VS 🦅💙\n\n⏰HORARIOS: Aqui quiero que vaya el mensaje personalizado\n\nPRIMER ESCUADRA🦅\n\n👑\n💙\n💙\n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
-  'LISTA DE VS 🦅💙\n\n⏰HORARIOS: Aqui quiero que vaya el mensaje personalizado\n\nPRIMER ESCUADRA🦅\n\n👑\n💙\n💙\n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
-  'LISTA DE VS 🦅💙\n\n⏰HORARIOS: Aqui quiero que vaya el mensaje personalizado\n\nPRIMER ESCUADRA🦅\n\n👑\n💙\n💙\n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.'
+  'LISTA DE VS 🦅💙\n\n⏰HORARIOS: Aqui quiero que vaya el mensaje personalizado\n\nPRIMER ESCUADRA 🦅\n\n👑\n💙\n💙\n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
+  'LISTA DE VS 🦅💙\n\n⏰HORARIOS: Aqui quiero que vaya el mensaje personalizado\n\nPRIMER ESCUADRA 🦅\n\n👑\n💙\n💙\n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
+  'LISTA DE VS 🦅💙\n\n⏰HORARIOS: Aqui quiero que vaya el mensaje personalizado\n\nPRIMER ESCUADRA 🦅\n\n👑\n💙\n💙\n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
+  'LISTA DE VS 🦅💙\n\n⏰HORARIOS: Aqui quiero que vaya el mensaje personalizado\n\nPRIMER ESCUADRA 🦅\n\n👑\n💙\n💙\n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
+  'LISTA DE VS 🦅💙\n\n⏰HORARIOS: Aqui quiero que vaya el mensaje personalizado\n\nPRIMER ESCUADRA 🦅\n\n👑\n💙\n💙\n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.'
 ];
