@@ -1,5 +1,3 @@
-// By https://github.com/elrebelde21
-
 const handler = async (m, {conn, text}) => {
   let customMessage = '';
   let horarios = '';
