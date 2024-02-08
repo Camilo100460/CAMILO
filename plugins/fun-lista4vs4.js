@@ -1,4 +1,4 @@
-let color = 'Negro'; // Variable para almacenar el color
+let color = ''; // Variable para almacenar el color
 
 const handler = async (m, {conn, text}) => {
   // Si el color no se ha establecido, preguntar por el color
