@@ -25,7 +25,7 @@ const handler = async (m, {conn, text}) => {
   }
   
   // Mensaje predeterminado de la lista global
-  const randomMessage = pickRandom(global.listaaa);
+  const randomMessage = pickRandom(global.listaaaaa);
   
   // Insertar el mensaje personalizado dentro del mensaje predeterminado
   const finalMessage = `${randomMessage.replace("Aqui quiero que vaya el mensaje personalizado", customMessage)}`;
@@ -38,7 +38,7 @@ const handler = async (m, {conn, text}) => {
 handler.tags = ['freefire'];
 
 // Comandos que activan este manejador
-handler.command = ['lista4vs4'];
+handler.command = ['prueba'];
 
 // Exporta el manejador para su uso en otros módulos
 export default handler;
@@ -49,7 +49,7 @@ function pickRandom(list) {
 }
 
 // Lista global de mensajes
-global.listaaa = [
+global.listaaaaa = [
   '_*LISTA DE VS*_ 🦅💙\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n\n       *PRIMER ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
   '_*LISTA DE VS*_ 🦅💙\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n\n       *PRIMER ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
   '_*LISTA DE VS*_ 🦅💙\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n\n       *PRIMER ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
