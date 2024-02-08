@@ -1,5 +1,5 @@
 // Handler
-let handler = async (m, { conn, text }) => {
+let handler = async (m, { conn, text, usedPrefix }) => {
   if (text.toLowerCase() === ".freefire") {
     m.reply(`
 _*< 🤖 SOBRE EL BOT 📚 />*_
