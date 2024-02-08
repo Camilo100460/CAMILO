@@ -5,8 +5,8 @@ const handler = async (m, {conn, text}) => {
     const parts = text.split('/');
     
     if (parts.length > 1) {
-      const hora = parts[0].trim().replace('(', '').replace(')', ''); // Se extrae la hora
-      const color = parts[1].trim().replace('(', '').replace(')', ''); // Se extrae el color
+      const hora = parts[0].trim(); // Se extrae la hora
+      const color = parts[1].trim(); // Se extrae el color
 
       // Mensaje predeterminado de la lista global
       const randomMessage = pickRandom(global.listaaaaa);
@@ -17,10 +17,10 @@ const handler = async (m, {conn, text}) => {
       // Responder con el mensaje final
       m.reply(`${finalMessage}`);
     } else {
-      m.reply('Por favor, envía tu mensaje en el formato ".prueba (hora)/(color)".');
+      m.reply('Por favor, envía tu mensaje en el formato ".prueba hora/color".');
     }
   } else {
-    m.reply('Por favor, envía tu mensaje en el formato ".prueba (hora)/(color)".');
+    m.reply('Por favor, envía tu mensaje en el formato ".prueba hora/color".');
   }
 };
 
