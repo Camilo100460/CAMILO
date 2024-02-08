@@ -1,5 +1,9 @@
-const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, isPrems}) => {
-  if (!/^\.(freefire)$/i.test(text)) return; // Se activa solo cuando se escribe ".freefire"
+import { clockString } from './clockString.js'; // Asegúrate de importar todas las dependencias necesarias
+
+import fetch from 'node-fetch';
+
+const handler = async (m, { conn, usedPrefix, __dirname, text }) => {
+  if (!/^\.freefire$/i.test(text)) return; // Se activa solo cuando se escribe ".freefire"
   try {
     const pp = imagen4;
     const img = './Menu2.jpg';
@@ -48,8 +52,9 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
     console.log(e)
   }
 }
+
 handler.help = ['freefire']
 handler.tags = ['game']
-handler.command = /^(freefire)$/i
+handler.command = /^freefire$/i
 
-module.exports = handler
+export default handler;
