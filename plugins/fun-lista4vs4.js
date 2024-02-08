@@ -1,21 +1,27 @@
-let color = ''; // Variable para almacenar el color
-let hora = ''; // Variable para almacenar la hora
-
 const handler = async (m, {conn, text}) => {
-  // Si el color y la hora no se han establecido, preguntar por ellos
-  if (!color || !hora) {
-    m.reply('Por favor, envía tu mensaje en el formato ".prueba (hora)/(color)".');
-    return;
-  }
+  // Verifica si se proporcionó texto junto con el comando
+  if (text) {
+    // Dividir el texto proporcionado en hora y color
+    const parts = text.split('/');
+    
+    if (parts.length > 1) {
+      const hora = parts[0].trim().replace('(', '').replace(')', ''); // Se extrae la hora
+      const color = parts[1].trim().replace('(', '').replace(')', ''); // Se extrae el color
 
-  // Mensaje predeterminado de la lista global
-  const randomMessage = pickRandom(global.listaaaaa);
-  
-  // Insertar la hora y el color dentro del mensaje predeterminado
-  const finalMessage = `${randomMessage.replace("Aqui quiero que vaya el mensaje personalizado", hora).replace("COLOR:", "COLOR: " + color)}`;
-  
-  // Responder con el mensaje final
-  m.reply(`${finalMessage}`);
+      // Mensaje predeterminado de la lista global
+      const randomMessage = pickRandom(global.listaaaaa);
+      
+      // Insertar la hora y el color dentro del mensaje predeterminado
+      const finalMessage = `${randomMessage.replace("Aqui quiero que vaya el mensaje personalizado", hora).replace("COLOR:", "COLOR: " + color)}`;
+      
+      // Responder con el mensaje final
+      m.reply(`${finalMessage}`);
+    } else {
+      m.reply('Por favor, envía tu mensaje en el formato ".prueba (hora)/(color)".');
+    }
+  } else {
+    m.reply('Por favor, envía tu mensaje en el formato ".prueba (hora)/(color)".');
+  }
 };
 
 // Etiquetas que describen la función del manejador
