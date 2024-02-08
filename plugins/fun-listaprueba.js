@@ -1,17 +1,19 @@
-const handler = async (m, { conn, text, usedPrefix }) => {
+const handler = async (m, { conn }) => {
   // Función para solicitar el color al usuario
   const askForColor = async () => {
     return new Promise((resolve, reject) => {
+      const waitForColor = (msg) => {
+        if (msg.key.fromMe && msg.message && msg.message.conversation) {
+          const color = msg.message.conversation.trim();
+          resolve(color);
+          conn.off('message-new', waitForColor);
+        }
+      };
+
+      conn.on('message-new', waitForColor);
+
       conn.sendMessage(m.chat, '_Por favor, ingresa el color que deseas para el menú:_', 'conversation', {
         quoted: m,
-        contextInfo: { mentionedJid: conn.parseMention(text) }
-      }).then(() => {
-        conn.on('message-new', async (msg) => {
-          if (msg.key.fromMe && msg.key.id === conn.user.jid.split('@')[0]) {
-            const color = msg.message.conversation;
-            resolve(color);
-          }
-        });
       });
     });
   };
