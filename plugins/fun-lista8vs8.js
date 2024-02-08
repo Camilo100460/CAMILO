@@ -16,7 +16,7 @@ const handler = async (m, {conn, text}) => {
   }
   
   // Mensaje predeterminado de la lista global
-  const randomMessage = pickRandom(global.listae);
+  const randomMessage = pickRandom(global.listaaa);
   
   // Insertar el mensaje personalizado dentro del mensaje predeterminado
   const finalMessage = `${randomMessage.replace("Aqui quiero que vaya el mensaje personalizado", customMessage)}`;
@@ -40,7 +40,7 @@ function pickRandom(list) {
 }
 
 // Lista global de mensajes
-global.listae = [
+global.listaaa = [
   '_*LISTA DE VS 8VS8*_ 🦅💙\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n*COLOR:*\n\n       *PRIMER ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙\n\n       *SEGUNDA ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
   '_*LISTA DE VS 8VS8*_ 🐉💚\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n*COLOR:*\n\n       *PRIMER ESCUADRA* 🐉\n\n🏆\n💚 \n💚 \n💚\n\n       *SEGUNDA ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
   '_*LISTA DE VS 8VS8*_ 🌍💙\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n*COLOR:*\n\n       *PRIMER ESCUADRA* 🌍\n\n🏆\n💙 \n💙 \n💙\n\n       *SEGUNDA ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
