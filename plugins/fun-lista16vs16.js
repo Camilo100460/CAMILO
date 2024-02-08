@@ -4,7 +4,7 @@ const handler = async (m, {conn, text}) => {
     // Dividir el texto proporcionado en hora, color y reglas de los líderes
     const parts = text.split('/');
     
-    if (parts.length > 2) {
+    if (parts.length === 3) {
       const hora = parts[0].trim(); // Se extrae la hora
       const color = parts[1].trim(); // Se extrae el color
       const reglasLideres = parts[2].trim(); // Se extraen las reglas de los líderes
@@ -13,15 +13,15 @@ const handler = async (m, {conn, text}) => {
       const randomMessage = pickRandom(global.listaaaaa);
       
       // Insertar la hora, el color y las reglas de los líderes dentro del mensaje predeterminado
-      const finalMessage = `${randomMessage.replace("Aqui quiero que vaya el mensaje personalizado", hora).replace("COLOR:", "COLOR: " + color + "\n\nREGLAS LÍDERES: " + reglasLideres)}`;
+      const finalMessage = `${randomMessage.replace("Aqui quiero que vaya el mensaje personalizado", hora).replace("*COLOR*:", "*COLOR*: " + color).replace("*REGLAS*:", "*REGLAS*: " + reglasLideres)}`;
       
       // Responder con el mensaje final
       m.reply(`${finalMessage}`);
     } else {
-      m.reply('Por favor, envía tu mensaje en el formato ".prueba hora/color/reglas líderes".');
+      m.reply('Por favor, envía tu mensaje en el formato ".prueba1 hora/color/reglas líderes".');
     }
   } else {
-    m.reply('Por favor, envía tu mensaje en el formato ".prueba hora/color/reglas líderes".');
+    m.reply('Por favor, envía tu mensaje en el formato ".prueba1 hora/color/reglas líderes".');
   }
 };
 
