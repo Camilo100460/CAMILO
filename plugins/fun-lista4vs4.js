@@ -1,5 +1,4 @@
-let color = ''; // Variable para almacenar el color
-const colors = ['rojo', 'azul', 'verde', 'amarillo', 'naranja', 'violeta']; // Lista de colores principales
+let color = 'Negro'; // Variable para almacenar el color
 
 const handler = async (m, {conn, text}) => {
   // Si el color no se ha establecido, preguntar por el color
