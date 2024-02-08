@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, isPrems}) => {
-  if (!/^\.menu\s+(free ?fire)$/i.test(text)) return; // Se activa solo cuando se escribe ".menu freefire" o ".menu Free fire"
+  if (!/\bfree ?fire\b/i.test(text)) return; // Se activa solo cuando se menciona "freefire" o "Free fire" como palabra completa
   try {
     const pp = imagen4;
     const img = './Menu2.jpg';
