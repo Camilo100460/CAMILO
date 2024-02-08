@@ -1,33 +1,18 @@
 let color = ''; // Variable para almacenar el color
+let hora = ''; // Variable para almacenar la hora
 
 const handler = async (m, {conn, text}) => {
-  // Si el color no se ha establecido, preguntar por el color
-  if (!color) {
-    m.reply('Por favor, elige un color de la siguiente lista: ' + colors.join(', '));
+  // Si el color y la hora no se han establecido, preguntar por ellos
+  if (!color || !hora) {
+    m.reply('Por favor, envía tu mensaje en el formato ".prueba (hora)/(color)".');
     return;
   }
 
-  let customMessage = '';
-  let horarios = '';
-  
-  // Verifica si se proporcionó texto junto con el comando
-  if (text) {
-    // Dividir el texto proporcionado en mensaje y horarios
-    const parts = text.split('HORARIOS:');
-    
-    if (parts.length > 1) {
-      customMessage = parts[1].trim(); // Se cambia para que se tome lo que hay despues de HORARIOS:
-      horarios = '.prueba ' + parts[0].trim() + '/' + color;
-    } else {
-      customMessage = text.trim();
-    }
-  }
-  
   // Mensaje predeterminado de la lista global
   const randomMessage = pickRandom(global.listaaaaa);
   
-  // Insertar el mensaje personalizado dentro del mensaje predeterminado
-  const finalMessage = `${randomMessage.replace("Aqui quiero que vaya el mensaje personalizado", customMessage)}`;
+  // Insertar la hora y el color dentro del mensaje predeterminado
+  const finalMessage = `${randomMessage.replace("Aqui quiero que vaya el mensaje personalizado", hora).replace("COLOR:", "COLOR: " + color)}`;
   
   // Responder con el mensaje final
   m.reply(`${finalMessage}`);
