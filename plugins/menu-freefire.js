@@ -27,3 +27,5 @@ _*< 🤖 SOBRE EL BOT 📚 />*_
 handler.help = ['donasi'];
 handler.tags = ['info'];
 handler.command = /\.freefire|\.Free fire|\.free fire$/i;
+
+export default handler;
