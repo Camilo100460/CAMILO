@@ -12,7 +12,7 @@ const handler = async (m, {conn, text}) => {
       const randomMessage = pickRandom(global.listaaaaa);
       
       // Insertar la hora y el color dentro del mensaje predeterminado
-      const finalMessage = `${randomMessage.replace("Aqui quiero que vaya el mensaje personalizado", hora).replace("COLOR:", "COLOR: " + color)}`;
+      const finalMessage = `${randomMessage.replace("Aqui quiero que vaya el mensaje personalizado", hora).replace("*COLOR*:", "*COLOR*: " + color)}`;
       
       // Responder con el mensaje final
       m.reply(`${finalMessage}`);
