@@ -14,7 +14,7 @@ const handler = async (m, {conn, text, usedPrefix}) => {
 };
 
 // Etiquetas que describen la función del manejador
-handler.tags = ['freefire1'];
+handler.tags = ['freefi22re1'];
 
 // Comandos que activan este manejador
 handler.command = ['freefire'];
