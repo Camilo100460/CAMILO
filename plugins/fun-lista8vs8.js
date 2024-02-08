@@ -29,7 +29,7 @@ const handler = async (m, {conn, text}) => {
 handler.tags = ['freefire'];
 
 // Comandos que activan este manejador
-handler.command = ['lista 8vs8'];
+handler.command = ['lista_8vs8'];
 
 // Exporta el manejador para su uso en otros módulos
 export default handler;
