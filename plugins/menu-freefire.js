@@ -1,6 +1,5 @@
-import fetch from 'node-fetch';
 const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, isPrems}) => {
-  if (!/\bfree ?fire\b/i.test(text)) return; // Se activa solo cuando se menciona "freefire" o "Free fire" como palabra completa
+  if (!/^\.(freefire)$/i.test(text)) return; // Se activa solo cuando se escribe ".freefire"
   try {
     const pp = imagen4;
     const img = './Menu2.jpg';
@@ -49,8 +48,8 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
     console.log(e)
   }
 }
-handler.help = ['menu <freefire>']
+handler.help = ['freefire']
 handler.tags = ['game']
-handler.command = /^menu$/i
+handler.command = /^(freefire)$/i
 
 module.exports = handler
