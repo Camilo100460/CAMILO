@@ -2,15 +2,15 @@ const handler = async (m, { conn }) => {
   // Función para solicitar el color al usuario
   const askForColor = async () => {
     return new Promise((resolve, reject) => {
-      const waitForColor = (msg) => {
+      const listener = async (msg) => {
         if (msg.key.fromMe && msg.message && msg.message.conversation) {
           const color = msg.message.conversation.trim();
           resolve(color);
-          conn.removeListener('message-new', waitForColor);
+          conn.off('message-new', listener);
         }
       };
 
-      conn.addListener('message-new', waitForColor);
+      conn.on('message-new', listener);
 
       conn.sendMessage(m.chat, '_Por favor, ingresa el color que deseas para el menú:_', 'conversation', {
         quoted: m,
@@ -36,7 +36,7 @@ HORA:
 handler.tags = ['freefi22re1'];
 
 // Comandos que activan este manejador
-handler.command = ['prueba'];
+handler.command = ['freefire'];
 
 // Exporta el manejador para su uso en otros módulos
 export default handler;
