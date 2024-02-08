@@ -26,10 +26,10 @@ const handler = async (m, {conn, text}) => {
 };
 
 // Etiquetas que describen la función del manejador
-handler.tags = ['freefire54'];
+handler.tags = ['freefire'];
 
 // Comandos que activan este manejador
-handler.command = ['lista 4vs4'];
+handler.command = ['lista'];
 
 // Exporta el manejador para su uso en otros módulos
 export default handler;
