@@ -14,7 +14,18 @@ function pickRandom(list) {
 }
 
 global.chiste = [
-  "¿Cuál es el último animal que subió al arca de Noé? El del-fin..",
-  "¿Cómo se llama el primo de Bruce Lee? Broco Lee.",
-  "Una madre le dice a su hijo: Jaimito, me ha dicho un pajarito que te drogas. La que te drogas eres tú, que hablas con pajaritos."
+  " _*< 🤖 SOBRE EL BOT 📚 />*_
+
+  📜 _${usedPrefix}terminosycondiciones_
+  👥 _${usedPrefix}grupos_
+  📊 _${usedPrefix}estado_
+  📝 _${usedPrefix}infobot_
+  🚀 _${usedPrefix}speedtest_
+  💸 _${usedPrefix}donar_
+  👑 _${usedPrefix}owner_
+  💻 _${usedPrefix}script_
+  📝 _${usedPrefix}reporte *<txt>*_
+  🚪 _${usedPrefix}join *<wagp_url>*_
+  🔄 _${usedPrefix}fixmsgespera_
+  🤖 _bot_ (sin prefijo)"
 ];
