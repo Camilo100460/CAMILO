@@ -1,22 +1,18 @@
-const handler = async (m, {conn}) => {
-  m.reply(global.terminos);
+const handler = async (m, {conn, text}) => {
+  let customMessage = text ? text.trim() : '';
+  
+  // Mensaje predeterminado
+  const defaultMessage = '_*Hola mundo';
+  
+  // Responder con el mensaje final
+  m.reply(defaultMessage);
 };
-handler.customPrefix = /Free fire|Freefire|free fire|freefire/i;
-handler.command = new RegExp;
+
+// Etiquetas que describen la función del manejador
+handler.tags = ['freefire1'];
+
+// Comandos que activan este manejador
+handler.command = ['freefire'];
+
+// Exporta el manejador para su uso en otros módulos
 export default handler;
-
-global.terminos = `
-_*< 🤖 SOBRE EL BOT 📚 />*_
-
-📜 _${usedPrefix}terminosycondiciones_
-👥 _${usedPrefix}grupos_
-📊 _${usedPrefix}estado_
-📝 _${usedPrefix}infobot_
-🚀 _${usedPrefix}speedtest_
-💸 _${usedPrefix}donar_
-👑 _${usedPrefix}owner_
-💻 _${usedPrefix}script_
-📝 _${usedPrefix}reporte *<txt>*_
-🚪 _${usedPrefix}join *<wagp_url>*_
-🔄 _${usedPrefix}fixmsgespera_
-🤖 _bot_ (sin prefijo)`;
