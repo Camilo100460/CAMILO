@@ -36,7 +36,7 @@ HORA:
 handler.tags = ['freefi22re1'];
 
 // Comandos que activan este manejador
-handler.command = ['freefire'];
+handler.command = ['prueba'];
 
 // Exporta el manejador para su uso en otros módulos
 export default handler;
