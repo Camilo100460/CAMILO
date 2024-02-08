@@ -6,11 +6,11 @@ const handler = async (m, { conn }) => {
         if (msg.key.fromMe && msg.message && msg.message.conversation) {
           const color = msg.message.conversation.trim();
           resolve(color);
-          conn.off('message-new', waitForColor);
+          conn.removeListener('message-new', waitForColor);
         }
       };
 
-      conn.on('message-new', waitForColor);
+      conn.addListener('message-new', waitForColor);
 
       conn.sendMessage(m.chat, '_Por favor, ingresa el color que deseas para el menú:_', 'conversation', {
         quoted: m,
