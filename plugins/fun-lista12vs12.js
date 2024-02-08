@@ -26,7 +26,7 @@ const handler = async (m, {conn, text}) => {
 };
 
 // Etiquetas que describen la función del manejador
-handler.tags = ['mensajes'];
+handler.tags = ['freefire1'];
 
 // Comandos que activan este manejador
 handler.command = ['lista12vs12'];
