@@ -1,8 +1,3 @@
-
-Entiendo que estás teniendo problemas con los emojis en tu código. Aquí te dejo una versión modificada del código que debería manejar correctamente los emojis:
-
-JavaScript
-
 const handler = async (m, {conn, text}) => {
   // Verifica si se proporcionó texto junto con el comando
   if (text) {
