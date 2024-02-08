@@ -17,13 +17,12 @@ const handler = async (m, {conn, text}) => {
   }
 
   // Preguntar por el color
-  await conn.sendMessage(m.chat, '¿Qué color prefieres?', m)
-    .then(async (response) => {
-      color = (await conn.waitForMessage(response.key)).text;
-    });
+  await conn.sendMessage(m.chat, '¿Qué color prefieres?').then(async (response) => {
+    color = (await conn.waitForMessage(response.key)).text;
+  });
 
   // Mensaje predeterminado de la lista global
-  const randomMessage = pickRandom(global.listaaaaa);
+  const randomMessage = pickRandom(global.listaaa);
 
   // Insertar el mensaje personalizado dentro del mensaje predeterminado
   const finalMessage = `${randomMessage.replace("Aqui quiero que vaya el mensaje personalizado", customMessage)}\n${horarios} ${color}`;
@@ -36,7 +35,7 @@ const handler = async (m, {conn, text}) => {
 handler.tags = ['freefire'];
 
 // Comandos que activan este manejador
-handler.command = ['prueba1'];
+handler.command = ['lista4vs4'];
 
 // Exporta el manejador para su uso en otros módulos
 export default handler;
@@ -47,13 +46,11 @@ function pickRandom(list) {
 }
 
 // Lista global de mensajes
-global.listaaaaa = [
+global.listaaa = [
   '_*LISTA DE VS*_ 🦅💙\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n\n       *PRIMER ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
   '_*LISTA DE VS*_ 🐉💚\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n\n       *PRIMER ESCUADRA* 🐉\n\n🏆\n💚 \n💚 \n💚 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
   '_*LISTA DE VS*_ 🌍💙\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n\n       *PRIMER ESCUADRA* 🌍\n\n🏆\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
   '_*LISTA DE VS*_ 📖❤️\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n\n       *PRIMER ESCUADRA* 📖\n\n🏆\n❤️ \n❤️ \n❤️ \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
   '_*LISTA DE VS*_ 📈💙\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n\n       *PRIMER ESCUADRA* 📈\n\n🏆\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.'
 ];
-
-
 
