@@ -24,39 +24,40 @@ function obtenerHoroscopo(signo) {
 }
 
 let handler = (m, { usedPrefix, command, text }) => {
-    if (!text) throw `Ejemplo:\n${usedPrefix + command} 2003 02 25`
+    if (!text) throw `Ejemplo:\n${usedPrefix + command} 2003-02-25`
 
-    const date = new Date(text)
-    if (date == 'Fecha invalida, prueba con el siguiente formato AAAA MM DD Ejemplo: 2003 02 07 ') throw date
-    const d = new Date()
-    const [tahun, bulan, tanggal] = [d.getFullYear(), d.getMonth() + 1, d.getDate()]
-    const birth = [date.getFullYear(), date.getMonth() + 1, date.getDate()]
-    
-    const zodiac = getZodiac(birth[1], birth[2])
-    const ageD = new Date(d - date)
+    const [year, month, day] = text.split('-').map(Number)
+    const date = new Date(year, month - 1, day)
+
+    if (isNaN(date)) throw `Fecha inválida, por favor usa el siguiente formato: AAAA-MM-DD. Por ejemplo: ${usedPrefix + command} 2003-02-25`
+
+    const today = new Date()
+    const currentYear = today.getFullYear()
+    const currentMonth = today.getMonth() + 1
+    const currentDay = today.getDate()
+
+    const birth = [year, month, day]
+    const horoscopo = obtenerHoroscopo(getZodiac(month, day))
+
+    const ageD = new Date(today - date)
     const age = ageD.getFullYear() - new Date(1970, 0, 1).getFullYear()
 
-    const birthday = [tahun + (birth[1] < bulan), ...birth.slice(1)]
-    const cekusia = bulan === birth[1] && tanggal === birth[2] ? `${age} - Feliz cumpleaños 🥳` : age
+    const isBirthday = month === currentMonth && day === currentDay
+    const ageText = isBirthday ? `${age} - ¡Feliz cumpleaños! 🥳` : age
 
-    const horoscopo = obtenerHoroscopo(zodiac)
-
-    const teks = `
-Fecha de nacimiento: : ${birth.join('-')}
-Proximo cumpleaños : ${birthday.join('-')}
-Edad : ${cekusia}
-Signo zodical : ${zodiac}
-Horoscopo : ${horoscopo}
+    const replyText = `
+Fecha de nacimiento: ${birth.join('-')}
+Edad: ${ageText}
+Signo horóscopo: ${getZodiac(month, day)}
+Horóscopo: ${horoscopo}
 `.trim()
-    m.reply(teks)
+
+    m.reply(replyText)
 }
 
-handler.help = ['zodiac *2002 02 25*']
+handler.help = ['horóscopo <AAAA-MM-DD>']
 handler.tags = ['tools']
-
-handler.command = /^zodia[kc]$/i
-
-export default handler
+handler.command = /^hor[oó]scopo$/i
 
 const zodiak = [
     ["Capricornio", new Date(1970, 0, 1)],
@@ -76,5 +77,7 @@ const zodiak = [
 
 function getZodiac(month, day) {
     let d = new Date(1970, month - 1, day)
-    return zodiak.find(([_,_d]) => d >= _d)[0]
+    return zodiak.find(([_, _d]) => d >= _d)[0]
 }
+
+export default handler
