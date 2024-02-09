@@ -10,7 +10,7 @@ const handler = async (m, {conn, text}) => {
       const reglasLideres = parts[2].trim(); // Se extraen las reglas de los líderes
 
       // Mensaje predeterminado de la lista global
-      const randomMessage = pickRandom(global.listaaaaaaa);
+      const randomMessage = pickRandom(global.lista12);
       
       // Insertar la hora, el color y las reglas de los líderes dentro del mensaje predeterminado
       const finalMessage = `${randomMessage.replace("Aqui quiero que vaya el mensaje personalizado", hora).replace("*COLOR*:", "*COLOR*: " + color).replace("*REGLAS*:", "*REGLAS*: " + reglasLideres)}`;
@@ -40,7 +40,7 @@ function pickRandom(list) {
 }
 
 // Lista global de mensajes
-global.listaaaaaaa = [
+global.lista12 = [
   '_*LISTA DE VS 8VS8*_ 🦅💙\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n*COLOR*:\n*REGLAS*:\n\n       *PRIMER ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\n       *SEGUNDA ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
   '_*LISTA DE VS 8VS8*_ 🐉💚\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n*COLOR*:\n*REGLAS*:\n\n       *PRIMER ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\n       *SEGUNDA ESCUADRA* 🐉\n\n🏆\n💚 \n💚 \n💚 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
   '_*LISTA DE VS 8VS8*_ 🌍💙\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n*COLOR*:\n*REGLAS*:\n\n       *PRIMER ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\n       *SEGUNDA ESCUADRA* 🌍\n\n🏆\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
