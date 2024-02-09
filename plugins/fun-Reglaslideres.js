@@ -6,9 +6,3 @@ const rulesHandler = async (m) => {
 rulesHandler.tags = ['rules'];
 rulesHandler.command = ['reglas'];
 export default rulesHandler;
-
-
-handler.tags = ['freefire4'];
-handler.command = ['reglas'];
-export default handler;
-
