@@ -159,7 +159,6 @@ let handler = (m, { command, text }) => {
 
     const replyText = `
 📊 _*< HORÓSCOPO PARA EL DÍA />*_
-📌 *Hola,* ${taguser}
 
 📅• *Fecha de nacimiento*: ${birth.join('-')}
 🎂• *Edad*: ${ageText}
