@@ -7,7 +7,7 @@ let handler = (m, { usedPrefix, command, text }) => {
     const [tahun, bulan, tanggal] = [d.getFullYear(), d.getMonth() + 1, d.getDate()]
     const birth = [date.getFullYear(), date.getMonth() + 1, date.getDate()]
     
-    const zodiac = getZodiac(birth[1], birth[2])
+    const horoscopo = getHoroscopo(birth[1], birth[2])
     const ageD = new Date(d - date)
     const age = ageD.getFullYear() - new Date(1970, 0, 1).getFullYear()
 
@@ -17,18 +17,18 @@ let handler = (m, { usedPrefix, command, text }) => {
     const teks = `
 Fecha de nacimiento: : ${birth.join('-')}
 Edad : ${cekusia}
-Signo zodical : ${zodiac}
+Signo horóscopo : ${horoscopo}
 `.trim()
     m.reply(teks)
 }
-handler.help = ['zodiac *2002 02 25*']
+handler.help = ['horóscopo *2002 02 25*']
 handler.tags = ['tools']
 
-handler.command = /^zodia[kc]$/i
+handler.command = /^hor[oó]scopo$/i
 
 export default handler
 
-const zodiak = [
+const horoscopos = [
     ["Capricornio", new Date(1970, 0, 1)],
     ["Acuario", new Date(1970, 0, 20)],
     ["Piscis", new Date(1970, 1, 19)],
@@ -44,7 +44,7 @@ const zodiak = [
     ["Capricornio", new Date(1970, 11, 22)]
 ].reverse()
 
-function getZodiac(month, day) {
+function getHoroscopo(month, day) {
     let d = new Date(1970, month - 1, day)
-    return zodiak.find(([_,_d]) => d >= _d)[0]
+    return horoscopos.find(([_,_d]) => d >= _d)[0]
 }
