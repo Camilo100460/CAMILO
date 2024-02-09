@@ -41,11 +41,11 @@ function pickRandom(list) {
 
 // Lista global de mensajes
 global.listaaaaaaa = [
-  '_*LISTA DE VS 12VS12*_ 🦅💙\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n*COLOR*:\n*REGLAS*:\n\n       *PRIMER ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\n       *SEGUNDA ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
-  '_*LISTA DE VS 12VS12*_ 🦅💙\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n*COLOR*:\n*REGLAS*:\n\n       *PRIMER ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\n       *SEGUNDA ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
-  '_*LISTA DE VS 12VS12*_ 🦅💙\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n*COLOR*:\n*REGLAS*:\n\n       *PRIMER ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\n       *SEGUNDA ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
-  '_*LISTA DE VS 12VS12*_ 🦅💙\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n*COLOR*:\n*REGLAS*:\n\n       *PRIMER ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\n       *SEGUNDA ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
-  '_*LISTA DE VS 12VS12*_ 🦅💙\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n*COLOR*:\n*REGLAS*:\n\n       *PRIMER ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\n       *SEGUNDA ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙\n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
+  '_*LISTA DE VS 8VS8*_ 🦅💙\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n*COLOR*:\n*REGLAS*:\n\n       *PRIMER ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\n       *SEGUNDA ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
+  '_*LISTA DE VS 8VS8*_ 🐉💚\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n*COLOR*:\n*REGLAS*:\n\n       *PRIMER ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\n       *SEGUNDA ESCUADRA* 🐉\n\n🏆\n💚 \n💚 \n💚 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
+  '_*LISTA DE VS 8VS8*_ 🌍💙\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n*COLOR*:\n*REGLAS*:\n\n       *PRIMER ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\n       *SEGUNDA ESCUADRA* 🌍\n\n🏆\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
+  '_*LISTA DE VS 8VS8*_ 📖❤️\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n*COLOR*:\n*REGLAS*:\n\n       *PRIMER ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\n       *SEGUNDA ESCUADRA* 📖\n\n🏆\n❤️ \n❤️ \n❤️ \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
+  '_*LISTA DE VS 8VS8*_ 📈💙\n\n⏰ *HORARIOS:* Aqui quiero que vaya el mensaje personalizado\n*COLOR*:\n*REGLAS*:\n\n       *PRIMER ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\n       *SEGUNDA ESCUADRA* 📈\n\n🏆\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS. 15 MINUTOS ANTES EN DISCORD',
 ];
 
 
