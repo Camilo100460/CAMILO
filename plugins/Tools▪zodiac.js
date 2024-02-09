@@ -1,32 +1,37 @@
-let handler = (m, { usedPrefix, command, text }) => {
-    if (!text) throw `Ejemplo:\n${usedPrefix + command} 2003 02 25`
+let handler = async (m, { usedPrefix, command, text }) => {
+    if (!text) throw `Ejemplo:\n${usedPrefix + command} 2003-02-25`
 
-    const date = new Date(text)
-    if (date == 'Fecha invalida, prueba con el siguiente formato AAAA MM DD Ejemplo: 2003 02 07 ') throw date
-    const d = new Date()
-    const [tahun, bulan, tanggal] = [d.getFullYear(), d.getMonth() + 1, d.getDate()]
-    const birth = [date.getFullYear(), date.getMonth() + 1, date.getDate()]
-    
-    const horoscopo = getHoroscopo(birth[1], birth[2])
-    const ageD = new Date(d - date)
+    const [year, month, day] = text.split('-').map(Number)
+    const date = new Date(year, month - 1, day)
+
+    if (isNaN(date)) throw `Fecha inválida, por favor usa el siguiente formato: AAAA-MM-DD. Por ejemplo: ${usedPrefix + command} 2003-02-25`
+
+    const today = new Date()
+    const currentYear = today.getFullYear()
+    const currentMonth = today.getMonth() + 1
+    const currentDay = today.getDate()
+
+    const birth = [year, month, day]
+    const horoscopo = getHoroscopo(month, day)
+
+    const ageD = new Date(today - date)
     const age = ageD.getFullYear() - new Date(1970, 0, 1).getFullYear()
 
-    const birthday = [tahun + (birth[1] < bulan), ...birth.slice(1)]
-    const cekusia = bulan === birth[1] && tanggal === birth[2] ? `${age} - Feliz cumpleaños 🥳` : age
+    const isBirthday = month === currentMonth && day === currentDay
+    const ageText = isBirthday ? `${age} - ¡Feliz cumpleaños! 🥳` : age
 
-    const teks = `
-Fecha de nacimiento: : ${birth.join('-')}
-Edad : ${cekusia}
-Signo horóscopo : ${horoscopo}
+    const replyText = `
+Fecha de nacimiento: ${birth.join('-')}
+Edad: ${ageText}
+Signo horóscopo: ${horoscopo}
 `.trim()
-    m.reply(teks)
+
+    m.reply(replyText)
 }
-handler.help = ['horóscopo *2002 02 25*']
+
+handler.help = ['horóscopo <YYYY-MM-DD>']
 handler.tags = ['tools']
-
 handler.command = /^hor[oó]scopo$/i
-
-export default handler
 
 const horoscopos = [
     ["Capricornio", new Date(1970, 0, 1)],
@@ -34,17 +39,19 @@ const horoscopos = [
     ["Piscis", new Date(1970, 1, 19)],
     ["Aries", new Date(1970, 2, 21)],
     ["Tauro", new Date(1970, 3, 21)],
-    ["Geminis", new Date(1970, 4, 21)],
-    ["Cancer", new Date(1970, 5, 22)],
+    ["Géminis", new Date(1970, 4, 21)],
+    ["Cáncer", new Date(1970, 5, 22)],
     ["Leo", new Date(1970, 6, 23)],
     ["Virgo", new Date(1970, 7, 23)],
     ["Libra", new Date(1970, 8, 23)],
-    ["Scorpion", new Date(1970, 9, 23)],
+    ["Escorpio", new Date(1970, 9, 23)],
     ["Sagitario", new Date(1970, 10, 22)],
     ["Capricornio", new Date(1970, 11, 22)]
 ].reverse()
 
 function getHoroscopo(month, day) {
-    let d = new Date(1970, month - 1, day)
-    return horoscopos.find(([_,_d]) => d >= _d)[0]
+    const dateToCheck = new Date(1970, month - 1, day)
+    return horoscopos.find(([_, date]) => dateToCheck >= date)[0]
 }
+
+export default handler
