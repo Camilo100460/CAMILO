@@ -158,9 +158,14 @@ let handler = (m, { command, text }) => {
     const ageText = isBirthday ? `${age} - ¡Feliz cumpleaños! 🥳` : age
 
     const replyText = `
-Fecha de nacimiento: ${birth.join('-')}
-Edad: ${ageText}
-Signo horóscopo: ${getZodiac(month, day)}
+    
+📊 _*< HORÓSCOPO PARA EL DÍA />*_
+📌 *Hola,* ${taguser}
+
+📅• *Fecha de nacimiento*: ${birth.join('-')}
+🎂• *Edad*: ${ageText}
+🔮• *Signo horóscopo*: ${getZodiac(month, day)}
+
 Horóscopo: ${horoscopo}
 `.trim()
 
