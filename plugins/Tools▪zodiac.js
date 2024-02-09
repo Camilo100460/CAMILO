@@ -160,11 +160,11 @@ let handler = (m, { command, text }) => {
     const replyText = `
 📊 _*< HORÓSCOPO PARA EL DÍA />*_
 
-📅• *Fecha de nacimiento*: ${birth.join('-')}
+📅• *Dia de nacimiento*: ${birth.join('-')}
 🎂• *Edad*: ${ageText}
 🔮• *Signo horóscopo*: ${getZodiac(month, day)}
 
-Horóscopo: ${horoscopo}
+*Horóscopo*: ${horoscopo}
 `.trim()
 
     m.reply(replyText)
