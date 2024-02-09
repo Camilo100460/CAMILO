@@ -8,9 +8,12 @@ const handler = async (m, {conn, usedPrefix, command}) => {
   if (!/sticker/.test(mime)) throw notStickerMessage;
   const media = await q.download();
   const out = await webp2png(media).catch((e) => {
-    console.error(e);
+    console.error("Error al convertir la imagen:", e);
     return null;
   }) || Buffer.alloc(0);
+  if (out.length === 0) {
+    console.error("El buffer de la imagen está vacío");
+  }
   await conn.sendFile(m.chat, out, 'error.png', null, m);
 };
 
