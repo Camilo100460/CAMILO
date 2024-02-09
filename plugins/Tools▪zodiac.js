@@ -1,3 +1,28 @@
+let horoscopos = {
+    "Capricornio": ["Hoy será un gran día para ti.", "Deberías evitar tomar decisiones importantes hoy."],
+    "Acuario": ["Hoy encontrarás algo que has estado buscando.", "Hoy es un buen día para aprender algo nuevo."],
+    "Piscis": ["Hoy te sentirás inspirado para crear.", "Hoy es un buen día para relajarte y disfrutar."],
+    "Aries": ["Hoy es un buen día para empezar un nuevo proyecto.", "Hoy es un buen día para hacer ejercicio y cuidar tu salud."],
+    "Tauro": ["Hoy es un buen día para pasar tiempo con seres queridos.", "Hoy es un buen día para cuidar de ti mismo y relajarte."],
+    "Geminis": ["Hoy es un buen día para aprender algo nuevo.", "Hoy es un buen día para expresar tus sentimientos a alguien especial."],
+    "Cancer": ["Hoy es un buen día para hacer algo creativo.", "Hoy es un buen día para cuidar de tu salud y bienestar."],
+    "Leo": ["Hoy es un buen día para enfrentar un desafío.", "Hoy es un buen día para pasar tiempo con amigos."],
+    "Virgo": ["Hoy es un buen día para organizar y planificar.", "Hoy es un buen día para tomar un descanso y relajarte."],
+    "Libra": ["Hoy es un buen día para resolver conflictos.", "Hoy es un buen día para disfrutar de las artes."],
+    "Scorpion": ["Hoy es un buen día para enfrentar tus miedos.", "Hoy es un buen día para compartir tus sentimientos con alguien cercano."],
+    "Sagitario": ["Hoy es un buen día para una aventura.", "Hoy es un buen día para aprender algo nuevo."]
+}
+
+function agregarHoroscopo(signo, horoscopo) {
+    horoscopos[signo].push(horoscopo);
+}
+
+function obtenerHoroscopo(signo) {
+    let horoscoposSigno = horoscopos[signo];
+    let indiceAleatorio = Math.floor(Math.random() * horoscoposSigno.length);
+    return horoscoposSigno[indiceAleatorio];
+}
+
 let handler = (m, { usedPrefix, command, text }) => {
     if (!text) throw `Ejemplo:\n${usedPrefix + command} 2003 02 25`
 
@@ -14,14 +39,18 @@ let handler = (m, { usedPrefix, command, text }) => {
     const birthday = [tahun + (birth[1] < bulan), ...birth.slice(1)]
     const cekusia = bulan === birth[1] && tanggal === birth[2] ? `${age} - Feliz cumpleaños 🥳` : age
 
+    const horoscopo = obtenerHoroscopo(zodiac)
+
     const teks = `
 Fecha de nacimiento: : ${birth.join('-')}
 Proximo cumpleaños : ${birthday.join('-')}
 Edad : ${cekusia}
 Signo zodical : ${zodiac}
+Horoscopo : ${horoscopo}
 `.trim()
     m.reply(teks)
 }
+
 handler.help = ['zodiac *2002 02 25*']
 handler.tags = ['tools']
 
