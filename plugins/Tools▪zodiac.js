@@ -158,7 +158,6 @@ let handler = (m, { command, text }) => {
     const ageText = isBirthday ? `${age} - ¡Feliz cumpleaños! 🥳` : age
 
     const replyText = `
-    
 📊 _*< HORÓSCOPO PARA EL DÍA />*_
 📌 *Hola,* ${taguser}
 
