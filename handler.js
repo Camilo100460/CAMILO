@@ -138,6 +138,8 @@ export async function handler(chatUpdate) {
         if (!isNumber(user.bawal)) user.bawal = 0;
         if (!isNumber(user.bawalbakar)) user.bawalbakar = 0;
         if (!isNumber(user.bayam)) user.bayam = 0;
+	if (!isNumber(user.juegos)) user.juegos = 0;
+        if (!isNumber(user.crime)) user.crime = 0;
         if (!isNumber(user.berlian)) user.berlian = 10;
         if (!isNumber(user.bibitanggur)) user.bibitanggur = 0;
         if (!isNumber(user.bibitapel)) user.bibitapel = 0;
@@ -951,6 +953,7 @@ export async function handler(chatUpdate) {
         if (!('antiArab' in chat)) chat.antiArab = false;
         if (!('antiArab2' in chat)) chat.antiArab2 = false;
         if (!('antiporno' in chat)) chat.antiporno = false;
+	if (!('game' in chat)) chat.game = true;
         if (!('modoadmin' in chat)) chat.modoadmin = false;
         if (!('simi' in chat)) chat.simi = false;
         if (!isNumber(chat.expired)) chat.expired = 0;
@@ -978,6 +981,7 @@ export async function handler(chatUpdate) {
 	  antiporno: false,
 	  modoadmin: false,
 	  simi: false,
+	  game: true, 
           expired: 0,
         };
       }
@@ -1542,7 +1546,7 @@ global.dfail = (type, m, conn) => {
     restrict: '*[ ℹ️ ] Este comando fue desactivado por el propietario del bot.*',
   }[type];
   const aa = {quoted: m, userJid: conn.user.jid};
-  const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: msg, contextInfo: {externalAdReply: {title: '[ ⚠️ ] Advertencia', body: '𝙈𝙖𝙮-𝙗𝙤𝙩', thumbnail: imagen1, sourceUrl: 'https://github.com/Akanksh'}}}}, aa);
+  const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: msg, contextInfo: {externalAdReply: {title: '*[ ⚠ ] Advertencia*', body: 'ᴛʜᴇ ᴍʏsᴛɪᴄ - ʙᴏᴛ', thumbnail: imagen1, sourceUrl: 'https://github.com/BrunoSobrino/TheMystic-Bot-MD'}}}}, aa);
   if (msg) return conn.relayMessage(m.chat, prep.message, {messageId: prep.key.id});
 };
 
