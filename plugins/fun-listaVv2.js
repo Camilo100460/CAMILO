@@ -25,9 +25,9 @@ function pickRandom(list) {
 }
 
 global.lista21 = [
-  '_*LISTA DE Vv2*_ 🦅💙\n\n⏰ *HORARIOS:* \n\n         *JUGADORES* 🦅\n\n👑\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
-  '_*LISTA DE Vv2*_ 🐉💚\n\n⏰ *HORARIOS:* \n\n         *JUGADORES* 🐉\n\n🏆\n💚 \n💚 \n💚 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
-  '_*LISTA DE Vv2*_ 🌍💙\n\n⏰ *HORARIOS:* \n\n         *JUGADORES* 🌍\n\n🏆\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
-  '_*LISTA DE Vv2*_ 📖❤️\n\n⏰ *HORARIOS:* \n\n         *JUGADORES* 📖\n\n🏆\n❤️ \n❤️ \n❤️ \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
-  '_*LISTA DE Vv2*_ 📈💙\n\n⏰ *HORARIOS:* \n\n         *JUGADORES* 📈\n\n🏆\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.'
+  '_*LISTA DE Vv2*_ 🦅💙\n\n⏰ *HORARIOS:* \n\n            *JUGADORES* 🦅\n\n👑\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
+  '_*LISTA DE Vv2*_ 🐉💚\n\n⏰ *HORARIOS:* \n\n            *JUGADORES* 🐉\n\n🏆\n💚 \n💚 \n💚 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
+  '_*LISTA DE Vv2*_ 🌍💙\n\n⏰ *HORARIOS:* \n\n            *JUGADORES* 🌍\n\n🏆\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
+  '_*LISTA DE Vv2*_ 📖❤️\n\n⏰ *HORARIOS:* \n\n            *JUGADORES* 📖\n\n🏆\n❤️ \n❤️ \n❤️ \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
+  '_*LISTA DE Vv2*_ 📈💙\n\n⏰ *HORARIOS:* \n\n            *JUGADORES* 📈\n\n🏆\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.'
 ];
