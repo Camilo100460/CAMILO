@@ -16,7 +16,7 @@ const handler = async (m, {conn, text}) => {
   }
   
   // Mensaje predeterminado de la lista global
-  const randomMessage = pickRandom(global.lista1);
+  const randomMessage = pickRandom(global.lista41);
   
   // Insertar el horario y el color dentro del mensaje predeterminado
   const finalMessage = randomMessage.replace("*HORARIOS:*", `*HORARIOS:* ${horario}`).replace("*COLOR*:", `*COLOR:* ${color}`);
@@ -26,17 +26,17 @@ const handler = async (m, {conn, text}) => {
 };
 
 handler.tags = ['freefire4'];
-handler.command = ['listascrim'];
+handler.command = ['lista6vs6'];
 export default handler;
 
 function pickRandom(list) {
   return list[Math.floor(Math.random() * list.length)];
 }
 
-global.lista1 = [
-  '_*LISTA DE SCRIM*_ 🦅💙\n\n⏰ *HORARIOS:* \n*COLOR*:\n\n       *PRIMER ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
-  '_*LISTA DE SCRIM*_ 🐉💚\n\n⏰ *HORARIOS:* \n*COLOR*:\n\n       *PRIMER ESCUADRA* 🐉\n\n🏆\n💚 \n💚 \n💚 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
-  '_*LISTA DE SCRIM*_ 🌍💙\n\n⏰ *HORARIOS:* \n*COLOR*:\n\n       *PRIMER ESCUADRA* 🌍\n\n🏆\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
-  '_*LISTA DE SCRIM*_ 📖❤️\n\n⏰ *HORARIOS:* \n*COLOR*:\n\n       *PRIMER ESCUADRA* 📖\n\n🏆\n❤️ \n❤️ \n❤️ \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
-  '_*LISTA DE SCRIM*_ 📈💙\n\n⏰ *HORARIOS:* \n*COLOR*:\n\n       *PRIMER ESCUADRA* 📈\n\n🏆\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.'
+global.lista41 = [
+  '_*LISTA DE 6VS6*_ 🦅💙\n\n⏰ *HORARIOS:* \n\n               *JUGADORES* 🦅\n\n👑\n💙 \n💙 \n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
+  '_*LISTA DE 6VS6*_ 🐉💚\n\n⏰ *HORARIOS:* \n\n               *JUGADORES* 🐉\n\n🏆\n💚 \n💚 \n💚 \n💚 \n💚 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
+  '_*LISTA DE 6VS6*_ 🌍💙\n\n⏰ *HORARIOS:* \n\n               *JUGADORES* 🌍\n\n🏆\n💙 \n💙 \n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
+  '_*LISTA DE 6VS6*_ 📖❤️\n\n⏰ *HORARIOS:* \n\n               *JUGADORES* 📖\n\n🏆\n❤️ \n❤️ \n❤️ \n❤️ \n❤️ \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
+  '_*LISTA DE 6VS6*_ 📈💙\n\n⏰ *HORARIOS:* \n\n               *JUGADORES* 📈\n\n🏆\n💙 \n💙 \n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.'
 ];
