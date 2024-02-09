@@ -23,13 +23,13 @@ function obtenerHoroscopo(signo) {
     return horoscoposSigno[indiceAleatorio];
 }
 
-let handler = (m, { usedPrefix, command, text }) => {
-    if (!text) throw `Ejemplo:\n${usedPrefix + command} 2003-02-25`
+let handler = (m, { command, text }) => {
+    if (!text) throw `Ejemplo: ${command} 2003 02 25`
 
-    const [year, month, day] = text.split('-').map(Number)
+    const [year, month, day] = text.match(/\d+/g).map(Number)
     const date = new Date(year, month - 1, day)
 
-    if (isNaN(date)) throw `Fecha inválida, por favor usa el siguiente formato: AAAA-MM-DD. Por ejemplo: ${usedPrefix + command} 2003-02-25`
+    if (isNaN(date)) throw `Fecha inválida, por favor usa el siguiente formato: AAAA MM DD. Por ejemplo: ${command} 2003 02 25`
 
     const today = new Date()
     const currentYear = today.getFullYear()
@@ -55,7 +55,7 @@ Horóscopo: ${horoscopo}
     m.reply(replyText)
 }
 
-handler.help = ['horóscopo <AAAA-MM-DD>']
+handler.help = ['horóscopo <AAAA MM DD>']
 handler.tags = ['tools']
 handler.command = /^hor[oó]scopo$/i
 
