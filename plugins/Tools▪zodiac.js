@@ -43,15 +43,15 @@ let handler = (m, { usedPrefix, command, text }) => {
     const teks = `
 Edad : ${cekusia}
 Signo zodical : ${zodiac}
-Horoscopo para hoy (${tahun}-${bulan}-${tanggal}): ${horoscopo}
+Horoscopo : ${horoscopo}
 `.trim()
     m.reply(teks)
 }
 
-handler.help = ['horoscopo *2002 02 25*']
+handler.help = ['zodiac *2002 02 25*']
 handler.tags = ['tools']
 
-handler.command = /^horoscopo$/i
+handler.command = /^(horoscopo|Horóscopo|horóscopo)$/i
 
 export default handler
 
@@ -70,11 +70,6 @@ const zodiak = [
     ["Sagitario", new Date(1970, 10, 22)],
     ["Capricornio", new Date(1970, 11, 22)]
 ].reverse()
-
-function getZodiac(month, day) {
-    let d = new Date(1970, month - 1, day)
-    return zodiak.find(([_,_d]) => d >= _d)[0]
-}
 
 function getZodiac(month, day) {
     let d = new Date(1970, month - 1, day)
