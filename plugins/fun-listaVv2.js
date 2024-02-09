@@ -34,9 +34,9 @@ function pickRandom(list) {
 }
 
 global.lista25 = [
-  '_*LISTA DE SCRIM*_ 🦅💙\n\n⏰ *HORARIOS:* \n*COLOR*:\n\n                  *JUGADORES* 🦅\n\n👑\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
-  '_*LISTA DE SCRIM*_ 🐉💚\n\n⏰ *HORARIOS:* \n*COLOR*:\n\n                  *JUGADORES* 🐉\n\n🏆\n💚 \n💚 \n💚 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
-  '_*LISTA DE SCRIM*_ 🌍💙\n\n⏰ *HORARIOS:* \n*COLOR*:\n\n                  *JUGADORES* 🌍\n\n🏆\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
-  '_*LISTA DE SCRIM*_ 📖❤️\n\n⏰ *HORARIOS:* \n*COLOR*:\n\n                  *JUGADORES* 📖\n\n🏆\n❤️ \n❤️ \n❤️ \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
-  '_*LISTA DE SCRIM*_ 📈💙\n\n⏰ *HORARIOS:* \n*COLOR*:\n\n                  *JUGADORES* 📈\n\n🏆\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.'
+  '_*LISTA DE Vv2*_ 🦅💙\n\n⏰ *HORARIOS:* \n\n                  *JUGADORES* 🦅\n\n👑\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
+  '_*LISTA DE Vv2*_ 🐉💚\n\n⏰ *HORARIOS:* \n\n                  *JUGADORES* 🐉\n\n🏆\n💚 \n💚 \n💚 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
+  '_*LISTA DE Vv2*_ 🌍💙\n\n⏰ *HORARIOS:* \n\n                  *JUGADORES* 🌍\n\n🏆\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
+  '_*LISTA DE Vv2*_ 📖❤️\n\n⏰ *HORARIOS:* \n\n                  *JUGADORES* 📖\n\n🏆\n❤️ \n❤️ \n❤️ \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
+  '_*LISTA DE Vv2*_ 📈💙\n\n⏰ *HORARIOS:* \n\n                  *JUGADORES* 📈\n\n🏆\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.'
 ];
