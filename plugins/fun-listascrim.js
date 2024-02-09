@@ -19,7 +19,7 @@ const handler = async (m, {conn, text}) => {
   const randomMessage = pickRandom(global.lista1);
   
   // Insertar el horario y el color dentro del mensaje predeterminado
-  const finalMessage = randomMessage.replace("HORARIOS:", `HORARIOS: ${horario}`).replace("COLOR:", `COLOR: ${color}`);
+  const finalMessage = randomMessage.replace("*HORARIOS:*", `*HORARIOS:* ${horario}`).replace("*COLOR*:", `*COLOR:* ${color}`);
   
   // Responder con el mensaje final
   m.reply(`${finalMessage}`);
@@ -27,16 +27,12 @@ const handler = async (m, {conn, text}) => {
 
 handler.tags = ['freefire4'];
 handler.command = ['listascrim'];
-
-// Exporta el manejador para su uso en otros módulos
 export default handler;
 
-// Función para seleccionar un elemento aleatorio de una lista
 function pickRandom(list) {
   return list[Math.floor(Math.random() * list.length)];
 }
 
-// Lista global de mensajes
 global.lista1 = [
   '_*LISTA DE SCRIM*_ 🦅💙\n\n⏰ *HORARIOS:* \n*COLOR*:\n\n       *PRIMER ESCUADRA* 🦅\n\n👑\n💙 \n💙 \n💙 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
   '_*LISTA DE SCRIM*_ 🐉💚\n\n⏰ *HORARIOS:* \n*COLOR*:\n\n       *PRIMER ESCUADRA* 🐉\n\n🏆\n💚 \n💚 \n💚 \n\nMUCHA RESPONSABILIDAD CON LOS HORARIOS.',
