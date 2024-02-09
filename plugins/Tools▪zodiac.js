@@ -16,7 +16,6 @@ let handler = (m, { usedPrefix, command, text }) => {
 
     const teks = `
 Fecha de nacimiento: : ${birth.join('-')}
-Proximo cumpleaños : ${birthday.join('-')}
 Edad : ${cekusia}
 Signo zodical : ${zodiac}
 `.trim()
