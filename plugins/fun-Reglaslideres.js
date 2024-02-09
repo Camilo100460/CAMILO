@@ -1,31 +1,14 @@
-const axios = require('axios');
-const fs = require('fs');
-
-const handler = async (m, { conn }) => {
-  try {
-    // URL del archivo PDF en el repositorio
-    const pdfUrl = 'https://github.com/Camilo100460/CAMILO/blob/master/src/REGLAS_JUEGO.pdf';
-    
-    // Descargar el archivo PDF
-    const response = await axios.get(pdfUrl, { responseType: 'arraybuffer' });
-    
-    // Guardar el archivo PDF temporalmente
-    const pdfPath = './temp.pdf';
-    fs.writeFileSync(pdfPath, Buffer.from(response.data, 'binary'));
-    
-    // Enviar el archivo PDF como documento adjunto
-    conn.sendFile(m.chat, pdfPath, 'reglas.pdf', 'Aquí están las reglas del grupo.');
-    
-    // Eliminar el archivo PDF temporal después de enviarlo
-    fs.unlinkSync(pdfPath);
-  } catch (error) {
-    console.error('Error al enviar el archivo PDF:', error);
-    m.reply('Lo siento, no pude enviar las reglas en este momento. Por favor, inténtalo de nuevo más tarde.');
-  }
+const rulesHandler = async (m) => {
+  // Responder con el mensaje "hola mundo como estas"
+  m.reply("hola mundo como estas");
 };
 
-// Comando para obtener las reglas
-handler.command = ['reglas'];
+rulesHandler.tags = ['rules'];
+rulesHandler.command = ['reglas'];
+export default rulesHandler;
 
-// Exportar el manejador
-module.exports = handler;
+
+handler.tags = ['freefire4'];
+handler.command = ['reglas'];
+export default handler;
+
