@@ -36,7 +36,7 @@ const handler = async (m, {conn, usedPrefix, text}) => {
   }
 };
 
-handler.command = /^(regas|reglasinfi|infi)$/i;
+handler.command = /^(mayyy|may|mayyyy)$/i;
 handler.exp = 50;
 handler.fail = null;
 
