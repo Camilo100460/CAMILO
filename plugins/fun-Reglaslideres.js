@@ -1,6 +1,6 @@
 const handler = async (m, {conn, usedPrefix}) => {
   try {
-    const pdfPath = 'may/CAMILO/REGLAS_JUEGO.pdf'; // Aquí debes proporcionar la ruta al archivo PDF
+    const pdfPath = 'C:/may/CAMILO/REGLAS_JUEGO.pdf'; // Aquí debes proporcionar la ruta al archivo PDF
     if (!fs.existsSync(pdfPath)) {
       conn.reply(m.chat, 'Lo siento, el archivo PDF no se encontró en la ruta especificada.', m);
       return;
