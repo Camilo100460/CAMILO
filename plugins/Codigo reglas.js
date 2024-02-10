@@ -24,8 +24,6 @@ const handler = async (m, { conn, text, isROwner, isOwner }) => {
         }
       }
       break;
-    default:
-      m.reply('*[❗] El comando no es válido. Use .infia, .infie o .infii seguido del mensaje.*');
   }
 };
 
