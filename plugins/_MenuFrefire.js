@@ -10,6 +10,9 @@ const handler = async (m, {conn, usedPrefix}) => {
 │ _*< LISTA DE COMANDOS />*_
 │
 ├ • 🏹 _${usedPrefix}Reglaslideres_ 
+├ • 🏹 _${usedPrefix}reglasinfi_ *< Text >* 
+├ • 🏹 _${usedPrefix}reglascompe_ *< Text >* 
+├ • 🏹 _${usedPrefix}discord_ *< Text >* 
 ├ • 🧸 _${usedPrefix}listavv2_ *< HORA >*
 ├ • 🍄 _${usedPrefix}lista4vs4_ *< HORA >*
 ├ • 🍂 _${usedPrefix}lista6vs6_ *< HORA >*
