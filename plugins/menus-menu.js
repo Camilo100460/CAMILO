@@ -38,7 +38,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   _*< 📜 LISTA DE MENUS 📋 />*_
   
   🎵 _${usedPrefix}menuaudios_
-  🍂 _${usedPrefix}menuaudios_
+  🍂 _${usedPrefix}MenuFrefire_
   📺 _${usedPrefix}menuanimes_
   📖 _${usedPrefix}labiblia_ (🔞)
 
