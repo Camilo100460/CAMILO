@@ -28,7 +28,7 @@ const handler = async (m, {conn, usedPrefix, text}) => {
     const taguser = '@' + m.sender.split('@s.whatsapp.net')[0];
     const str = `🔮 𝙈𝘼𝙔-𝘽𝙊𝙏 🔮
  📌 *Hola,* ${taguser}
- 📊 _*< TUS ESTADÍSTICAS />*_
+ 📊 _*< TUS ESTAD555ÍSTICAS />*_
  🖼️ _${usedPrefix}viewimage_`.trim();
     conn.reply(m.chat, str.trim(), m);
   } catch {
