@@ -3,10 +3,14 @@ const handler = async (m, {conn, text, usedPrefix}) => {
   const defaultMessage = `
   _*< 📜 LISTA DE MENUS 📋 />*_
   
-  🎵 _${usedPrefix}(lista)_
-  📺 _${usedPrefix}lista (8vs8)_
-  📖 _${usedPrefix}lista (12vs12)_
-  📖 _${usedPrefix}lista (16vs16)_
+  🧸• _${usedPrefix}listavv2_
+  🍄• _${usedPrefix}lista4vs4_
+  🍂• _${usedPrefix}lista6vs6_
+  📺• _${usedPrefix}lista8vs8_
+  🍪• _${usedPrefix}lista12vs2_
+  📖• _${usedPrefix}lista12vs12_
+  ✒️• _${usedPrefix}lista16vs16_
+  🏹• _${usedPrefix}listacuadri_
   `;
   
   // Responder con el mensaje final
