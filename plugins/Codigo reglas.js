@@ -4,7 +4,7 @@ let mensajes = {};
 
 const handler = async (m, { conn, text, isROwner, isOwner }) => {
   const chatId = m.chat;
-  const [command, ...restOfText] = text.split(" ");
+  const [command, ...restOfText] = text.split(" ", 2);
 
   switch (command) {
     case '.infia':
