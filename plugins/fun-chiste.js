@@ -1,5 +1,5 @@
 let handler = async (m, { conn, text }) => {
-  m.reply(`\n *😹 ${pickRandom(global.chiste)} 😹*\n┊\n*      𓃠 ${conn.getName(m.sender)}*`);
+  m.reply(`\n *😹 ${pickRandom(global.chiste)} 😹*\n\n             *${conn.getName(m.sender)}*`);
 };
 
 handler.tags = ['humor'];
@@ -10,7 +10,7 @@ export default handler;
 function pickRandom(list) {
   const randomIndex = Math.floor(Math.random() * list.length);
   const chosenChiste = list[randomIndex];
-  return chosenChiste.split("\n").map(line => `┊ ${line}`).join("\n");
+  return chosenChiste.split("\n").map(line => ` ${line}`).join("\n");
 }
 
 global.chiste = [
