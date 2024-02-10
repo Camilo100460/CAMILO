@@ -7,7 +7,7 @@ const handler = async (m, {conn, usedPrefix}) => {
 📌 *Hola,* @${m.sender.split('@')[0]}
 
 ╭━━━━━━ ◜◌◝ ━━━━━━╮
-│_*< LISTA DE MENUS />*_
+│ _*< LISTA DE MENUS />*_
 │
 ├ • 🧸 _${usedPrefix}listavv2_ *< HORA >*
 ├ • 🍄 _${usedPrefix}lista4vs4_ *< HORA >*
@@ -17,6 +17,7 @@ const handler = async (m, {conn, usedPrefix}) => {
 ├ • 📖 _${usedPrefix}lista12vs12_ *< H/C/R >*
 ├ • ✒️ _${usedPrefix}lista16vs16_ *< H/C/R >*
 ├ • 🏹 _${usedPrefix}listacuadri_ *< H/C/R >*
+│
 ╰━━━━━━━━━━━━━━━━╯`.trim();
 
     if (m.isGroup) {
@@ -30,5 +31,5 @@ const handler = async (m, {conn, usedPrefix}) => {
     conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝚈 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙴𝙽𝚅𝙸𝙰𝚁𝙻𝙾, 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃*', m);
   }
 };
-handler.command = /^(cami|camilo)$/i;
+handler.command = /^(MenuFrefire|menufreefire|Menufreefire)$/i;
 export default handler;
