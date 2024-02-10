@@ -1,5 +1,3 @@
-import fetch from 'node-fetch';
-
 let mensajes = {};
 
 const handler = async (m, { conn, text, isROwner, isOwner }) => {
@@ -13,10 +11,10 @@ const handler = async (m, { conn, text, isROwner, isOwner }) => {
       const index = ['a', 'e', 'i'].indexOf(command.charAt(5));
       const infiText = restOfText.join(" ");
       if (infiText) {
-        global.db.data.chats[chatId][`sInfi${index + 1}`] = infiText.trim();
+        mensajes[`${chatId}_sInfi${index + 1}`] = infiText.trim();
         m.reply(`*[❗] Mensaje ${index + 1} configurado correctamente para Infi.*`);
       } else {
-        const sInfi = global.db.data.chats[chatId][`sInfi${index + 1}`];
+        const sInfi = mensajes[`${chatId}_sInfi${index + 1}`];
         if (sInfi) {
           m.reply(sInfi);
         } else {
