@@ -42,7 +42,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
     conn.reply(m.chat, '*[ ℹ️ ] Este menu tiene un error interno, por lo cual no fue posible enviarlo.*', m);
   }
 };
-handler.command = /^(reglas)$/i;
+handler.command = /^(angie)$/i;
 handler.exp = 50;
 handler.fail = null;
 export default handler;
