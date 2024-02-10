@@ -12,11 +12,11 @@ const handler = async (m, {conn, usedPrefix}) => {
 ├ • 🧸 _${usedPrefix}listavv2_ *< HORA >*
 ├ • 🍄 _${usedPrefix}lista4vs4_ *< HORA >*
 ├ • 🍂 _${usedPrefix}lista6vs6_ *< HORA >*
-├ • 📺 _${usedPrefix}lista8vs8_ *< HORA/COLOR/REGLAS >*
-├ • 🍪 _${usedPrefix}lista12vs2_ *< HORA/COLOR/REGLAS >*
-├ • 📖 _${usedPrefix}lista12vs12_ *< HORA/COLOR/REGLAS >*
-├ • ✒️ _${usedPrefix}lista16vs16_ *< HORA/COLOR/REGLAS >*
-├ • 🏹 _${usedPrefix}listacuadri_ *< HORA/COLOR/REGLAS >*
+├ • 📺 _${usedPrefix}lista8vs8_ *< HOR/COL/REG >*
+├ • 🍪 _${usedPrefix}lista12vs2_ *< HOR/COL/REG >*
+├ • 📖 _${usedPrefix}lista12vs12_ *< HOR/COL/REG >*
+├ • ✒️ _${usedPrefix}lista16vs16_ *< HOR/COL/REG >*
+├ • 🏹 _${usedPrefix}listacuadri_ *< HOR/COL/REG >*
 ╰━━━━━━━━━━━━━━━━╯`.trim();
 
     if (m.isGroup) {
