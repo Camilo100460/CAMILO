@@ -12,9 +12,9 @@ const handler = async (m, { conn, text, isROwner, isOwner }) => {
   }
 };
 
-handler.help = ['.Reglasinfi <texto>', '.Reglasinfi'];
+handler.help = ['.reglasinfi <texto>', '.reglasinfi'];
 handler.tags = ['group'];
-handler.command = ['Reglasinfi'];
+handler.command = ['reglasinfi'];
 handler.admin = true;
 
 export default handler;
