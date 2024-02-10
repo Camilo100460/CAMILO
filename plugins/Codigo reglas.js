@@ -3,10 +3,10 @@ const handler = async (m, { conn, text, isROwner, isOwner }) => {
   const [command, ...restOfText] = text.split(" ");
 
   switch (command) {
-    case '.infi1':
-    case '.infi2':
-    case '.infi3':
-      const index = parseInt(command.replace(".infi", "")) - 1;
+    case '.infia':
+    case '.infie':
+    case '.infii':
+      const index = ['a', 'e', 'i'].indexOf(command.charAt(5));
       const infiText = restOfText.join(" ");
       if (infiText) {
         global.db.data.chats[chatId][`sInfi${index + 1}`] = infiText.trim();
@@ -21,13 +21,13 @@ const handler = async (m, { conn, text, isROwner, isOwner }) => {
       }
       break;
     default:
-      m.reply('*[❗] El comando no es válido. Use .infi1, .infi2 o .infi3 seguido del mensaje.*');
+      m.reply('*[❗] El comando no es válido. Use .infia, .infie o .infii seguido del mensaje.*');
   }
 };
 
-handler.help = ['.infi1 <texto>', '.infi2 <texto>', '.infi3 <texto>', '.infi1', '.infi2', '.infi3'];
+handler.help = ['.infia <texto>', '.infie <texto>', '.infii <texto>', '.infia', '.infie', '.infii'];
 handler.tags = ['group'];
-handler.command = ['infi1', 'infi2', 'infi3'];
+handler.command = ['infia', 'infie', 'infii'];
 handler.admin = true;
 
 export default handler;
