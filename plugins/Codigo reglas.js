@@ -5,11 +5,13 @@ let mensajes = {};
 const handler = async (m, {conn, usedPrefix, text}) => {
   if (usedPrefix == '.infi') {
     if (text) {
+      // Si hay texto después del comando, lo guardamos
       mensajes[m.chat] = text;
       conn.reply(m.chat, 'Mensaje guardado.', m);
     } else {
+      // Si no hay texto después del comando, enviamos el mensaje guardado
       let mensaje = mensajes[m.chat];
-      conn.reply(m.chat, mensaje ? 'Mensaje guardado: ' + mensaje : 'No hay ningún mensaje guardado.', m);
+      conn.reply(m.chat, mensaje ? mensaje : 'No hay ningún mensaje guardado.', m);
     }
   }
 
