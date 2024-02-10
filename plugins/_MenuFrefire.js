@@ -7,7 +7,7 @@ const handler = async (m, {conn, usedPrefix}) => {
 📌 *Hola,* @${m.sender.split('@')[0]}
 
 ╭━━━━━━ ◜◌◝ ━━━━━━╮
-│ _*< LISTA DE MENUS />*_
+│ _*< LISTA DE COMANDOS />*_
 │
 ├ • 🧸 _${usedPrefix}listavv2_ *< HORA >*
 ├ • 🍄 _${usedPrefix}lista4vs4_ *< HORA >*
