@@ -7,48 +7,16 @@ const handler = async (m, {conn, usedPrefix}) => {
 📌 *Hola,* @${m.sender.split('@')[0]}
 
 ╭━━━━━━ ◜◌◝ ━━━━━━╮
-│ *< MENU-ANIME />*
+│_*< LISTA DE MENUS />*_
 │
-├ • 🌹 _${usedPrefix}lolivid_
-├ • 🌙 _${usedPrefix}loli_
-├ • ⭐ _${usedPrefix}ppcouple_
-├ • 🌈 _${usedPrefix}neko_
-├ • 🎭 _${usedPrefix}waifu_
-├ • 🎨 _${usedPrefix}akira_
-├ • 🎵 _${usedPrefix}akiyama_
-├ • 🎀 _${usedPrefix}anna_
-├ • 🎁 _${usedPrefix}asuna_
-├ • 🎉 _${usedPrefix}ayuzawa_
-├ • 🎊 _${usedPrefix}boruto_
-├ • 🎈 _${usedPrefix}chiho_
-├ • 🎆 _${usedPrefix}chitoge_
-├ • 🎇 _${usedPrefix}deidara_
-├ • 🧧 _${usedPrefix}erza_
-├ • 🏮 _${usedPrefix}elaina_
-├ • 💌 _${usedPrefix}eba_
-├ • 💎 _${usedPrefix}emilia_
-├ • 💍 _${usedPrefix}hestia_
-├ • 💖 _${usedPrefix}hinata_
-├ • 💗 _${usedPrefix}inori_
-├ • 💓 _${usedPrefix}isuzu_
-├ • 💞 _${usedPrefix}itachi_
-├ • 💕 _${usedPrefix}itori_
-├ • 💘 _${usedPrefix}kaga_
-├ • 💝 _${usedPrefix}kagura_
-├ • 💟 _${usedPrefix}kaori_
-├ • 🥀 _${usedPrefix}keneki_
-├ • 🌼 _${usedPrefix}kotori_
-├ • 🌻 _${usedPrefix}kurumi_
-├ • 🌸 _${usedPrefix}madara_
-├ • 🌺 _${usedPrefix}mikasa_
-├ • 🌷 _${usedPrefix}miku_
-├ • 🌱 _${usedPrefix}minato_
-├ • 🍀 _${usedPrefix}naruto_
-├ • 🍁 _${usedPrefix}nezuko_
-├ • 🍂 _${usedPrefix}sagiri_
-├ • 🍃 _${usedPrefix}sasuke_
-├ • 🌿 _${usedPrefix}sakura_
-├ • 🌾 _${usedPrefix}cosplay_
+├ • 🧸 _${usedPrefix}listavv2_
+├ • 🍄 _${usedPrefix}lista4vs4_
+├ • 🍂 _${usedPrefix}lista6vs6_
+├ • 📺 _${usedPrefix}lista8vs8_
+├ • 🍪 _${usedPrefix}lista12vs2_
+├ • 📖 _${usedPrefix}lista12vs12_
+├ • ✒️ _${usedPrefix}lista16vs16_
+├ • 🏹 _${usedPrefix}listacuadri_
 ╰━━━━━━━━━━━━━━━━╯`.trim();
 
     if (m.isGroup) {
