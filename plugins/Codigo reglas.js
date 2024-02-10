@@ -1,3 +1,7 @@
+import fetch from 'node-fetch';
+
+let mensajes = {};
+
 const handler = async (m, { conn, text, isROwner, isOwner }) => {
   const chatId = m.chat;
   const [command, ...restOfText] = text.split(" ");
