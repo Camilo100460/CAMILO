@@ -14,12 +14,12 @@ function pickRandom(list) {
 }
 
 global.chiste = [
-  "¿Cuál es el último animal que subió al arca de Noé? El del-fin..",
-  "¿Cómo se dice pañuelo en japonés? Saka-moko",
-  "¿Cómo se dice disparo en árabe? Ahí-va-la-bala..",
-  "¿Qué le dice un gusano a otro gusano? Voy a dar una vuelta a la manzana.",
-  "Un gato empieza a ladrar en el tejado de una casa. Otro gato, sorprendido, le dice: Estás loco gato, ¿por qué ladras en vez de maullar? El gatito le responde: ¿A caso no puedo aprender otro idioma?",
-  "El doctor le dice al paciente: respire profundo que lo voy a auscultar. El paciente le responde: doctor, ¿de quién me va a ocultar si no le debo a nadie?\nSale el doctor después de un parto y el padre de la criatura le pregunta: ¿Doctor cómo salió todo? El doctor le dice: todo salió bien, pero tuvimos que colocarle oxígeno al bebé. El padre, horrorizado, le dice: pero doctor, nosotros queríamos ponerle Gabriel..",
+  "El marido está revisando las facturas y le dice a su mujer: Si supieses cocinar nos ahorraríamos un dineral en la cocinera. Pues si tú supieses hacer el amor nos ahorraríamos un dineral en el jardinero.",
+  "¿De qué color le compra las bragas un sordomudo a su novia? Transparentes, para poder leerle los labios.",
+  "Hoy le pregunté a mi teléfono: ‘Siri, ¿por qué estoy soltero?’ y abrió la cámara frontal",
+  "Estaba bebiendo un martini y la camarera gritó: ‘¿Alguien sabe RCP?’. Y yo dije: ‘Me sé todo el alfabeto’. Todos nos reímos. Bueno… menos una persona",
+  "Nunca serás completamente inútil. Siempre puedes ser utilizado como un mal ejemplo.",
+  "¿Cuántos niños emo se necesitan para poner una bombilla? Ninguno, todos se sientan en la oscuridad y lloran.",
   "Un pez le pregunta a otro pez: ¿qué hace tu mamá? Este le contesta: Nada, ¿y la tuya qué hace? Nada también.",
   "¿Cuál es el colmo de Aladdín? Tener mal genio",
   "El profesor le dice al estudiante después de haberle corregido la tarea: Tu trabajo me ha conmovido. El estudiante, sorprendido, le pregunta: ¿Y eso por qué profesor? El profesor con cara de burla le dice: Porque me dio mucha pena.",
