@@ -9,14 +9,14 @@ const handler = async (m, {conn, usedPrefix}) => {
 ╭━━━━━━ ◜◌◝ ━━━━━━╮
 │_*< LISTA DE MENUS />*_
 │
-├ • 🧸 _${usedPrefix}listavv2_
-├ • 🍄 _${usedPrefix}lista4vs4_
-├ • 🍂 _${usedPrefix}lista6vs6_
-├ • 📺 _${usedPrefix}lista8vs8_
-├ • 🍪 _${usedPrefix}lista12vs2_
-├ • 📖 _${usedPrefix}lista12vs12_
-├ • ✒️ _${usedPrefix}lista16vs16_
-├ • 🏹 _${usedPrefix}listacuadri_
+├ • 🧸 _${usedPrefix}listavv2_ *< HORA >*
+├ • 🍄 _${usedPrefix}lista4vs4_ *< HORA >*
+├ • 🍂 _${usedPrefix}lista6vs6_ *< HORA >*
+├ • 📺 _${usedPrefix}lista8vs8_ *< HORA/COLOR/REGLAS >*
+├ • 🍪 _${usedPrefix}lista12vs2_ *< HORA/COLOR/REGLAS >*
+├ • 📖 _${usedPrefix}lista12vs12_ *< HORA/COLOR/REGLAS >*
+├ • ✒️ _${usedPrefix}lista16vs16_ *< HORA/COLOR/REGLAS >*
+├ • 🏹 _${usedPrefix}listacuadri_ *< HORA/COLOR/REGLAS >*
 ╰━━━━━━━━━━━━━━━━╯`.trim();
 
     if (m.isGroup) {
