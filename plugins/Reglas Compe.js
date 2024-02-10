@@ -10,8 +10,8 @@ const handler = async (m, { conn, text, isROwner, isOwner }) => {
     return;
   }
   
-  // Registra el momento actual más el tiempo de enfriamiento (por ejemplo, 10 segundos)
-  cooldowns[userId] = Date.now() + 10000; // 10 segundos de enfriamiento
+  // Registra el momento actual más el tiempo de enfriamiento (por ejemplo, 1 minuto)
+  cooldowns[userId] = Date.now() + 60000; // 1 minuto de enfriamiento
   
   if (text) {
     global.db.data.chats[m.chat].sReglascompe = text; // Guarda el texto personalizado en la base de datos
