@@ -9,6 +9,7 @@ const handler = async (m, {conn, usedPrefix}) => {
 ╭━━━━━━ ◜◌◝ ━━━━━━╮
 │ _*< LISTA DE COMANDOS />*_
 │
+├ • 🏹 _${usedPrefix}Reglaslideres_ 
 ├ • 🧸 _${usedPrefix}listavv2_ *< HORA >*
 ├ • 🍄 _${usedPrefix}lista4vs4_ *< HORA >*
 ├ • 🍂 _${usedPrefix}lista6vs6_ *< HORA >*
