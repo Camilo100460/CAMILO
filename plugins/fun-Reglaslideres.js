@@ -1,3 +1,4 @@
+const fs = require('fs');
 const path = require('path');
 
 const handler = async (m, { conn }) => {
@@ -9,7 +10,6 @@ const handler = async (m, { conn }) => {
       return;
     }
 
-    const pdfBuffer = fs.readFileSync(pdfPath); // Leer el contenido del archivo PDF
     const pdfName = path.basename(pdfPath); // Obtener el nombre del archivo PDF
 
     const fkontak2 = {
@@ -28,12 +28,11 @@ const handler = async (m, { conn }) => {
 
     const messageOptions = {
       quoted: fkontak2,
-      mimetype: 'application/pdf',
       caption: pdfName // Agregar el nombre del archivo como texto del mensaje
     };
 
-    // Enviar el documento con el nombre del archivo como texto del mensaje
-    await conn.sendMessage(m.chat, { document: pdfBuffer, mimetype: 'application/pdf' }, messageOptions);
+    // Enviar el archivo como documento adjunto con el nombre correcto
+    await conn.sendFile(m.chat, pdfPath, pdfName, messageOptions);
   } catch (error) {
     console.error(error);
     conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝚈 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙴𝙽𝚅𝙸𝙰𝚁𝙻𝙾, 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃*', m);
