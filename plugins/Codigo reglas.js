@@ -1,14 +1,15 @@
 const handler = async (m, { conn, text, isROwner, isOwner }) => {
   const chatId = m.chat;
-  const [command, restOfText] = text.split(" ", 2);
+  const [command, ...restOfText] = text.split(" ");
 
   switch (command) {
     case '.infi1':
     case '.infi2':
     case '.infi3':
       const index = parseInt(command.replace(".infi", "")) - 1;
-      if (restOfText) {
-        global.db.data.chats[chatId][`sInfi${index + 1}`] = restOfText.trim();
+      const infiText = restOfText.join(" ");
+      if (infiText) {
+        global.db.data.chats[chatId][`sInfi${index + 1}`] = infiText.trim();
         m.reply(`*[❗] Mensaje ${index + 1} configurado correctamente para Infi.*`);
       } else {
         const sInfi = global.db.data.chats[chatId][`sInfi${index + 1}`];
