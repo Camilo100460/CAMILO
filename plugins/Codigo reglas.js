@@ -14,7 +14,7 @@ const handler = async (m, { conn, text, isROwner, isOwner }) => {
 
 handler.help = ['.Reglasinfi <texto>', '.Reglasinfi'];
 handler.tags = ['group'];
-handler.command = ['infi'];
+handler.command = ['Reglasinfi'];
 handler.admin = true;
 
 export default handler;
