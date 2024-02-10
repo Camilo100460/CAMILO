@@ -14,21 +14,21 @@ const handler = async (m, { conn, text, isROwner, isOwner }) => {
   cooldowns[userId] = Date.now() + 60000; // 1 minuto de enfriamiento
   
   if (text) {
-    global.db.data.chats[m.chat].sReglascompe = text; // Guarda el texto personalizado en la base de datos
-    m.reply('*[❗] Mensaje de bienvenida configurado correctamente para Reglascompe.*');
+    global.db.data.chats[m.chat].sDiscord = text; // Guarda el texto personalizado en la base de datos
+    m.reply('*[❗] Mensaje de bienvenida configurado correctamente para Discord.*');
   } else {
-    const sReglascompe = global.db.data.chats[m.chat].sReglascompe; // Obtiene el texto personalizado de la base de datos
-    if (sReglascompe) {
-      m.reply(sReglascompe); // Envía el mensaje personalizado si está configurado
+    const sDiscord = global.db.data.chats[m.chat].sDiscord; // Obtiene el texto personalizado de la base de datos
+    if (sDiscord) {
+      m.reply(sDiscord); // Envía el mensaje personalizado si está configurado
     } else {
-      m.reply('*[❗] No se ha configurado un mensaje de bienvenida para Reglascompe.*');
+      m.reply('*[❗] No se ha configurado un mensaje de bienvenida para Discord.*');
     }
   }
 };
 
-handler.help = ['.reglascompe <texto>', '.reglascompe'];
+handler.help = ['.discord <texto>', '.discord'];
 handler.tags = ['group'];
-handler.command = ['reglascompe'];
+handler.command = ['discord'];
 handler.admin = true;
 
 export default handler;
