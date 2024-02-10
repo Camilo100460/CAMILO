@@ -1,28 +1,24 @@
-const handler = async (m, { conn, text, isROwner, isOwner }) => {
+const handler = async (m, { conn, isROwner, isOwner }) => {
   const { MessageType } = conn;
 
-  // Verificar si se proporcionó texto y/o una imagen
-  if (text && m.quoted && m.quoted.mimetype.includes('image')) {
+  // Verificar si se adjuntó una imagen
+  if (m.quoted && m.quoted.mimetype.includes('image')) {
     const img = await conn.downloadAndSaveMediaMessage(m.quoted);
-    global.db.data.chats[m.chat].sReglasimg = { text, img }; // Guarda el texto y la imagen en la base de datos
-    m.reply('*[❗] Mensaje de bienvenida con imagen configurado correctamente para Reglasimg.*');
+    global.db.data.chats[m.chat].sReglasimg = img; // Guarda solo la imagen en la base de datos
+    m.reply('*[❗] Imagen de bienvenida configurada correctamente para Reglasimg.*');
   } else {
-    const sReglasimg = global.db.data.chats[m.chat].sReglasimg; // Obtiene el mensaje personalizado de la base de datos
-    if (sReglasimg && sReglasimg.text && sReglasimg.img) {
-      // Envía el mensaje personalizado con la imagen si está configurado
-      conn.sendMessage(m.chat, sReglasimg.text, MessageType.text);
-      conn.sendMessage(m.chat, sReglasimg.img, MessageType.image, { caption: 'Imagen de bienvenida' });
-    } else if (sReglasimg && sReglasimg.text) {
-      // Envía solo el mensaje personalizado si está configurado sin imagen
-      m.reply(sReglasimg.text);
+    const sReglasimg = global.db.data.chats[m.chat].sReglasimg; // Obtiene la imagen personalizada de la base de datos
+    if (sReglasimg) {
+      // Envía la imagen de bienvenida si está configurada
+      conn.sendMessage(m.chat, sReglasimg, MessageType.image, { caption: 'Imagen de bienvenida' });
     } else {
-      // Mensaje de advertencia si no se ha configurado ningún mensaje de bienvenida
-      m.reply('*[❗] No se ha configurado un mensaje de bienvenida para Reglasimg.*');
+      // Mensaje de advertencia si no se ha configurado ninguna imagen de bienvenida
+      m.reply('*[❗] No se ha configurado una imagen de bienvenida para Reglasimg.*');
     }
   }
 };
 
-handler.help = ['.reglasimg <texto>', '.reglasimg'];
+handler.help = ['.reglasimg', '.reglasimg'];
 handler.tags = ['group'];
 handler.command = ['reglasimg'];
 handler.admin = true;
