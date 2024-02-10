@@ -1,5 +1,5 @@
 let handler = async (m, { conn, text }) => {
-  m.reply(`\n *😹 ${pickRandom(global.chiste)}*\n\n                     *${conn.getName(m.sender)}*`);
+  m.reply(`\n *${pickRandom(global.chiste)}*\n\n                         *${conn.getName(m.sender)}*`);
 };
 
 handler.tags = ['humor'];
