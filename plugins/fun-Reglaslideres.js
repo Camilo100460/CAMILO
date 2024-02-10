@@ -1,4 +1,4 @@
-const path = require('path'); // Importa el módulo path
+const path = require('path');
 
 const handler = async (m, { conn }) => {
   try {
@@ -27,10 +27,10 @@ const handler = async (m, { conn }) => {
 
     const messageOptions = {
       quoted: fkontak2,
-      caption: pdfName // Utiliza el nombre del archivo como el texto del mensaje
+      filename: pdfName // Usa el nombre del archivo como nombre de archivo
     };
 
-    conn.sendMessage(m.chat, { document: fs.readFileSync(pdfPath), mimetype: 'application/pdf', filename: pdfName }, messageOptions);
+    conn.sendMessage(m.chat, { document: fs.readFileSync(pdfPath), mimetype: 'application/pdf' }, messageOptions);
   } catch (error) {
     console.error(error);
     conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝚈 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙴𝙽𝚅𝙸𝙰𝚁𝙻𝙾, 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃*', m);
