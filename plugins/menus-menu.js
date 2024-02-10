@@ -38,6 +38,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   _*< 📜 LISTA DE MENUS 📋 />*_
   
   🎵 _${usedPrefix}menuaudios_
+  🍂 _${usedPrefix}menuaudios_
   📺 _${usedPrefix}menuanimes_
   📖 _${usedPrefix}labiblia_ (🔞)
 
@@ -82,6 +83,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   🎲 _${usedPrefix}ttt *<nombre sala>*_
   ❌ _${usedPrefix}delttt_
   ❓ _${usedPrefix}acertijo_
+  💐 _${usedPrefix}ship *<nombre / nombre>*_
   🤖 _${usedPrefix}simi *<txt>*_
   🏆 _${usedPrefix}top *<txt>*_
   🌈 _${usedPrefix}topgays_
@@ -240,8 +242,12 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 
   🌹 _${usedPrefix}piropo_
   💡 _${usedPrefix}consejo_
+  🍂 _${usedPrefix}chiste_
   💘 _${usedPrefix}fraseromantica_
   📖 _${usedPrefix}historiaromantica_
+  🧸 _${usedPrefix}personalidad_
+  🔮 _${usedPrefix}horóscopo_
+  
 
 
   _*< ALEATORIO 🎲 />*_
