@@ -14,7 +14,8 @@ const handler = async (m, { conn, text, isROwner, isOwner }) => {
   cooldowns[userId] = Date.now() + 60000; // 1 minuto de enfriamiento
   
   if (text) {
-    global.db.data.chats[m.chat].sDiscord = text; // Sobrescribe el texto personalizado en la base de datos
+    const message = `${text}\n¡Te deseo mucha suerte en tu servidor! 🍀`; // Agrega el mensaje de buena suerte al nuevo texto
+    global.db.data.chats[m.chat].sDiscord = message; // Sobrescribe el texto personalizado en la base de datos
     m.reply('*[❗] Mensaje de bienvenida configurado correctamente para Discord.*');
   } else {
     const sDiscord = global.db.data.chats[m.chat].sDiscord; // Obtiene el texto personalizado de la base de datos
