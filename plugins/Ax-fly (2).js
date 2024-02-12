@@ -1,49 +1,34 @@
-const axios = require('axios');
-const fs = require('fs');
+const cooldowns = {};
 
-const handler = async (m, { conn, text }) => {
-    // Comprobamos si el comando es .reglasx-fly
-    if (text && /^.reglasx-fly/i.test(text)) {
-        const url = text.split(' ')[1]; // Extraemos la URL de la imagen de la entrada del usuario
-        
-        if (url) {
-            try {
-                const response = await axios.get(url, { responseType: 'arraybuffer' });
-                if (response.status === 200) {
-                    const buffer = Buffer.from(response.data, 'binary');
-                    const ext = url.split('.').pop(); // Obtenemos la extensión del archivo
-                    const filename = `imagen_${Date.now()}.${ext}`; // Nombre de archivo único con la extensión original
-                    fs.writeFileSync(filename, buffer); // Guardamos la imagen en el sistema de archivos
-
-                    global.db.data.urls[m.chat] = filename; // Guardamos el nombre del archivo en la base de datos
-                    m.reply('Imagen guardada correctamente.');
-                } else {
-                    m.reply('Error al descargar la imagen.');
-                }
-            } catch (error) {
-                console.error(error);
-                m.reply('Error al descargar la imagen.');
-            }
-            return;
-        } else {
-            m.reply('Por favor, proporciona una URL de imagen después de `.reglasx-fly`.');
-            return;
-        }
-    }
-    
-    // Si el comando no es .reglasx-fly, se busca la URL guardada
-    const filename = global.db.data.urls[m.chat];
-    if (filename) {
-        const buffer = fs.readFileSync(filename);
-        conn.sendMessage(m.chat, buffer, 'imageMessage', { filename: filename.split('.').pop(), caption: 'Mensaje de ejemplo', quoted: m });
+const handler = async (m, { conn, text, isROwner, isOwner }) => {
+  const userId = m.sender; // Obtiene el ID del remitente del mensaje
+  
+  // Verifica si el usuario está en el registro de enfriamiento y si ha pasado el tiempo de enfriamiento
+  if (cooldowns[userId] && cooldowns[userId] > Date.now()) {
+    const remainingTime = (cooldowns[userId] - Date.now()) / 1000;
+    m.reply(`Debes esperar ${remainingTime.toFixed(1)} segundos antes de volver a usar este comando.`);
+    return;
+  }
+  
+  // Registra el momento actual más el tiempo de enfriamiento (por ejemplo, 1 minuto)
+  cooldowns[userId] = Date.now() + 60000; // 1 minuto de enfriamiento
+  
+  if (text) {
+    global.db.data.chats[m.chat].sInsta = text; // Guarda el texto personalizado en la base de datos
+    m.reply('*[❗] Mensaje se configurado correctamente para Instagram.*');
+  } else {
+    const sInsta = global.db.data.chats[m.chat].sInsta; // Obtiene el texto personalizado de la base de datos
+    if (sInsta) {
+      m.reply(sInsta); // Envía el mensaje personalizado si está configurado
     } else {
-        m.reply('No se ha configurado ninguna URL de imagen.');
+      m.reply('*[❗] No se ha configurado un mensaje para Instagram.*');
     }
+  }
 };
 
-handler.help = ['.reglasx-fly <URL>', '.reglasx-fly'];
-handler.tags = ['internet'];
-handler.command = ['reglasx-fly'];
+handler.help = ['.insta <texto>', '.insta'];
+handler.tags = ['group'];
+handler.command = ['insta'];
 handler.admin = true;
 
 export default handler;
