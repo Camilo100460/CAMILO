@@ -16,7 +16,7 @@ const handler = async (m, { conn, text, isROwner, isOwner }) => {
   if (text) {
     const message = `${text}\n\n*_¡Te deseo mucha suerte en tu servidor!_* 🍀`; // Agrega el mensaje de buena suerte al nuevo texto
     global.db.data.chats[m.chat].sDiscord = message; // Sobrescribe el texto personalizado en la base de datos
-    m.reply('*[❗] Mensaje configurado correctamente para Discord.*');
+    m.reply('*[❗] El mensaje se ha configurado correctamente. Por favor, espera un minuto antes de volver a usar este comando.*');
   } else {
     const sDiscord = global.db.data.chats[m.chat].sDiscord; // Obtiene el texto personalizado de la base de datos
     if (sDiscord) {
