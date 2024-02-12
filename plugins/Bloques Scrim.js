@@ -14,22 +14,21 @@ const handler = async (m, { conn, text, isROwner, isOwner }) => {
   cooldowns[userId] = Date.now() + 60000; // 1 minuto de enfriamiento
   
   if (text) {
-    const message = `${text}\n\n*_¡Te deseo mucha suerte en tu servidor!_* 🍀`; // Agrega el mensaje de buena suerte al nuevo texto
-    global.db.data.chats[m.chat].sDiscord = message; // Sobrescribe el texto personalizado en la base de datos
-    m.reply('*[❗] Mensaje configurado correctamente para Discord.*');
+    global.db.data.chats[m.chat].sBloquescrim = text; // Guarda el texto personalizado en la base de datos
+    m.reply('*[❗] Mensaje se configurado correctamente para Bloquescrim.*');
   } else {
-    const sDiscord = global.db.data.chats[m.chat].sDiscord; // Obtiene el texto personalizado de la base de datos
-    if (sDiscord) {
-      m.reply(sDiscord); // Envía el mensaje personalizado si está configurado
+    const sBloquescrim = global.db.data.chats[m.chat].sBloquescrim; // Obtiene el texto personalizado de la base de datos
+    if (sBloquescrim) {
+      m.reply(sBloquescrim); // Envía el mensaje personalizado si está configurado
     } else {
-      m.reply('*[❗] No se ha configurado el mensaje para Discord.*');
+      m.reply('*[❗] No se ha configurado un mensaje para Bloquescrim.*');
     }
   }
 };
 
-handler.help = ['.discord <texto>', '.discord'];
+handler.help = ['.bloquescrim <texto>', '.bloquescrim'];
 handler.tags = ['group'];
-handler.command = ['discord'];
+handler.command = ['bloquescrim'];
 handler.admin = true;
 
 export default handler;
