@@ -13,7 +13,7 @@ const handler = async (m, { conn, text, isROwner, isOwner, command }) => {
   
   if (!db.data.chats[m.chat].modohorny && m.isGroup && command === 'reglasx-fly') throw 'Mensaje de error que deseas mostrar si no se cumple la condición';
   let url = "https://i.ibb.co/8DpxWFc/ENFRENTAMIENTOS.jpg"; 
-  conn.sendFile(m.chat, url, 'error.jpg', `May te desea mucha suerte`, m)
+  conn.sendFile(m.chat, url, 'error.jpg', `te desea mucha suerte`, m)
 };
 
 handler.help = ['reglasx-fly'];
