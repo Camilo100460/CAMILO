@@ -2,9 +2,7 @@ import fetch from 'node-fetch'
 
 let handler = async (m, { conn, command }) => {
     if (command === 'hola') { // Si el comando es .hola
-        let url = "https://i.ibb.co/M71kYVG/grupo-Amarillo.jpg"; // Coloca aquí la URL que deseas enviar
         conn.sendText(m.chat, '¡Hola! ¿Cómo estás?') // Envía este mensaje
-        conn.sendFile(m.chat, url, 'hello.jpg', '¡Aquí tienes una URL!', m) // Envía la URL
     } else { // Para cualquier otro comando
         if (!db.data.chats[m.chat].modohorny && m.isGroup) throw `${lenguajeGB['smsContAdult']()}`
         let url = "https://i.ibb.co/8DpxWFc/ENFRENTAMIENTOS.jpg"; // Cambia este enlace por el que desees usar
