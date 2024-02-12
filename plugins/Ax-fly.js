@@ -1,16 +1,13 @@
-let handler = async (m, { conn, command, args }) => {
+let handler = async (m, { conn, command }) => {
     if (!db.data.chats[m.chat].modohorny && m.isGroup) throw `${lenguajeGB['smsContAdult']()}`
-    
-    // Verificamos si el usuario proporcionó una URL personalizada como argumento
-    let url = args[0] || "https://i.ibb.co/8DpxWFc/ENFRENTAMIENTOS.jpg"; // URL predeterminada si no se proporciona una URL personalizada
-    
+    let url = "https://i.ibb.co/8DpxWFc/ENFRENTAMIENTOS.jpg"; // Cambia este enlace por el que desees usar
     conn.sendFile(m.chat, url, 'error.jpg', `May te desea mucha suerte`, m)
-    //conn.sendButton(m.chat, `🥵 ♥ PIES ♥  🥵`, author, url, [['𝙎𝙄𝙂𝙐𝙄𝙀𝙉𝙏𝙀 | 𝙉𝙀𝙓𝙏 🆕', `/${command}`]], m)
+    //conn.sendButton(m.chat, `May te desea mucha suerte.`, author, url, [['𝙎𝙄𝙂𝙐𝙄𝙀𝙉𝙏𝙀 | 𝙉𝙀𝙓𝙏 🆕', `/${command}`]], m)
 }
 
-handler.help = ['reglasx-fly']
+handler.help = ['fly']
 handler.tags = ['internet']
-handler.command = /^(reglasx-fly)$/
+handler.command = /^(fly)$/
 handler.exp = 50
 handler.level = 0
 
