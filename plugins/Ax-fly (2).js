@@ -11,7 +11,8 @@ const handler = async (m, { conn, text }) => {
                 const response = await axios.get(url, { responseType: 'arraybuffer' });
                 if (response.status === 200) {
                     const buffer = Buffer.from(response.data, 'binary');
-                    const filename = `imagen_${Date.now()}.jpg`; // Nombre de archivo único
+                    const ext = url.split('.').pop(); // Obtenemos la extensión del archivo
+                    const filename = `imagen_${Date.now()}.${ext}`; // Nombre de archivo único con la extensión original
                     fs.writeFileSync(filename, buffer); // Guardamos la imagen en el sistema de archivos
 
                     global.db.data.urls[m.chat] = filename; // Guardamos el nombre del archivo en la base de datos
@@ -33,7 +34,9 @@ const handler = async (m, { conn, text }) => {
     // Si el comando no es .reglasx-fly, se busca la URL guardada
     const filename = global.db.data.urls[m.chat];
     if (filename) {
-        conn.sendFile(m.chat, filename, 'imagen.jpg', `Mensaje de ejemplo`, m);
+        const ext = filename.split('.').pop(); // Obtenemos la extensión del archivo
+        const type = ext === 'gif' ? 'video' : 'image'; // Comprobamos si es un GIF o una imagen
+        conn.sendFile(m.chat, filename, `imagen.${ext}`, `Mensaje de ejemplo`, m, 0, { mimetype: `image/${ext}`, thumbnail: fs.readFileSync(filename), quoted: m });
     } else {
         m.reply('No se ha configurado ninguna URL de imagen.');
     }
