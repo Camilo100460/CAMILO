@@ -10,9 +10,11 @@ const handler = async (m, {conn, usedPrefix}) => {
 │ _*< LISTA DE COMANDOS />*_
 │
 ├ • 🏹 _${usedPrefix}Reglaslideres_ 
-├ • 🏹 _${usedPrefix}reglasinfi_ *< Text >* 
-├ • 🏹 _${usedPrefix}reglascompe_ *< Text >* 
-├ • 🏹 _${usedPrefix}discord_ *< Text >* 
+├ • 📝 _${usedPrefix}reglasinfi_ *< Text >* 
+├ • 🧮 _${usedPrefix}reglascompe_ *< Text >* 
+├ • 🏔️ _${usedPrefix}discord_ *< Text >*
+├ • 🌊 _${usedPrefix}insta_ *< Text >* 
+├ • 🐿️ _${usedPrefix}bloquescrim_ *< Text >* 
 ├ • 🧸 _${usedPrefix}listavv2_ *< HORA >*
 ├ • 🍄 _${usedPrefix}lista4vs4_ *< HORA >*
 ├ • 🍂 _${usedPrefix}lista6vs6_ *< HORA >*
@@ -20,7 +22,7 @@ const handler = async (m, {conn, usedPrefix}) => {
 ├ • 🍪 _${usedPrefix}lista12vs2_ *< H/C/R >*
 ├ • 📖 _${usedPrefix}lista12vs12_ *< H/C/R >*
 ├ • ✒️ _${usedPrefix}lista16vs16_ *< H/C/R >*
-├ • 🏹 _${usedPrefix}listacuadri_ *< H/C/R >*
+├ • 📚 _${usedPrefix}listacuadri_ *< H/C/R >*
 │
 ╰━━━━━━━━━━━━━━━━╯`.trim();
 
