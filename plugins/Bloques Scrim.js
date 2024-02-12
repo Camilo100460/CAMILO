@@ -15,7 +15,7 @@ const handler = async (m, { conn, text, isROwner, isOwner }) => {
   
   if (text) {
     global.db.data.chats[m.chat].sBloquescrim = text; // Guarda el texto personalizado en la base de datos
-    m.reply('*[❗] Mensaje se configurado correctamente para Bloquescrim.*');
+    m.reply('*[❗] El mensaje se ha configurado correctamente. Por favor, espera un minuto antes de volver a usar este comando.*');
   } else {
     const sBloquescrim = global.db.data.chats[m.chat].sBloquescrim; // Obtiene el texto personalizado de la base de datos
     if (sBloquescrim) {
