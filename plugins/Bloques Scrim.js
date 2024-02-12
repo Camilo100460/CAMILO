@@ -1,34 +1,41 @@
-const cooldowns = {};
+const axios = require('axios');
+const fs = require('fs');
 
-const handler = async (m, { conn, text, isROwner, isOwner }) => {
-  const userId = m.sender; // Obtiene el ID del remitente del mensaje
-  
-  // Verifica si el usuario está en el registro de enfriamiento y si ha pasado el tiempo de enfriamiento
-  if (cooldowns[userId] && cooldowns[userId] > Date.now()) {
-    const remainingTime = (cooldowns[userId] - Date.now()) / 1000;
-    m.reply(`Debes esperar ${remainingTime.toFixed(1)} segundos antes de volver a usar este comando.`);
-    return;
-  }
-  
-  // Registra el momento actual más el tiempo de enfriamiento (por ejemplo, 1 minuto)
-  cooldowns[userId] = Date.now() + 60000; // 1 minuto de enfriamiento
-  
-  if (text) {
-    global.db.data.chats[m.chat].sBloquescrim = text; // Guarda el texto personalizado en la base de datos
-    m.reply('*[❗] Mensaje se configurado correctamente para Bloquescrim.*');
-  } else {
-    const sBloquescrim = global.db.data.chats[m.chat].sBloquescrim; // Obtiene el texto personalizado de la base de datos
-    if (sBloquescrim) {
-      m.reply(sBloquescrim); // Envía el mensaje personalizado si está configurado
-    } else {
-      m.reply('*[❗] No se ha configurado un mensaje para Bloquescrim.*');
+const handler = async (m, { conn, text }) => {
+    const [command, url] = text.trim().split(/ +/);
+
+    if (command.toLowerCase() === '.reglasx-fly') {
+        if (!url) {
+            if (global.db.data.urls[m.chat]) {
+                const filename = global.db.data.urls[m.chat];
+                conn.sendFile(m.chat, filename, 'imagen.jpg', 'Mensaje de ejemplo', m);
+            } else {
+                m.reply('No se ha configurado ninguna URL de imagen.');
+            }
+        } else {
+            try {
+                const response = await axios.get(url, { responseType: 'arraybuffer' });
+                if (response.status === 200) {
+                    const buffer = Buffer.from(response.data, 'binary');
+                    const ext = url.split('.').pop();
+                    const filename = `imagen_${Date.now()}.${ext}`;
+                    fs.writeFileSync(filename, buffer);
+                    global.db.data.urls[m.chat] = filename;
+                    m.reply('Imagen guardada correctamente.');
+                } else {
+                    m.reply('Error al descargar la imagen.');
+                }
+            } catch (error) {
+                console.error(error);
+                m.reply('Error al descargar la imagen.');
+            }
+        }
     }
-  }
 };
 
-handler.help = ['.bloquescrim <texto>', '.bloquescrim'];
-handler.tags = ['group'];
-handler.command = ['bloquescrim'];
+handler.help = ['.reglasx-fly <URL>', '.reglasx-fly'];
+handler.tags = ['internet'];
+handler.command = ['reglasx-fly'];
 handler.admin = true;
 
 export default handler;
