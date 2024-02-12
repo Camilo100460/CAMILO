@@ -15,7 +15,7 @@ const handler = async (m, { conn, text, isROwner, isOwner }) => {
   
   if (text) {
     global.db.data.chats[m.chat].sReglascompe = text; // Guarda el texto personalizado en la base de datos
-    m.reply('*[❗] Mensaje se configurado correctamente para Reglascompe.*');
+    m.reply('*[❗] El mensaje se ha configurado correctamente. Por favor, espera un minuto antes de volver a usar este comando..*');
   } else {
     const sReglascompe = global.db.data.chats[m.chat].sReglascompe; // Obtiene el texto personalizado de la base de datos
     if (sReglascompe) {
