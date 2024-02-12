@@ -34,9 +34,8 @@ const handler = async (m, { conn, text }) => {
     // Si el comando no es .reglasx-fly, se busca la URL guardada
     const filename = global.db.data.urls[m.chat];
     if (filename) {
-        const ext = filename.split('.').pop(); // Obtenemos la extensión del archivo
-        const type = ext === 'gif' ? 'video' : 'image'; // Comprobamos si es un GIF o una imagen
-        conn.sendFile(m.chat, filename, `imagen.${ext}`, `Mensaje de ejemplo`, m, 0, { mimetype: `image/${ext}`, thumbnail: fs.readFileSync(filename), quoted: m });
+        const buffer = fs.readFileSync(filename);
+        conn.sendMessage(m.chat, buffer, 'imageMessage', { filename: filename.split('.').pop(), caption: 'Mensaje de ejemplo', quoted: m });
     } else {
         m.reply('No se ha configurado ninguna URL de imagen.');
     }
