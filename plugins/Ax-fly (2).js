@@ -1,14 +1,25 @@
-let handler = async (m, { conn, command }) => {
-    if (!db.data.chats[m.chat].modohorny && m.isGroup) throw `${lenguajeGB['smsContAdult']()}`
-    let url = "https://i.ibb.co/8DpxWFc/ENFRENTAMIENTOS.jpg"; // Cambia este enlace por el que desees usar
-    conn.sendFile(m.chat, url, 'error.jpg', `May te desea mucha suerte`, m)
-    //conn.sendButton(m.chat, `🥵 ♥ PIES ♥  🥵`, author, url, [['𝙎𝙄𝙂𝙐𝙄𝙀𝙉𝙏𝙀 | 𝙉𝙀𝙓𝙏 🆕', `/${command}`]], m)
-}
+const cooldownsReglas = {};
 
-handler.help = ['reglas-fly']
-handler.tags = ['internet']
-handler.command = /^(reglasx-fly)$/
-handler.exp = 50
-handler.level = 0
+const handler = async (m, { conn, text, isROwner, isOwner, command }) => {
+  const userId = m.sender; 
+  
+  if (cooldownsReglas[userId] && cooldownsReglas[userId] > Date.now()) { 
+    const remainingTime = (cooldownsReglas[userId] - Date.now()) / 1000; 
+    m.reply(`Debes esperar ${remainingTime.toFixed(1)} segundos antes de volver a usar este comando.`);
+    return;
+  }
+  
+  cooldownsReglas[userId] = Date.now() + 60000; 
+  
+  if (!db.data.chats[m.chat].modohorny && m.isGroup && command === 'reglasx-fly') throw 'Mensaje de error que deseas mostrar si no se cumple la condición';
+  let url = "https://i.ibb.co/8DpxWFc/ENFRENTAMIENTOS.jpg"; 
+  conn.sendFile(m.chat, url, 'error.jpg', `May te desea mucha suerte`, m)
+};
 
-export default handler
+handler.help = ['reglasx-fly'];
+handler.tags = ['internet'];
+handler.command = /^(reglasx-fly)$/;
+handler.exp = 50;
+handler.level = 0;
+
+export default handler;
