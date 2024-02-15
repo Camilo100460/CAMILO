@@ -1,16 +1,28 @@
-import fetch from 'node-fetch'
+const handler = async (m, { conn }) => {
+  const iqResult = pickRandom(global.iq);
+  conn.reply(m.chat, `Tu coeficiente intelectual es: ${iqResult}`, m);
+};
 
-let handler = async (m, { conn, command }) => {
-    if (!db.data.chats[m.chat].modohorny && m.isGroup) throw `${lenguajeGB['smsContAdult']()}`
-    let url = "https://i.ibb.co/8DpxWFc/ENFRENTAMIENTOS.jpg"; // Cambia este enlace por el que desees usar
-    conn.sendFile(m.chat, url, 'error.jpg', `🥵 ♥ PIES ♥  🥵`, m)
-    //conn.sendButton(m.chat, `🥵 ♥ PIES ♥  🥵`, author, url, [['𝙎𝙄𝙂𝙐𝙄𝙀𝙉𝙏𝙀 | 𝙉𝙀𝙓𝙏 🆕', `/${command}`]], m)
+handler.help = ['iqtest'];
+handler.tags = ['game'];
+handler.command = /^(iqtest)$/i;
+handler.owner = false;
+handler.mods = false;
+handler.premium = false;
+handler.group = false;
+handler.private = false;
+handler.admin = false;
+handler.botAdmin = false;
+handler.fail = null;
+
+module.exports = handler;
+
+function pickRandom(list) {
+  return list[Math.floor(Math.random() * list.length)];
 }
 
-handler.help = ['x-fly']
-handler.tags = ['internet']
-handler.command = /^(x-fly)$/
-handler.exp = 50
-handler.level = 0
-
-export default handler
+global.iq = [
+  1, 14, 23, 35, 41, 50, 67, 72, 86, 99,
+  150, 340, 423, 500, 676, 780, 812, 945,
+  1000, '¡Ilimitado!', 5000, 7500, 10000
+];
