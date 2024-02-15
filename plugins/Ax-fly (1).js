@@ -1,5 +1,12 @@
 const handler = async (m, {conn, text}) => {
-  const name = text.trim();
+  let name = text.trim();
+  
+  // Verificar si el texto contiene una mención (@) y obtener el nombre de la persona mencionada
+  if (m.mentionedIds && m.mentionedIds.length > 0) {
+    const mentionedId = m.mentionedIds[0];
+    name = conn.getName(mentionedId);
+  }
+  
   const iqMessage = `El coeficiente intelectual de ${name} es: ${pickRandom(global.iq)}`;
   m.reply(iqMessage);
 };
