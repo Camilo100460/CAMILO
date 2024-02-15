@@ -55,4 +55,4 @@ global.taugasih= [
 "¿Sabías que los glóbulos rojos se producen en la médula ósea",
 "¿Sabías que el 11% de las personas son zurdas?",
 "¿Sabías que cada año el sol pierde 360 ​​millones de toneladas?" 
-]
+];
