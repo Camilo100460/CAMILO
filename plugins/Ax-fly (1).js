@@ -1,45 +1,25 @@
-const handler = async (m, {conn, text}) => {
-  let name = text.trim();
-  
-  // Verificar si el texto contiene una mención (@) y obtener el nombre de la persona mencionada
-  if (m.mentionedIds && m.mentionedIds.length > 0) {
-    const mentionedId = m.mentionedIds[0];
-    name = conn.getName(mentionedId);
-  }
-  
-  const iqMessage = `El coeficiente intelectual de ${name} es: ${pickRandom(global.iq)}`;
-  m.reply(iqMessage);
-};
-handler.tags = ['frases'];
-handler.command = ['iqtest'];
-export default handler;
+let lastUsed = 0;
 
-function pickRandom(list) {
-  return list[Math.floor(list.length * Math.random())];
+let handler = async (m, { conn, command, text }) => {
+    if (command === "iqtest") {
+        if (!text) throw `⚠️ Debes mencionar a una persona para hacer el test de IQ.`;
+        let iq = Math.floor(Math.random() * 200) + 1; // Genera un IQ aleatorio entre 1 y 200
+        m.reply(`El IQ de ${text} es: ${iq}`);
+        return;
+    }
+
+    let currentTime = Date.now();
+
+    if (currentTime - lastUsed < 30000) {
+        m.reply("_⌛ Tiempo de uso del comando agotado. Por favor, vuelve a intentarlo más tarde._");
+        return;
+    }
+
+    lastUsed = currentTime;
 }
 
-global.iq = [
-  '1',
-  '14',
-  '23',
-  '35',
-  '41',
-  '50',
-  '67',
-  '72',
-  '86',
-  '99',
-  '150',
-  '340', 
-  '423',
-  '500',
-  '676',
-  '780',
-  '812',
-  '945',
-  '1000',
-  '¡Ilimitado!',
-  '5000',
-  '7500',
-  '10000',
-];
+handler.help = ['iqtest']
+handler.tags = ['fun']
+handler.command = /^iqtest$/i
+
+export default handler
