@@ -1,5 +1,7 @@
 const handler = async (m, {conn, text}) => {
-  m.reply(`🤔 • *${pickRandom(global.iq)}*`);
+  const name = text.trim();
+  const iqMessage = `El coeficiente intelectual de ${name} es: ${pickRandom(global.iq)}`;
+  m.reply(iqMessage);
 };
 handler.tags = ['frases'];
 handler.command = ['iqtest'];
@@ -10,27 +12,27 @@ function pickRandom(list) {
 }
 
 global.iq = [
-  'Tu coeficiente intelectual es: 1',
-  'Tu coeficiente intelectual es: 14',
-  'Tu coeficiente intelectual es: 23',
-  'Tu coeficiente intelectual es: 35',
-  'Tu coeficiente intelectual es: 41',
-  'Tu coeficiente intelectual es: 50',
-  'Tu coeficiente intelectual es: 67',
-  'Tu coeficiente intelectual es: 72',
-  'Tu coeficiente intelectual es: 86',
-  'Tu coeficiente intelectual es: 99',
-  'Tu coeficiente intelectual es: 150',
-  'Tu coeficiente intelectual es: 340', 
-  'Tu coeficiente intelectual es: 423',
-  'Tu coeficiente intelectual es: 500',
-  'Tu coeficiente intelectual es: 676',
-  'Tu coeficiente intelectual es: 780',
-  'Tu coeficiente intelectual es: 812',
-  'Tu coeficiente intelectual es: 945',
-  'Tu coeficiente intelectual es: 1000',
-  'Tu coeficiente intelectual es: ¡Ilimitado!',
-  'Tu coeficiente intelectual es: 5000',
-  'Tu coeficiente intelectual es: 7500',
-  'Tu coeficiente intelectual es: 10000',
+  '1',
+  '14',
+  '23',
+  '35',
+  '41',
+  '50',
+  '67',
+  '72',
+  '86',
+  '99',
+  '150',
+  '340', 
+  '423',
+  '500',
+  '676',
+  '780',
+  '812',
+  '945',
+  '1000',
+  '¡Ilimitado!',
+  '5000',
+  '7500',
+  '10000',
 ];
