@@ -30,7 +30,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
  📈 •  *Experiencia:* ${exp}
  🏅 •  *Rango:* ${role}
  💎 •  *Diamantes:* ${limit}
- 💰 •  *MysticCoins:* ${money}
+ 💰 •  *MayCoins:* ${money}
  🎟️ •  *Tokens:* ${joincount}
  🎁 •  *Premium:* ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌') || ''}
  ${readMore}
