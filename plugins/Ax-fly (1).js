@@ -4,7 +4,7 @@ let handler = async (m, { conn, command, text }) => {
     if (command === "iqtest") {
         if (!text) throw `⚠️ Debes mencionar a una persona para hacer el test de IQ.`;
         let iq = Math.floor(Math.random() * 200) + 1; // Genera un IQ aleatorio entre 1 y 200
-        m.reply(`El IQ de ${text} es: ${iq}`);
+        m.reply(`El IQ de  ${text}  es: ${iq}`);
         return;
     }
 
