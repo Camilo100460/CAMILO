@@ -59,6 +59,18 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   🤖 _bot_ (sin prefijo)
 
 
+ _*< FRASES & TEXTOS 💬 />*_
+
+  🌹 _${usedPrefix}piropo_
+  💡 _${usedPrefix}consejo_
+  🍂 _${usedPrefix}chiste_
+  🏖️ _${usedPrefix}iqtest_
+  💘 _${usedPrefix}fraseromantica_
+  📖 _${usedPrefix}historiaromantica_
+  🧸 _${usedPrefix}personalidad_
+  🔮 _${usedPrefix}horóscopo_
+  
+
   _*< 🎮 JUEGOS 🕹️ />*_
 
   🧮 _${usedPrefix}mates *<noob / easy / medium / hard / extreme /impossible /impossible2>*_
@@ -223,6 +235,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   🔗 _${usedPrefix}tourl *<video / img / audio>*_
   🗣️ _${usedPrefix}tts *<idioma> <txt>*_
   🎤 _${usedPrefix}tts *<efecto> <txt>*_
+  
 
  _*< EFECTOS & LOGOS 🎨 />*_
 
@@ -236,18 +249,6 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   🤪 _${usedPrefix}itssostupid_
   🎆 _${usedPrefix}pixelar_
   🌫️ _${usedPrefix}blur_
-
-
- _*< FRASES & TEXTOS 💬 />*_
-
-  🌹 _${usedPrefix}piropo_
-  💡 _${usedPrefix}consejo_
-  🍂 _${usedPrefix}chiste_
-  💘 _${usedPrefix}fraseromantica_
-  📖 _${usedPrefix}historiaromantica_
-  🧸 _${usedPrefix}personalidad_
-  🔮 _${usedPrefix}horóscopo_
-  
 
 
   _*< ALEATORIO 🎲 />*_
@@ -360,6 +361,7 @@ _*< 💰 ECONOMÍA />*_
   🕵️ _${usedPrefix}robar *<cant> <@tag>*_
   💸 _${usedPrefix}transfer *<tipo> <cant> <@tag>*_
   🚫 _${usedPrefix}unreg *<sn>*_
+
 
  _*< 🎨 STICKERS />*_
 
