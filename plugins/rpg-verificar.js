@@ -7,9 +7,9 @@ const handler = async function(m, {conn, text, usedPrefix, command}) {
   if (user.registered === true) throw `[❗𝐈𝐍𝐅𝐎❗] _*YA ESTAS REGISTRADO*_\n\n_*¿QUIERE VOLVER A REGISTRARSE?_*\n\n 📌 USE ESTE COMANDO PARA ELIMINAR SU REGISTRO\n*${usedPrefix}unreg* <Número de serie>`;
   if (!Reg.test(text)) throw `*[❗𝐈𝐍𝐅𝐎❗] FORMATO INCORRECTO*\n\n*🖥️• USO DEL COMANDO: ${usedPrefix + command} nombre.edad*\n*—◉ Ejemplo: ${usedPrefix + command} May.18*`;
   let [_, name, splitter, age] = text.match(Reg);
-  if (!name) throw '[❗𝐈𝐍𝐅𝐎❗]_* DEBES PONER UN NOMBRE*_';
-  if (!age) throw '[❗𝐈𝐍𝐅𝐎❗]_* LA EDAD NO PUEDE ESTAR VACIA*_';
-  if (name.length >= 30) throw '[❗𝐈𝐍𝐅𝐎❗]_* EL NOMBRE ES DEMASIADO LARGO*_';
+  if (!name) throw '[❗𝐈𝐍𝐅𝐎❗] _*DEBES PONER UN NOMBRE*_';
+  if (!age) throw '[❗𝐈𝐍𝐅𝐎❗] _*LA EDAD NO PUEDE ESTAR VACIA*_';
+  if (name.length >= 30) throw '[❗𝐈𝐍𝐅𝐎❗] _*EL NOMBRE ES DEMASIADO LARGO*_';
   age = parseInt(age);
   if (age > 100) throw '*[❗] Kheee, como sigues vivo con esa edad? 👴🏻*';
   if (age < 5) throw '*[❗] Kheee, un bebé que sabe usar WhatsApp? 😲*';
@@ -19,18 +19,17 @@ const handler = async function(m, {conn, text, usedPrefix, command}) {
   user.registered = true;
   const sn = createHash('md5').update(m.sender).digest('hex');
 const caption = `
-╭━━━━━━━━━━━━━━━━━━━
-┇           𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍
-┣━━━━━━━━━━━━━━━━━━━
-┃ 📛 • NOMBRE: ${name}
-┃ 🎂 • EDAD: ${age} años
-┃ 🔢 • NUMERO DE SERIE: 
-┃     ${sn}
-┣━━━━━━━━━━━━━━━━━━━
-┃ ¡𝚃𝚄 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴 𝚂𝙴𝚁𝙸𝙴 𝚃𝙴 𝚂𝙴𝚁𝚅𝙸𝚁𝙰 
-┃ 𝙿𝙾𝚁 𝚂𝙸 𝙳𝙴𝚂𝙴𝙰𝚂 𝙱𝙾𝚁𝚁𝙰𝚁 
-┃ 𝚃𝚄 𝚁𝙴𝙶𝙸𝚂𝚃𝚁𝙾 𝙴𝙽 𝙴𝙻 𝙱𝙾𝚃!
-╰━━━━━━━━━━━━━━━━━━━
+
+           𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍
+
+ 📛 • _*NOMBRE:*_ ${name}
+ 🎂 • _*EDAD:*_ ${age} años
+ 🔢 • _*NUMERO DE SERIE:*_ 
+     ${sn}
+
+ ¡𝚃𝚄 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴 𝚂𝙴𝚁𝙸𝙴 𝚃𝙴 𝚂𝙴𝚁𝚅𝙸𝚁𝙰 
+ 𝙿𝙾𝚁 𝚂𝙸 𝙳𝙴𝚂𝙴𝙰𝚂 𝙱𝙾𝚁𝚁𝙰𝚁 
+ 𝚃𝚄 𝚁𝙴𝙶𝙸𝚂𝚃𝚁𝙾 𝙴𝙽 𝙴𝙻 𝙱𝙾𝚃!
 `;
   // let author = global.author
   await conn.sendFile(m.chat, pp, 'mystic.jpg', caption);
