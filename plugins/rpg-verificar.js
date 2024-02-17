@@ -25,10 +25,6 @@ const caption = `
  🎂 • _*EDAD:*_ ${age} años
  🔢 • _*NUMERO DE SERIE:*_ 
      ${sn}
-
- ¡𝚃𝚄 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴 𝚂𝙴𝚁𝙸𝙴 𝚃𝙴 𝚂𝙴𝚁𝚅𝙸𝚁𝙰 
- 𝙿𝙾𝚁 𝚂𝙸 𝙳𝙴𝚂𝙴𝙰𝚂 𝙱𝙾𝚁𝚁𝙰𝚁 
- 𝚃𝚄 𝚁𝙴𝙶𝙸𝚂𝚃𝚁𝙾 𝙴𝙽 𝙴𝙻 𝙱𝙾𝚃!
 `;
   // let author = global.author
   await conn.sendFile(m.chat, pp, 'mystic.jpg', caption);
