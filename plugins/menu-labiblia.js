@@ -32,6 +32,7 @@ if (!db.data.chats[m.chat].modohorny && m.isGroup) throw `*[❗] Los comandos +1
 ┣ • 🔞 _${usedPrefix}videoxxx_
 ┣ • 🔞 _${usedPrefix}videolesbixxx_
 ┣ • 🔞 _${usedPrefix}tetas_
+┣ • 🔞 _${usedPrefix}pies_
 ┣ • 🔞 _${usedPrefix}booty_
 ┣ • 🔞 _${usedPrefix}ecchi_
 ┣ • 🔞 _${usedPrefix}furro_
