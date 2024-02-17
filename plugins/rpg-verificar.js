@@ -24,6 +24,7 @@ const caption = `
  📛 • _*NOMBRE:*_ ${name}
  🎂 • _*EDAD:*_ ${age} años
  🔢 • _*NUMERO DE SERIE:*_ 
+ 
      ${sn}
 `;
   // let author = global.author
