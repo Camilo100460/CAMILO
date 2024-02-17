@@ -18,7 +18,7 @@ let iqList = {
 };
 
 let handler = async (m, { conn, command, text }) => {
-    if (!text) throw `╰⊱❗️⊱ *𝙇𝙊 𝙐𝙎𝙊́ 𝙈𝘼𝙇 | 𝙐𝙎𝙀𝘿 𝙄𝙏 𝙒𝙍𝙊𝙉𝙂* ⊱❗️⊱╮\n\n𝙀𝙎𝘾𝙍𝙄𝘽𝙀 𝙀𝙇 𝙉𝙊𝙈𝘽𝙍𝙀 𝘿𝙀 𝙇𝘼 𝙋𝙀𝙍𝙎𝙊𝙉𝘼 𝙋𝘼𝙍𝘼 𝘾𝘼𝙇𝘾𝙐𝙇𝘼𝙍 𝙎𝙐 𝘾𝙊𝘾𝙄𝙀𝙉𝙏𝙊 𝙌𝙐𝙊𝘾𝙄𝙀𝙉𝙏𝙄𝙁𝙄𝘾𝙊`
+    if (!text) throw `╰⊱❗️⊱ *𝙇𝙊 𝙐𝙎𝙊 𝙈𝘼𝙇 | 𝙐𝙎𝙀𝘿 𝙄𝙏 𝙒𝙍𝙊𝙉𝙂* ⊱❗️⊱╮\n\n𝙀𝙎𝘾𝙍𝙄𝘽𝙀 𝙀𝙇 𝙉𝙊𝙈𝘽𝙍𝙀 𝘿𝙀 𝙇𝘼 𝙋𝙀𝙍𝙎𝙊𝙉𝘼 𝙋𝘼𝙍𝘼 𝘾𝘼𝙇𝘾𝙐𝙇𝘼𝙍 𝙎𝙐 𝘾𝙊𝘾𝙄𝙀𝙉𝙏𝙊 𝙌𝙐𝙊𝘾𝙄𝙀𝙉𝙏𝙄𝙁𝙄𝘾𝙊`
 
     // Obtener el tiempo actual en milisegundos
     let currentTime = Date.now();
