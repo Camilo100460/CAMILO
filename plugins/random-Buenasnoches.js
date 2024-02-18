@@ -3,7 +3,7 @@ const handler = async (m, { conn, text, command }) => {
   const url = buenos_noches[Math.floor(Math.random() * buenos_noches.length)];
   conn.sendMessage(m.chat, { image: { url: url }, caption: '_*¡Buenas noches! Descansa*_ 🛌' }, { quoted: m });
 };
-handler.command = /^(buenasnoches|descansa)$/i;
+handler.command = /^(buenasnoches|descansa|mimir|dormir)$/i;
 handler.tags = ['fun'];
 handler.help = ['buenasnoches', 'descansa'];
 export default handler;
