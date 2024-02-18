@@ -62,6 +62,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
  _*< FRASES & TEXTOS 💬 />*_
 
   🌹 _${usedPrefix}piropo_
+  🛌 _${usedPrefix}Buenasnoches_
   💡 _${usedPrefix}consejo_
   🍂 _${usedPrefix}chiste_
   🏖️ _${usedPrefix}iqtest_
