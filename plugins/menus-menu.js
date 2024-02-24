@@ -34,6 +34,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
  🎟️ •  *Tokens:* ${joincount}
  🎁 •  *Premium:* ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌') || ''}
  ${readMore}
+ 🏖️ •  *Si deseas adquirir el bot: +57 3145699786*
 
   _*< 📜 LISTA DE MENUS 📋 />*_
   
@@ -44,8 +45,6 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 
  
  _*< 🤖 SOBRE EL BOT 📚 />*_
-
-  🏖️ _Si deseas adquirir el bot: +57 3145699786_
 
   📜 _${usedPrefix}terminosycondiciones_
   👥 _${usedPrefix}grupos_
