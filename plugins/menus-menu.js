@@ -33,7 +33,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
  💰 •  *MayCoins:* ${money}
  🎟️ •  *Tokens:* ${joincount}
  🎁 •  *Premium:* ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌') || ''} ${readMore}
- 🏖️ •  *Si deseas adquirir el bot: +57 3145699786*
+ 🏖️ •  *Si deseas adquirir el bot:    +57 3145699786*
 
   _*< 📜 LISTA DE MENUS 📋 />*_
   
