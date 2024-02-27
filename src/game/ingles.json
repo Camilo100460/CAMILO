@@ -1,16 +1,48 @@
 [
     {
-        "question": "¿Qué se dice perro en ingles?",
-        "response": "dog"
+        "question": "¿Cómo se dice 'preguntar' en inglés?",
+        "response": "Ask"
     },
     {
-        "question": "¿Qué se dice gato en ingles?",
-        "response": "cat"
+        "question": "¿Cómo se dice 'escuchar' en inglés?",
+        "response": "Listen"
     },
     {
-        "question": "¿Qué se dice raton en ingles?",
-        "response": "mouse"
-    
+        "question": "¿Cómo se dice 'leer' en inglés?",
+        "response": "Leer"
+    },
+    {
+        "question": "¿Cómo se dice 'decir' en inglés?",
+        "response": "Say"
+    },
+    {
+        "question": "¿Cómo se dice 'deletrear' en inglés?",
+        "response": "Spell"
+    },
+    {
+        "question": "¿Cómo se dice 'mirar' en inglés?",
+        "response": "Watch"
+    },
+    {
+        "question": "¿Cómo se dice 'escribir' en inglés?",
+        "response": "Write"
+    },
+    {
+        "question": "¿Cómo se dice 'permitir' en inglés?",
+        "response": "Allow"
+    },
+    {
+        "question": "¿Cómo se dice 'la tienda de la esquina' en inglés?",
+        "response": "The corner shop"
+    },
+    {
+        "question": "¿Cómo se dice 'un hermoso cliente' en inglés?",
+        "response": "A beatiful customer"
+    },
+    {
+        "question": "¿Cómo se dice 'un beso rapido' en inglés?",
+        "response": "A quick kiss"
+        
     
 }
 ]
