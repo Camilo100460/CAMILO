@@ -1,0 +1,479 @@
+[
+    {
+        "question": "¿Qué le dice un pingüino a otro pingüino?",
+        "response": "Te quiero como a ningüino"
+    },
+    {
+        "question": "¿Qué le dice un ciego a otro ciego?",
+        "response": "Después nos vemos"
+    },
+    {
+        "question": "¿En qué se parece un alfiler a un policía?",
+        "response": "En que los dos prenden"
+    },
+    {
+        "question": "¿Qué se congela cuando se calienta?",
+        "response": "La computadora"
+    },
+    {
+        "question": "¿Qué fruta tiene muchos ojos, pero no puede ver?",
+        "response": "La piña"
+    },
+    {
+        "question": "¿En qué idioma se comunican las tortugas?",
+        "response": "En tortugués"
+    },
+    {
+        "question": "¿Cómo llama un policía sevillano a su pistola?",
+        "response": "Mi arma"
+    },
+    {
+        "question": "¿Qué es todo para uno y nada para lo demás?",
+        "response": "La mente"
+    },
+    {
+        "question": "Siempre va hacia adelante, pero nunca llega a su destino. ¿Qué es?",
+        "response": "El mañana"
+    },
+    {
+        "question": "¿Qué es aquello que si nombras, desaparece?",
+        "response": "El silencio"
+    },
+    {
+        "question": "¿Qué necesitamos para escribir durmiendo?",
+        "response": "Estar despiertos"
+    },
+    {
+        "question": "¿Qué objeto puede tener cara sin poseer cuerpo?",
+        "response": "Una moneda"
+    },
+    {
+        "question": "Soy la capital de un país famoso por el tango y los gauchos. ¿Quién soy?",
+        "response": "Buenos Aires"
+    },
+    {
+        "question": "¿Qué tienen las mujeres en medio de las piernas?",
+        "response": "Las rodillas"
+    },
+    {
+        "question": "Entra duro y seco y sale blandito y mojado ¿Qué es?",
+        "response": "Un chicle"
+    },
+    {
+        "question": "Estoy en todo y estoy en nada ¿qué soy?",
+        "response": "La letra d"
+    },
+    {
+        "question": "Continuas en rojo, pero te paras en verde. ¿Qué soy?",
+        "response": "Una sandía"
+    },
+    {
+        "question": "¿Qué es negro cuando lo compras, rojo cuando lo usas, y gris cuando lo tiras?",
+        "response": "El carbón"
+    },
+    {
+        "question": "¿Qué hay delante de ti siempre pero que no se puede ver?",
+        "response": "El futuro"
+    },
+    {
+        "question": "¿Qué mes tiene 28 días?",
+        "response": "Todos"
+    },
+    {
+        "question": "¿Cómo puede estar alguien sin dormir diez días y no tener sueño?",
+        "response": "Durmiendo por las noches"
+    },
+    {
+        "question": "¿De qué llenarías un barril para que pese lo menos posible?",
+        "response": "De agujeros"
+    },
+    {
+        "question": "Si durante una carrera adelantas a quien va segundo, ¿en qué posición estás?",
+        "response": "Segundo"
+    },
+    {
+        "question": "¿En qué lugar el jueves va antes que el miércoles?",
+        "response": "En el diccionario"
+    },
+    {
+        "question": "¿Qué sube y baja pero se queda siempre en el mismo sitio?",
+        "response": "Las escaleras"
+    },
+    {
+        "question": "¿Cómo llaman a un ascensor en China?",
+        "response": "Apretando el botón"
+    },
+    {
+        "question": "¿Qué es lo primero que hace un elefante al salir el sol?",
+        "response": "Sombra"
+    },
+    {
+        "question": "¿Por qué un Tiranosaurus Rex no puede aplaudir?",
+        "response": "Porque se extinguió"
+    },
+    {
+        "question": "¿Qué animal siempre está lleno?",
+        "response": "La ballena"
+    },
+    {
+        "question": "¿Qué es lo primero que todos hacemos al despertar?",
+        "response": "Abrir los ojos"
+    },
+    {
+        "question": "¿Cuál es el número que si le quitas la mitad, vale 0?",
+        "response": "El ocho"
+    },
+    {
+        "question": "¿Qué se necesita para encender una vela?",
+        "response": "Que esté apagada"
+    },
+    {
+        "question": "¿Cuál es el país donde termina todo?",
+        "response": "Finlandia"
+    },
+    {
+        "question": "La respuesta a esta pregunta es #######",
+        "response": "#######"
+    },
+    {
+        "question": "Cuál es el final de todo",
+        "response": "La letra o"
+    },
+    {
+        "question": "¿Dónde se encuentra una pared con otra pared?",
+        "response": "En la esquina"
+    },
+    {
+        "question": "¿Qué tiene muchas palabras, pero nunca habla?",
+        "response": "Un libro"
+    },
+    {
+        "question": "¿Qué cosa te pertenece, pero los demás usan más que tú?",
+        "response": "Tu nombre"
+    },
+    {
+        "question": "¿En qué momento una persona se convierte en fruta?",
+        "response": "Cuando espera"
+    },
+    {
+        "question": "Los padres de José tienen tres hijos: Luis, Raúl y…, ¿cómo se llama el tercero?",
+        "response": "José"
+    },
+    {
+        "question": "¿Qué palabra del diccionario se escribe incorrectamente?",
+        "response": "Incorrectamente"
+    },
+    {
+        "question": "Húmedo por dentro, con pelos por fuera. Comienza por la C. ¿De qué se trata?",
+        "response": "Un coco"
+    },
+    {
+        "question": "David y Fabián están jugando al ajedrez. Llevan 5 partidas, pero ambos han ganado 3. ¿Cómo es posible?",
+        "response": "Porque juegan con más personas"
+    },
+    {
+        "question": "¿Cuántos 9 hay entre el 1 y el 100?",
+        "response": "20"
+    },
+    {
+        "question": "Son dos abanicos que están todo el día sin parar, pero cuando te duermas se paran y quietos se quedarán",
+        "response": "Las pestañas"
+    },
+    {
+        "question": "Oro parece, plata no es y el que no lo adivine un tonto es",
+        "response": "Un platano"
+    },
+    {
+        "question": "Círculo bien redondo al que si le pegas, das un brinco del susto",
+        "response": "Un tambor"
+    },
+    {
+        "question": "Un caballo blanco entró en el Mar Negro. ¿Cómo salió?",
+        "response": "Salió mojado"
+    },
+    {
+        "question": "Si un tren eléctrico va de Norte a Sur, ¿Hacia qué lado echará el humo?",
+        "response": "Es eléctrico, no echa humo"
+    },
+    {
+       "question": "Tiene 4 letras, empieza por C y termina por O y esta en la parte trasera",
+        "response": "El codo"
+    },
+    {
+       "question": "Se estrella un avión y mueren todos, justo en la frontera entre España y Portugal ¿A que Hospital tienen que llevar a los supervivientes? ",
+        "response": "No hay supervivientes"
+    },
+    {
+       "question": "Este banco está ocupado por un padre y por un hijo, el padre se llama Juan y el hijo ya te lo he dicho",
+        "response": "Esteban"
+    },
+    {
+       "question": "Algunos meses tienen 31 días, otros solo 30.¿Cuantos tienen 28 días?",
+        "response": "Todos"
+    },
+    {
+       "question": "No lo puedes ver, pero no puedes vivir sin él. ¿Qué es?",
+       "response": "El aire"
+    },
+    {
+       "question": "Es un instrumento y deja líquido dentro ¿Qué es?",
+       "response": "Una jeringuilla"
+    },
+    {
+       "question": "Los hombres lo hacen de pie, las mujeres lo pueden hacer sentadas, los perros a tres patas. ¿Qué es?",
+       "response": "Dar la mano"
+    },
+    {
+       "question": "Hombres y machos lo tienen, hembras y mujeres no, hasta el obispo en persona tiene, como el toro, dos, ¿qué es?",
+       "response": "La letra o"
+    },
+    {
+       "question": "¿Quién es el hombre que introduce su instrumento en la boca de una mujer?",
+       "response": "El dentista"
+    },
+    {
+       "question": "Soy peludo y asomo por tu pijama de noche, ¿qué soy?",
+       "response": "Tu cabeza"
+    },
+    {
+       "question": "¿En qué se parecen los zapatos y el dinero?",
+       "response": "En que los dos se gastan"
+    },
+    {
+       "question": "¿Cuál es la parte más sensible del cuerpo de una mujer? Tiene 6 letras y aaba en ina",
+       "response": "La retina"
+    },
+    {
+       "question": "Madonna no lo tiene, el Papa lo tiene pero no lo usa, Trump lo tiene corto y Schwartzenegger lo tiene largo y duro, ¿qué es?",
+       "response": "El apellido"
+    },
+    {
+       "question": "¿Por qué el libro de matemáticas se suicidó?",
+       "response": "Porque tenía muchos problemas"
+    },
+    {
+       "question": "Entra parado y sale mojado y oliendo a pescado, ¿qué es?",
+       "response": "El buzo"
+    },
+    {
+       "question": "¿Dónde tienen las mujeres el pelo más rizado?",
+       "response": "En África"
+    },
+    {
+       "question": "¿Cómo se dice suegra en griego?",
+       "response": "Storbas"
+    },
+    {
+       "question": "¿Qué tienen en común un elfo y un hombre inteligente?",
+       "response": "Ambos son leyendas"
+    },
+    {
+       "question": "¿Entra al centro de las mujeres pero solo detrás del hombre, qué es?",
+       "response": "La letra e"
+    },
+    {
+       "question": "¿Quién es conocido por su increíble habilidad para driblar, su precisión en los tiros libres y su récord de goles en un solo club?",
+       "response": "Messi"
+    },
+    {
+       "question": "¿Cuántos balones de oro ha ganado Messi?",
+       "response": "8"
+    },
+    {
+       "question": "¿Cuántos títulos ha ganado Messi con el Barcelona?",
+       "response": "35"
+    },
+    {
+       "question": "¿Cual es el mejor equipo de fútbol 2024?",
+       "response": "Manchester City"
+    },
+    {
+       "question": "¿Qué equipo ganó la última Copa del Mundo de fútbol?",
+       "response": "Argentina"
+    },
+    {
+       "question": "¿Cuántas veces ha ganado Brasil la Copa del Mundo?",
+       "response": "cinco veces"
+    },
+    {
+       "question": "¿Qué cuando es macho alumbra y cuando es hembra no?",
+       "response": "El foco y la foca"
+    },
+    {
+       "question": "Adivina la película con emoji 🧙‍♂️👦🧙‍♀️🚂🏰",
+       "response": "Harry Potter"
+    },
+    {
+       "question": "Adivina la película con emoji 🍫🏭🏠🎈",
+       "response": "Charlie y la fábrica de chocolate"
+    },
+    {
+       "question": "Adivina la película con emoji 🕵️‍♂️🕰️🔍",
+       "response": "Sherlock Holmes"
+    },
+    {
+       "question": "Adivina la película con emoji 🚀🤠🌌",
+       "response": "Toy Story"
+    },
+    {
+       "question": "Adivina la película con emoji 🧟‍♀️🏚️👨‍👩‍👧‍👦",
+       "response": "Hotel Transylvania"
+    },
+    {
+       "question": "Adivina la película con emoji 🏹👧🔥📚",
+       "response": "Los juegos del hambre"
+    },
+    {
+       "question": "Adivina la película con emoji 📖🍵🌹",
+       "response": "La bella y la bestia"
+    },
+    {
+       "question": "¿Qué es tan frágil que se rompe al decir su nombre?",
+       "response": "El silencio"
+    },
+    {
+       "question": "Tengo ciudades, pero no tengo casas. Tengo montañas, pero no tengo árboles. Tengo agua, pero no océanos. ¿Qué soy?",
+       "response": "Un mapa"
+    },
+    {
+       "question": "Soy un número de dos dígitos. Mi dígito de las unidades es igual a mi dígito de las decenas al revés. La suma de mis dígitos es 9. ¿Qué número soy?",
+       "response": "45"
+    },
+    {
+       "question": "Fui el primer presidente de los Estados Unidos. ¿Quién soy?",
+       "response": "George Washington"
+    },
+    {
+       "question": "Soy conocido por pintar la Mona Lisa. ¿Quién soy?",
+       "response": "Leonardo da Vinci"
+    },
+    {
+       "question": "Esta antigua maravilla del mundo está ubicada en Egipto y es la única que aún permanece en pie. ¿Cuál es?",
+       "response": "Las Pirámides de Giza"
+    },
+    {
+       "question": "Soy una ciudad europea famosa por mi Torre Eiffel. ¿Qué ciudad soy?",
+       "response": "París"
+    },
+    {
+       "question": "Fui el dramaturgo inglés más famoso, conocido por obras como Romeo y Julieta. ¿Quién soy?",
+       "response": "William Shakespeare"
+    },
+    {
+       "question": "Soy el máximo goleador en la historia de la Copa del Mundo. ¿Quién soy?",
+       "response": "Miroslav Klose"
+    },
+    {
+       "question": "Soy un país sudamericano que ha ganado la Copa del Mundo en cinco ocasiones. ¿Qué país soy?",
+       "response": "Brasil"
+    },
+    {
+       "question": "Juego en el Inter Miami CF y soy considerado uno de los mejores futbolistas del mundo. ¿Quién soy?",
+       "response": "Lionel Messi"
+    },
+    {
+       "question": "Soy una princesa de Disney que vive bajo el mar. ¿Quién soy?",
+       "response": "Ariel"
+    },
+    {
+       "question": "Fui la primera mujer en ganar dos premios Nobel en diferentes campos. ¿Quién soy?",
+       "response": "Marie Curie"
+    },
+    {
+       "question": "Soy una superheroína de Marvel conocida por mi habilidad con el lazo de la verdad. ¿Quién soy?",
+       "response": "La Mujer Maravilla"
+    },
+    {
+       "question": "Mi diario es famoso en el mundo entero, y soy conocida por ser una niña judía durante la Segunda Guerra Mundial. ¿Quién soy?",
+       "response": "Anne Frank"
+    },
+    {
+       "question": "Fui la primera mujer en el espacio, astronauta soviética. ¿Quién soy?",
+       "response": "Valentina Tereshkova"
+    },
+    {
+       "question": "Adivina la película con emoji 🕵️‍♂️🇮🇹🔫🚬",
+       "response": "El Padrino"
+    },
+    {
+       "question": "Adivina la película con emoji 🚢💔🎶💏",
+       "response": "Titanic"
+    },
+    {
+       "question": "Adivina la película con emoji 🏃‍♂️🍤🏅❤️",
+       "response": "Forrest Gump"
+    },
+    {
+       "question": "Adivina la película con emoji 🧙‍♂️🪙🌋👣",
+       "response": "El Señor de los Anillos"
+    },
+    {
+       "question": "Adivina la película con emoji 🦖🦕🌴🔬",
+       "response": "Jurassic Park"
+    },
+    {
+       "question": "Adivina la película con emoji 👠🌪️🌈🦁",
+       "response": "El Mago de Oz"
+    },
+    {
+       "question": "Adivina la película con emoji 🕶️💊💻🔵",
+       "response": "Matrix"
+    },
+    {
+       "question": "Adivina la película con emoji 🕵️‍♂️🎩🌎💎",
+       "response": "Indiana Jones"
+    },
+    {
+       "question": "Adivina la película con emoji 🌿🌐🚀💙",
+       "response": "Avatar"
+    },
+    {
+       "question": "¿Cuál es la estrella que no tiene luz?",
+       "response": "Un agujero negro"
+    },
+    {
+       "question": "¿Cuál es el animal que tiene más dientes?",
+       "response": "El tiburón"
+    },
+    {
+       "question": "Piensa y lo adivinarás: ¿qué tiene Adán delante que Eva tiene detrás?",
+       "response": "La letra A"
+    },
+    {
+       "question": "¿Qué instrumento musical es indispensable en una banda de mariachis?",
+       "response": "La trompeta"
+    },
+    {
+       "question": "¿Cuál es el país más grande del mundo?",
+       "response": "Rusia"
+    },
+    {
+       "question": "¿Cuál es el río más largo del mundo?",
+       "response": "El Amazonas"
+    },
+    {
+       "question": "¿En qué año comenzó la Segunda Guerra Mundial?",
+       "response": "1939"
+    },
+    {
+       "question": "¿Qué famoso científico desarrolló la teoría de la relatividad?",
+       "response": "Albert Einstein"
+    },
+    {
+       "question": "¿Quién escribió Cien años de soledad?",
+       "response": "Gabriel García Márquez"
+    },
+    {
+       "question": "¿Cuál es el planeta más grande de nuestro sistema solar?",
+       "response": "Júpiter"
+    },
+    {
+       "question": "¿Cuál es la capital de Japón?",
+       "response": "Tokio"
+    },
+    {
+       "question": "La capital Tiflis es un punto de interés en un país ubicado en la intersección de Europa y Asia, ¿cómo se llama este país?",
+       "response": "Georgia"
+    
+}
+]
