@@ -42,6 +42,18 @@
     {
         "question": "¿Cómo se dice 'un beso rapido' en inglés?",
         "response": "A quick kiss"
+    },
+    {
+        "question": "¿Cómo se dice 'otro pedido especial' en inglés?",
+        "response": "Another special order"
+    },
+    {
+        "question": "¿Cómo se dice 'the football match' en inglés?",
+        "response": "El partido de futbol"
+    },
+    {
+        "question": "¿Cómo se dice 'Un fin de semana secreto' en inglés?",
+        "response": "A secret weekend"
         
     
 }
