@@ -7,7 +7,7 @@ const handler = async (m, {conn, participants, usedPrefix, command}) => {
   const owr = m.chat.split`-`[0];
   await conn.groupParticipantsUpdate(m.chat, [user], 'remove');
 };
-handler.command = /^(kick2|echar2|hechar2|sacar2)$/i;
+handler.command = /^(kick|echar|hechar|sacar|ban)$/i;
 handler.admin = true;
 handler.group = true;
 handler.botAdmin = true;
