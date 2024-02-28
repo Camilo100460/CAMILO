@@ -11,5 +11,5 @@ const handler = async (m, {conn, usedPrefix, command}) => {
 };
 handler.help = ['toimg (reply)'];
 handler.tags = ['sticker'];
-handler.command = ['toimg', 'jpg', 'img'];
+handler.command = ['toimg5', 'jpg5', 'img5'];
 export default handler;
