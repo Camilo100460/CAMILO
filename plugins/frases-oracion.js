@@ -2,7 +2,7 @@ const handler = async (m, {conn, text}) => {
   m.reply(`💐• *${pickRandom(global.oracion2)}*`);
 };
 handler.tags = ['frases'];
-handler.command = ['piropo'];
+handler.command = ['oracion'];
 export default handler;
 
 function pickRandom(list) {
