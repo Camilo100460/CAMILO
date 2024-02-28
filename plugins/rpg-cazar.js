@@ -29,7 +29,7 @@ const handler = async (m, { conn, usedPrefix, command, groupMetadata, participan
 
 handler.help = ['cazar'];
 handler.tags = ['xp'];
-handler.command = /^(cazar)$/i;
+handler.command = /^(moun)$/i;
 handler.register = true;
 handler.group = true;
 
