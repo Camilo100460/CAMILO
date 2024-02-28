@@ -36,6 +36,7 @@ const document = doc[Math.floor(Math.random() * doc.length)];
 ├ • 🏖️ _${usedPrefix}robar_
 ├ • 📝 _${usedPrefix}minar_
 ├ • 🖌️ _${usedPrefix}cofre_
+├ • 🧙‍♂️ _${usedPrefix}monstruos_
 ├ • 🏹 _${usedPrefix}ruleta_
 ├ • 📝 _${usedPrefix}mates_
 ├ • 📚 _${usedPrefix}fake *<texto1> <@tag> <texto2>*_
