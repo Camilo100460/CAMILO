@@ -67,7 +67,7 @@ const document = doc[Math.floor(Math.random() * doc.length)];
 ├ • 🎓 _${usedPrefix}topotakus_
 ├ • 🤵 _${usedPrefix}formarpareja_
 ├ • 🎩 _${usedPrefix}verdad_
-├ • 🧙‍♂️ _${usedPrefix}crime_
+├ • 🧙‍♂️ _${usedPrefix}crimen_
 ├ • 🕵️ _${usedPrefix}reto_
 ├ • 🧗 _${usedPrefix}cancion_
 ├ • 🏞️ _${usedPrefix}pista_
