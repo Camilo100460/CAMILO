@@ -5,9 +5,8 @@ var handler = async (m, { conn, usedPrefix, command }) => {
     const q = m.quoted || m
     let mime = q.mimetype || ''
     if (!/image\/webp/.test(mime)) throw notStickerMessage
-    let media = await q.download()
-    let out = await conn.toBuffer(media)
-    await conn.sendFile(m.chat, out, 'imagen.png', 'Aquí está tu imagen convertida', m)
+    let media = await conn.downloadAndSaveMediaMessage(m.quoted)
+    await conn.sendFile(m.chat, media, 'imagen.png', 'Aquí está tu imagen convertida', m)
 
 }
 handler.help = ['toimg']
