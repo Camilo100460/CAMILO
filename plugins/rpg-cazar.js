@@ -1,7 +1,7 @@
 const handler = async (m, { conn, usedPrefix, command, groupMetadata, participants, isPrems }) => {
     const date = global.db.data.users[m.sender].monster_hunt + 3600000; // 3600000 = 1 hora
     if (new Date - global.db.data.users[m.sender].monster_hunt < 3600000) {
-        return m.reply(`👑 *La Reina May te convocó para cazar a un enorme gigante que amenaza nuestras tierras./nAventura próxima:* ${msToTime(date - new Date())}`);
+        return m.reply(`🏹 *La Reina May te convocó para cazar a un enorme gigante que amenaza nuestras tierras.*/n/n ⏰ • *Aventura próxima:* ${msToTime(date - new Date())}`);
     }
 
     const monsters = [
