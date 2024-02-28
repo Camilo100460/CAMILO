@@ -33,6 +33,9 @@ const document = doc[Math.floor(Math.random() * doc.length)];
 ╭━━━━━━ ◜◌◝ ━━━━━━╮
 │ _*< LISTA DE COMANDOS />*_
 │
+├ • 🏖️ _${usedPrefix}robar_
+├ • 📝 _${usedPrefix}minar_
+├ • 🖌️ _${usedPrefix}cofre_
 ├ • 🏹 _${usedPrefix}ruleta_
 ├ • 📝 _${usedPrefix}mates_
 ├ • 📚 _${usedPrefix}fake *<texto1> <@tag> <texto2>*_
@@ -84,7 +87,7 @@ const document = doc[Math.floor(Math.random() * doc.length)];
     conn.reply(m.chat, '*🍨 Error Al Enviar!.*', m);
   }
 };
-handler.command = /^(juegosmenu|games|juegos|menujuegos)$/i;
+handler.command = /^(juegosmenu|games|juegos|menujuegos|Menujuegos)$/i;
 handler.register = true
 handler.exp = 50;
 handler.fail = null;
