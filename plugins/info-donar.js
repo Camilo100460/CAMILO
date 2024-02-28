@@ -11,12 +11,12 @@ const handler = async (m, {conn, usedPrefix, command}) => {
 _*HOLA USUARIO:*_  ${name}  🏖️
 _*AQUÍ ALGUNOS DATOS POR SI DESEAS AYUDAR.*_ 
 
-👤•  _*BENEFICIARIOS:*_  Andres Camilo y May Garcia 
+👤•  _*BENEFICIARIOS:*_  Andres Camilo y Valentina Espinosa 
 💰•  _*CONCEPTO:*_  APOYO                  
 💳 • _*PAYPAL:*_  https://www.paypal.me/camildaza
 
 👉🏻 *SI TIENES ALGUNA SUGERENCIA O CONSEJO:*
-📚 •  MI CREADOR: wa.me/573178454976
+📚 •  MI CREADOR: wa.me/573145699786
 
 ╰━━━━━━━━━━━━━━━━━╯
 `.trim();
