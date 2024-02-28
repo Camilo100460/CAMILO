@@ -34,12 +34,12 @@ const document = doc[Math.floor(Math.random() * doc.length)];
 │ _*< LISTA DE COMANDOS />*_
 │
 ├ • 🏹 _${usedPrefix}ruleta_
-├ • 📝 _${usedPrefix}mates *<noob / easy / medium / hard / extreme /impossible /impossible2>*_
+├ • 📝 _${usedPrefix}mates_
 ├ • 📚 _${usedPrefix}fake *<texto1> <@tag> <texto2>*_
 ├ • 📖 _${usedPrefix}ppt *<papel / tijera /piedra>*_
-├ • 🧮 _${usedPrefix}prostituto *<nombre / @tag>*_
-├ • 🏔️ _${usedPrefix}prostituta *<nombre / @tag>*_
-├ • 🌊 _${usedPrefix}gay2 *<nombre / @tag>*_
+├ • 🧮 _${usedPrefix}prostituto *<nombre>*_
+├ • 🏔️ _${usedPrefix}prostituta *<nombre>*_
+├ • 🌊 _${usedPrefix}gay2 *<nombre>*_
 ├ • 🐿️ _${usedPrefix}lesbiana *<nombre / @tag>*_
 ├ • 🧸 _${usedPrefix}pajero *<nombre / @tag>*_
 ├ • 🍄 _${usedPrefix}pajera *<nombre / @tag>*_
