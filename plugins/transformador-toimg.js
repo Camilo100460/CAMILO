@@ -1,3 +1,5 @@
+import { webp2png } from '../lib/webp2mp4.js'
+
 var handler = async (m, { conn, usedPrefix, command }) => {
 
     const notStickerMessage = `*⚠️ RESPONDA CON ${usedPrefix + command} AL STICKER QUE DESEE CONVERTIR EN IMAGEN*`
@@ -5,8 +7,9 @@ var handler = async (m, { conn, usedPrefix, command }) => {
     const q = m.quoted || m
     let mime = q.mimetype || ''
     if (!/image\/webp/.test(mime)) throw notStickerMessage
-    let media = await conn.downloadAndSaveMediaMessage(m.quoted)
-    await conn.sendFile(m.chat, media, 'imagen.png', 'Aquí está tu imagen convertida', m)
+    let media = await q.download()
+    let out = await webp2png(media).catch(_ => null) || Buffer.alloc(0)
+    await conn.sendFile(m.chat, out, 'imagen.png', 'Aquí está tu imagen convertida', m)
 
 }
 handler.help = ['toimg']
