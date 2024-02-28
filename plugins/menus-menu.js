@@ -39,6 +39,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   
   🎵 _${usedPrefix}menuaudios_
   🍂 _${usedPrefix}MenuFreefire_
+  🏖️ _${usedPrefix}Menujuegos_
   📺 _${usedPrefix}menuanimes_
   📖 _${usedPrefix}labiblia_ (🔞)
 
@@ -62,6 +63,8 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
  _*< FRASES & TEXTOS 💬 />*_
 
   🌹 _${usedPrefix}piropo_
+  📖 _${usedPrefix}oracion_
+  📝 _${usedPrefix}refran_
   🛌 _${usedPrefix}Buenasnoches_
   💡 _${usedPrefix}consejo_
   🍂 _${usedPrefix}chiste_
