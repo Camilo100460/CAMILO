@@ -3,7 +3,7 @@ let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.m
 let name = conn.getName(who)
 const pp = './Menu.png'
 
-let love = `\t\t*➺ 𝐸𝑙 𝑀𝑒𝑑𝑖𝑑𝑜𝑟 𝐷𝑒𝑙 𝐴𝑚𝑜𝑟💘*
+let love = `\t\t*➺ 𝐸𝑙 𝑀𝑒𝑑𝑖𝑑𝑜𝑟 𝐷𝑒𝑙 𝐴𝑚𝑜𝑟 💘*
 
 ╭• ────── ✾ ────── •╮
 ┇➺ 𝑬𝒍 𝑨𝒎𝒐𝒓 𝑫𝒆 ${name} 𝑷𝒐𝒓 𝑻𝒊 𝑬𝒔 𝑫𝒆 *${Math.floor(Math.random() * 100)}%* 𝑫𝒆 𝑼𝒏 *100%*
@@ -16,6 +16,6 @@ conn.sendMessage(m.chat,{image: {url: pp}, caption: love, mentions: [m.sender]},
 
 handler.help = ['love  @user']
 handler.tags = ['fun']
-handler.command = /^(love1)$/i
+handler.command = /^(love)$/i
 handler.register = true
 export default handler
