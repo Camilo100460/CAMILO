@@ -2,41 +2,37 @@
   😎 • By https://github.com/HACHEJOTA
 -----------------------------------------------------------------------------------------*/
 
-var handler = async (m, { conn, text}) => {
-
-let hasil = Math.floor(Math.random() * 5000)
-
-conn.reply(m.chat, `*╭─────◈🇻🇦◈──────╮*
+var handler = async (m, { conn, text }) => {
+    let hasil = Math.floor(Math.random() * 5000);
+    let saludo = ""; // Definir saludo aquí o asignarle un valor apropiado
+    conn.reply(m.chat, `*╭─────◈🇻🇦◈──────╮*
 
 ${pickRandom(global.oracion2)}
 
-*╰─────◈🇻🇦◈──────╯*`, m, { contextInfo:{ externalAdReply: {title: '✝️ Oración ✝️', body: saludo, sourceUrl: global.paypal, thumbnail: oracion }}})
+*╰─────◈🇻🇦◈──────╯*`, m, { contextInfo:{ externalAdReply: {title: '✝️ Oración ✝️', body: saludo, sourceUrl: global.paypal, thumbnail: oracion }}});
+};
 
-}
-handler.help = ['oracion']
-handler.tags = ['frases']
-handler.command = ['oracion']
-handler.fail = null
-handler.exp = 0
-
-export default handler
+handler.help = ['oracion'];
+handler.tags = ['frases'];
+handler.command = ['oracion'];
+handler.fail = null;
+handler.exp = 0;
 
 function msToTime(duration) {
-var milliseconds = parseInt((duration % 1000) / 100),
-seconds = Math.floor((duration / 1000) % 60),
-minutes = Math.floor((duration / (1000 * 60)) % 60),
-hours = Math.floor((duration / (1000 * 60 * 60)) % 24)
+    var milliseconds = parseInt((duration % 1000) / 100),
+    seconds = Math.floor((duration / 1000) % 60),
+    minutes = Math.floor((duration / (1000 * 60)) % 60),
+    hours = Math.floor((duration / (1000 * 60 * 60)) % 24)
 
-hours = (hours < 10) ? "0" + hours : hours
-minutes = (minutes < 10) ? "0" + minutes : minutes
-seconds = (seconds < 10) ? "0" + seconds : seconds
+    hours = (hours < 10) ? "0" + hours : hours
+    minutes = (minutes < 10) ? "0" + minutes : minutes
+    seconds = (seconds < 10) ? "0" + seconds : seconds
 
-return minutes + " m " + seconds + " s " 
+    return minutes + " m " + seconds + " s " 
 }
 
-
 function pickRandom(list) {
-return list[Math.floor(list.length * Math.random())]
+    return list[Math.floor(list.length * Math.random())]
 }
 
 global.oracion2 = ["LA SEÑAL DE LA CRUZ: Por la señal + de la Santa Cruz, de nuestros + enemigos líbranos Señor, + Dios nuestro.En el nombre del Padre, y del + Hijo, y del Espíritu Santo. Amén.","EL PADRE NUESTRO: Padre nuestro, que estás en el cielo, santificado sea tu Nombre; venga a nosotros tu reino; hágase tu voluntad, en la tierra como en el cielo.Danos hoy nuestro pan de cada día; perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación, y líbranos del mal Amén.","GLORIA: Gloria al Padre y al Hijo y al Espíritu Santo.Como era en el principio, ahora y siempre, por los siglos de los siglos Amén.","EL AVE MARÍA: Dios te salve, María, llena eres de gracia; el Señor es contigo; bendita Tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.","SALVE: Dios te salve, Reina y Madre de misericordia, vida y dulzura y esperanza nuestra: Dios te salve. A ti llamamos los desterrados hijos de Eva; a ti suspiramos, gimiendo y llorando en este valle de lágrimas.Ea, pues, Señora abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos y, después de este destierro, muéstranos a Jesús, fruto bendito de tu vientre.¡Oh clementísima! ¡Oh piadosa! ¡Oh dulce Virgen María! Ruega por nosotros santa Madre de Dios, para que seamos dignos de alcanzar las promesas de nuestro Señor Jesucristo. Amén.","AL ÁNGEL CUSTODIO: Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, dirígeme, guárdame. Amén.",
