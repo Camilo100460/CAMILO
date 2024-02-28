@@ -12,6 +12,6 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 }
 handler.help = ['toimg <sticker>']
 handler.tags = ['sticker']
-handler.command = ['toimg', 'jpg', 'aimg'] 
+handler.command = ['toimg3', 'jpg3', 'aimg3'] 
 
 export default handler
