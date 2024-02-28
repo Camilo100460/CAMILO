@@ -14,7 +14,7 @@ await conn.sendFile(m.chat, out, 'error.png', null, fkontak, m)
 }
 handler.help = ['toimg']
 handler.tags = ['transformador']
-handler.command = ['toimg', 'jpg', 'jpge', 'png']
+handler.command = ['toimg4', 'jpg4', 'jpge4', 'png4']
 
 handler.limit = true
 
