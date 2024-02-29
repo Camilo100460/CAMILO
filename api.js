@@ -26,7 +26,6 @@ global.lolkeysapi = ['GataDios']; // ['BrunoSobrino_2']
 global.itsrose = ['4b146102c4d500809da9d1ff'];
 
 global.APIs = {
-  // ApiEmpire: 'https://',
   CFROSAPI: 'https://api.cafirexos.com',
   xteam: 'https://api.xteam.xyz',
   dzx: 'https://api.dhamzxploit.my.id',
@@ -139,7 +138,7 @@ global.rpg = {
       kambing: '🐐 Cabra',
       kerbau: '🐃 Búfalo',
       lion: '🦁 León',
-      money: '👾 MayCoins',
+      money: '👾 MysticCoins',
       monyet: '🐒 Mono',
       panda: '🐼 Panda',
       snake: '🐍 Serpiente',
