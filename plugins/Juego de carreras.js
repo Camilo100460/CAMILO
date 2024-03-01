@@ -1,29 +1,23 @@
 const handler = async (m, { conn, usedPrefix }) => {
   try {
     const pp = imagen2;
-    const equipos = [
-      "Once Caldas (Colombia)",
-      "Club América (México)",
-      "FC Porto (Portugal)",
-      "Juventus (Italia)",
-      "Real Madrid (Spain)",
-      "Barcelona (Spain)",
-      "Manchester United (England)",
-      "Liverpool (England)",
-      "Bayern Munich (Germany)",
-      "Paris Saint-Germain (France)",
-      "Chelsea (England)",
-      "Manchester City (England)",
-      "Arsenal (England)"
-    ];
+    const equipos = {
+      debut: ["Once Caldas (Colombia)", "Boca Juniors (Argentina)"],
+      joven: ["Once Caldas (Colombia)", "Boca Juniors (Argentina)"],
+      maduro: ["FC Porto (Portugal)", "Ajax (Holanda)"],
+      pico: ["Sevilla FC (España)", "Villarreal CF (España)"],
+      veterano: ["Bayern Munich (Germany)", "Paris Saint-Germain (France)", "Juventus (Italia)"],
+      retiro: ["Club América (México)", "River Plate (Argentina)"]
+    };
 
-    const equipoAleatorio = (start, end) => equipos[Math.floor(Math.random() * (end - start + 1)) + start];
+    const equipoAleatorio = (etapa) => equipos[etapa][Math.floor(Math.random() * equipos[etapa].length)];
 
     const asistencias = Math.floor(Math.random() * 100) + 1; // Valor entre 1 y 100
     const amarillas = Math.floor(Math.random() * 20) + 1; // Valor entre 1 y 20
     const rojas = Math.floor(Math.random() * 5) + 1; // Valor entre 1 y 5
     const champions = Math.floor(Math.random() * 10) + 1; // Valor entre 1 y 10
     const mundiales = Math.floor(Math.random() * 5) + 1; // Valor entre 1 y 5
+    const goles = Math.floor(Math.random() * 500) + 1; // Valor entre 1 y 500
     const balonOros = Math.floor(Math.random() * 7) + 1; // Valor entre 1 y 7
 
     const str = `
@@ -31,20 +25,20 @@ const handler = async (m, { conn, usedPrefix }) => {
 
 ╭━━━━━━ ◜◌◝ ━━━━━━╮
 │
-├ • 🏹 A: ${equipoAleatorio(0, 1)}
-├ • 📝 18: ${equipoAleatorio(0, 1)}
-├ • 🧮 21: ${equipoAleatorio(0, 2)}
-├ • 🏔️ 24: ${equipoAleatorio(0, 3)}
-├ • 🌊 27: ${equipoAleatorio(0, equipos.length - 1)}
-├ • 🐿️ 30: ${equipoAleatorio(0, equipos.length - 1)}
+├ • 🏹 A: ${equipoAleatorio("debut")}
+├ • 📝 18: ${equipoAleatorio("joven")}
+├ • 🧮 21: ${equipoAleatorio("maduro")}
+├ • 🏔️ 24: ${equipoAleatorio("pico")}
+├ • 🌊 27: ${equipoAleatorio("veterano")}
+├ • 🐿️ 30: ${equipoAleatorio("retiro")}
 ├ • 🧸 33: Retiro
-├ • 🍄 R: ${equipoAleatorio(0, equipos.length - 1)}
-├ • 🍂 M: ${equipoAleatorio(0, equipos.length - 1)}
+├ • 🍄 R: ${equipoAleatorio("retiro")}
+├ • 🍂 M: ${equipoAleatorio("retiro")}
 ├ • 📺 ASISTENCIAS: ${asistencias}
-├ • 🍪 GOALS: ${equipoAleatorio(0, equipos.length - 1)}
+├ • 🍪 GOALS: ${goles}
 ├ • 📖 YELLOW CARDS: ${amarillas}
 ├ • ✒️ RED CARDS: ${rojas}
-├ • 📚 LIGAS: ${equipoAleatorio(0, equipos.length - 1)}
+├ • 📚 LIGAS: ${equipoAleatorio("retiro")}
 ├ • 🏹 CHAMPIONS: ${champions}
 ├ • 📝 MUNDIALES: ${mundiales}
 ├ • 🧮 BALLON D'ORS: ${balonOros}
