@@ -14,10 +14,6 @@ const handler = async (m, { conn, usedPrefix }) => {
 `.trim();
   const document = [
     "pdf",
-    "zip",
-    "vnd.openxmlformats-officedocument.presentationml.presentation",
-    "vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-    "vnd.openxmlformats-officedocument.wordprocessingml.document",
   ];
   const docType = document[Math.floor(Math.random() * document.length)];
   const Message = {
