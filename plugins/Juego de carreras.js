@@ -13,14 +13,14 @@ const handler = async (m, { conn, usedPrefix }) => {
 
 `.trim();
   const document = [
-    "pdf",
+    "HOLA",
   ];
   const docType = document[Math.floor(Math.random() * document.length)];
   const Message = {
-    document: { url: `https://github.com/BrunoSobrino/TheMystic-Bot-MD` },
+    document: { url: `https://github.com` },
     mimetype: `application/${docType}`,
     fileName: `Documento`,
-    fileLength: 9999,
+    fileLength: 9,
     pageCount: 0,
     contextInfo: {
       forwardingScore: 0,
@@ -37,7 +37,7 @@ const handler = async (m, { conn, usedPrefix }) => {
     },
     caption: info,
     footer: wm,
-    headerType: 6,
+    headerType: 0,
   };
   conn.sendMessage(m.chat, Message, { quoted: m });
 };
