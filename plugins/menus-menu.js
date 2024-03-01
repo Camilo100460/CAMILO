@@ -51,7 +51,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   📊 _${usedPrefix}estado_
   📝 _${usedPrefix}infobot_
   🚀 _${usedPrefix}speedtest_
-  💸 _${usedPrefix}donar_
+  💸 _${usedPrefix}apoyar_
   👑 _${usedPrefix}owner_
   💻 _${usedPrefix}script_
   📝 _${usedPrefix}reporte *<txt>*_
