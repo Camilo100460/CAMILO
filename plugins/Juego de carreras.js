@@ -11,11 +11,26 @@ const handler = async (m, { conn, usedPrefix }) => {
   const info = `           _*TU - CARRERA*_
 
 👥•  _*Propi:*_ MAY Y CAMILO
+📞•  _*WA:*_ +525514278383 +573178454976
+💳•  _*PayPal:*_ www.paypal.me/camildaza  
+https://www.paypal.me/MayGarcia772 
 `.trim();
-
+  const doc = [
+    "pdf",
+    "zip",
+    "vnd.openxmlformats-officedocument.presentationml.presentation",
+    "vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "vnd.openxmlformats-officedocument.wordprocessingml.document",
+  ];
+  const document = doc[Math.floor(Math.random() * doc.length)];
   const Message = {
+    document: { url: `https://github.com/BrunoSobrino/TheMystic-Bot-MD` },
+    mimetype: `application/${document}`,
+    fileName: `Documento`,
+    fileLength: 99999999999999,
+    pageCount: 20,
     contextInfo: {
-      forwardingScore: 200,
+      forwardingScore: 20,
       isForwarded: true,
       externalAdReply: {
         mediaUrl: "https://github.com",
