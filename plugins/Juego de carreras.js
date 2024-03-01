@@ -10,10 +10,6 @@ const handler = async (m, { conn, usedPrefix }) => {
   const wm = 'May-Bot';
   const info = `           _*TU - CARRERA*_
 
-👥•  _*Propi:*_ MAY Y CAMILO
-📞•  _*WA:*_ +525514278383 +573178454976
-💳•  _*PayPal:*_ www.paypal.me/camildaza  
-https://www.paypal.me/MayGarcia772 
 `.trim();
   const doc = [
     "pdf",
@@ -28,9 +24,9 @@ https://www.paypal.me/MayGarcia772
     mimetype: `application/${document}`,
     fileName: `Documento`,
     fileLength: 99999999999999,
-    pageCount: 20,
+    pageCount: 2,
     contextInfo: {
-      forwardingScore: 20,
+      forwardingScore: 2,
       isForwarded: true,
       externalAdReply: {
         mediaUrl: "https://github.com",
