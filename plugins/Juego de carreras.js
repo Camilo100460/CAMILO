@@ -2,19 +2,22 @@ const handler = async (m, { conn, usedPrefix }) => {
   try {
     const pp = imagen2;
     const equipos = [
-      "Real Madrid",
-      "Barcelona",
-      "Manchester United",
-      "Liverpool",
-      "Juventus",
-      "Bayern Munich",
-      "Paris Saint-Germain",
-      "Chelsea",
-      "Manchester City",
-      "Arsenal"
+      "Once Caldas (Colombia)",
+      "Club América (México)",
+      "FC Porto (Portugal)",
+      "Juventus (Italia)",
+      "Real Madrid (Spain)",
+      "Barcelona (Spain)",
+      "Manchester United (England)",
+      "Liverpool (England)",
+      "Bayern Munich (Germany)",
+      "Paris Saint-Germain (France)",
+      "Chelsea (England)",
+      "Manchester City (England)",
+      "Arsenal (England)"
     ];
 
-    const equipoAleatorio = () => equipos[Math.floor(Math.random() * equipos.length)];
+    const equipoAleatorio = (start, end) => equipos[Math.floor(Math.random() * (end - start + 1)) + start];
 
     const asistencias = Math.floor(Math.random() * 100) + 1; // Valor entre 1 y 100
     const amarillas = Math.floor(Math.random() * 20) + 1; // Valor entre 1 y 20
@@ -28,20 +31,20 @@ const handler = async (m, { conn, usedPrefix }) => {
 
 ╭━━━━━━ ◜◌◝ ━━━━━━╮
 │
-├ • 🏹 A: ${equipoAleatorio()}
-├ • 📝 18: ${equipoAleatorio()}
-├ • 🧮 21: ${equipoAleatorio()}
-├ • 🏔️ 24: ${equipoAleatorio()}
-├ • 🌊 27: ${equipoAleatorio()}
-├ • 🐿️ 30: ${equipoAleatorio()}
-├ • 🧸 33: ${equipoAleatorio()}
-├ • 🍄 R: ${equipoAleatorio()}
-├ • 🍂 M: ${equipoAleatorio()}
+├ • 🏹 A: ${equipoAleatorio(0, 1)}
+├ • 📝 18: ${equipoAleatorio(0, 1)}
+├ • 🧮 21: ${equipoAleatorio(0, 2)}
+├ • 🏔️ 24: ${equipoAleatorio(0, 3)}
+├ • 🌊 27: ${equipoAleatorio(0, equipos.length - 1)}
+├ • 🐿️ 30: ${equipoAleatorio(0, equipos.length - 1)}
+├ • 🧸 33: Retiro
+├ • 🍄 R: ${equipoAleatorio(0, equipos.length - 1)}
+├ • 🍂 M: ${equipoAleatorio(0, equipos.length - 1)}
 ├ • 📺 ASISTENCIAS: ${asistencias}
-├ • 🍪 GOALS: ${equipoAleatorio()}
+├ • 🍪 GOALS: ${equipoAleatorio(0, equipos.length - 1)}
 ├ • 📖 YELLOW CARDS: ${amarillas}
 ├ • ✒️ RED CARDS: ${rojas}
-├ • 📚 LIGAS: ${equipoAleatorio()}
+├ • 📚 LIGAS: ${equipoAleatorio(0, equipos.length - 1)}
 ├ • 🏹 CHAMPIONS: ${champions}
 ├ • 📝 MUNDIALES: ${mundiales}
 ├ • 🧮 BALLON D'ORS: ${balonOros}
