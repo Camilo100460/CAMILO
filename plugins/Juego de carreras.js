@@ -12,8 +12,6 @@ const handler = async (m, { conn, usedPrefix }) => {
 
 
 `.trim();
-  const document = [
-    "HOLA",
   ];
   const docType = document[Math.floor(Math.random() * document.length)];
   const Message = {
