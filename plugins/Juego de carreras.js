@@ -9,21 +9,11 @@ const handler = async (m, { conn, usedPrefix }) => {
   const groups = chats.filter(([id]) => id.endsWith("@g.us"));
   const wm = 'May-Bot';
   const info = `           _*TU - CARRERA*_
+
+👥•  _*Propi:*_ MAY Y CAMILO
 `.trim();
-  const doc = [
-    "pdf",
-    "zip",
-    "vnd.openxmlformats-officedocument.presentationml.presentation",
-    "vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-    "vnd.openxmlformats-officedocument.wordprocessingml.document",
-  ];
-  const document = doc[Math.floor(Math.random() * doc.length)];
+
   const Message = {
-    document: { url: `https://github.com/BrunoSobrino/TheMystic-Bot-MD` },
-    mimetype: `application/${document}`,
-    fileName: `Documento`,
-    fileLength: 99999999999999,
-    pageCount: 200,
     contextInfo: {
       forwardingScore: 200,
       isForwarded: true,
