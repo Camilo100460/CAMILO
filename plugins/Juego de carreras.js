@@ -3,7 +3,7 @@ const handler = async (m, { conn, text, args, usedPrefix, command }) => {
 
   try {
     const aa = { quoted: m, userJid: conn.user.jid };
-    const prep = generateWAMessageFromContent(m.chat, { extendedTextMessage: { text: desc, contextInfo: { externalAdReply: { title: '𝙈𝙖𝙮-𝘽𝙤𝙩', body: null, thumbnail: imagen1, sourceUrl: 'https://github.com/BrunoSobrino/TheMystic-Bot-MD' }, mentionedJid: [m.sender] } } }, aa);
+    const prep = generateWAMessageFromContent(m.chat, { extendedTextMessage: { text: desc, contextInfo: { externalAdReply: { title: '𝙈𝙖𝙮-𝘽𝙤𝙩', body: null, thumbnail: menu, sourceUrl: 'https://github.com/BrunoSobrino/TheMystic-Bot-MD' }, mentionedJid: [m.sender] } } }, aa);
     await conn.relayMessage(m.chat, prep.message, { messageId: prep.key.id, mentions: [m.sender] });
   } catch (ee1) {
     // Puedes manejar el error de la manera que desees
