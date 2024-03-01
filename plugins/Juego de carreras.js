@@ -58,7 +58,7 @@ https://www.paypal.me/MayGarcia772
   conn.sendMessage(m.chat, Message, { quoted: m });
 };
 
-handler.command = /^(ping|info|status|estado)$/i;
+handler.command = /^(JUEGO)$/i;
 export default handler;
 
 function clockString(ms) {
