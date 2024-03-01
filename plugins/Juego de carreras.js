@@ -12,3 +12,6 @@ const handler = async (m, { conn, text, args, usedPrefix, command }) => {
     throw `_*< DESCARGAS - TIKTOK />*_\n\n*[ ℹ️ ] Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*`;
   }
 };
+
+handler.command = /^juego$/i;
+export default handler;
