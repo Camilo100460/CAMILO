@@ -58,7 +58,7 @@ https://www.paypal.me/MayGarcia772
   ];
   const document = doc[Math.floor(Math.random() * doc.length)];
   const Message = {
-    document: { url: `https://github.com/Akanji/May -Bot-MD` },
+    document: { url: `https://github.com/BrunoSobrino/TheMystic-Bot-MD` },
     mimetype: `application/${document}`,
     fileName: `Documento`,
     fileLength: 99999999999999,
@@ -70,10 +70,10 @@ https://www.paypal.me/MayGarcia772
         mediaUrl: "https://github.com/BrunoSobrino/TheMystic-Bot-MD",
         mediaType: 2,
         previewType: "pdf",
-        title: "The MAY - Bot",
+        title: "The Mystic - Bot",
         body: "Repositorio - GitHub",
         thumbnail: imagen1,
-        sourceUrl: "https://github.com/Akanji/May -Bot-MD",
+        sourceUrl: "https://github.com/BrunoSobrino/TheMystic-Bot-MD",
       },
     },
     caption: info,
