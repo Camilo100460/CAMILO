@@ -25,8 +25,8 @@ const handler = async (m, { conn, usedPrefix }) => {
   const wm = 'May-Bot';
   const info = `           _*INFO - ESTADO*_
 
-👥•  _*Propi:*_ MAY Y CAMILO
-📞•  _*WA:*_ +525514278383 +573178454976
+👥•  _*Propi:*_ VALENTINA Y CAMILO
+📞•  _*WA:*_ +573145456409
 💳•  _*PayPal:*_ www.paypal.me/camildaza  
 https://www.paypal.me/MayGarcia772
 
