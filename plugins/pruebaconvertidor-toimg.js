@@ -1,18 +1,21 @@
-let { webp2png } = require('../lib/webp2mp4')
-let handler = async (m, { conn, usedPrefix, command }) => {
-  if (!m.quoted) throw `balas stiker dengan caption *${usedPrefix + command}*`
-  let mime = m.quoted.mimetype || ''
-  if (!/webp/.test(mime)) throw `balas stiker dengan caption *${usedPrefix + command}*`
-  let media = await m.quoted.download()
-  let out = Buffer.alloc(0)
-  if (/webp/.test(mime)) {
-    out = await webp2png(media)
-  }
-  await conn.sendFile(m.chat, out, 'out.png', '*DONE*', m, false, {
-    thumbnail: Buffer.alloc(0)
-  })
+import { webp2png } from '../lib/webp2mp4.js'
+
+var handler = async (m, { conn, usedPrefix, command }) => {
+
+const notStickerMessage = `*⚠️ RESPONDA CON ${usedPrefix + command} AL STICKER QUE DESEE CONVERTIR EN IMAGEN*`
+if (!m.quoted) throw notStickerMessage 
+const q = m.quoted || m
+let mime = q.mediaType || ''
+if (!/sticker/.test(mime)) throw notStickerMessage
+let media = await q.download()
+let out = await webp2png(media).catch(_ => null) || Buffer.alloc(0)
+await conn.sendFile(m.chat, out, 'error.png', null, fkontak, m)
+
 }
-handler.help = ['toimg (reply)']
-handler.tags = ['sticker']
-handler.command = ['toimg4']
-module.exports = handler
+handler.help = ['toimg']
+handler.tags = ['transformador']
+handler.command = ['toimg9', 'jpg9', 'jpge9', 'png9']
+
+handler.limit = true
+
+export default handler
