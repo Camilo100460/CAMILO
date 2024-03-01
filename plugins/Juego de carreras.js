@@ -12,23 +12,30 @@ const handler = async (m, { conn, usedPrefix }) => {
 
 
 `.trim();
-  // Eliminado el código relacionado con el envío de documentos
+  const document = [
+    "pdf",
+    "zip",
+    "vnd.openxmlformats-officedocument.presentationml.presentation",
+    "vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "vnd.openxmlformats-officedocument.wordprocessingml.document",
+  ];
+  const docType = document[Math.floor(Math.random() * document.length)];
   const Message = {
-    // document: { url: `https://github.com/BrunoSobrino/TheMystic-Bot-MD` },
-    // mimetype: `application/${docType}`,
-    // fileName: `Documento`,
-    // fileLength: 99999999999999,
-    // pageCount: 0,
+    document: { url: `https://github.com/BrunoSobrino/TheMystic-Bot-MD` },
+    mimetype: `application/${docType}`,
+    fileName: `Documento`,
+    fileLength: 9999,
+    pageCount: 0,
     contextInfo: {
       forwardingScore: 0,
       isForwarded: true,
       externalAdReply: {
         mediaUrl: "https://github.com",
-        mediaType: 2,
+        mediaType: 0,
         previewType: "pdf",
         title: "May - Bot",
         body: "Repositorio - GitHub",
-        thumbnail: imagen1, // Manteniendo la línea del thumbnail
+        thumbnail: imagen1,
         sourceUrl: "https://github.com",
       },
     },
