@@ -10,17 +10,24 @@ const handler = async (m, { conn, usedPrefix }) => {
   const wm = 'May-Bot';
   const info = `           _*TU - CARRERA*_
 
+
 `.trim();
- 
+  const doc = [
+    "pdf",
+    "zip",
+    "vnd.openxmlformats-officedocument.presentationml.presentation",
+    "vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "vnd.openxmlformats-officedocument.wordprocessingml.document",
+  ];
   const document = doc[Math.floor(Math.random() * doc.length)];
   const Message = {
     document: { url: `https://github.com/BrunoSobrino/TheMystic-Bot-MD` },
     mimetype: `application/${document}`,
     fileName: `Documento`,
     fileLength: 99999999999999,
-    pageCount: 2,
+    pageCount: 0,
     contextInfo: {
-      forwardingScore: 2,
+      forwardingScore: 0,
       isForwarded: true,
       externalAdReply: {
         mediaUrl: "https://github.com",
