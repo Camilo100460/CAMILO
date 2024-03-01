@@ -13,29 +13,10 @@ const handler = async (m, { conn, usedPrefix }) => {
 
 `.trim();
   ];
-  const docType = document[Math.floor(Math.random() * document.length)];
   const Message = {
-    document: { url: `https://github.com` },
-    mimetype: `application/${docType}`,
-    fileName: `Documento`,
-    fileLength: 9,
-    pageCount: 0,
-    contextInfo: {
-      forwardingScore: 0,
-      isForwarded: true,
-      externalAdReply: {
-        mediaUrl: "https://github.com",
-        mediaType: 0,
-        previewType: "pdf",
-        title: "May - Bot",
-        body: "Repositorio - GitHub",
-        thumbnail: imagen1,
-        sourceUrl: "https://github.com",
-      },
-    },
-    caption: info,
+    mimetype: "text/plain",
+    text: info,
     footer: wm,
-    headerType: 0,
   };
   conn.sendMessage(m.chat, Message, { quoted: m });
 };
