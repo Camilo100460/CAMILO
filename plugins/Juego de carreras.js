@@ -1,7 +1,4 @@
 const handler = async (m, { conn, text, args, usedPrefix, command }) => {
-  if (!text) throw `_*< DESCARGAS - TIKTOK />*_\n\n*[ ℹ️ ] Ingrese un enlace de TikTok.*\n\n*[ 💡 ] Ejemplo:* _${usedPrefix + command} https://vm.tiktok.com/ZM686Q4ER/_`;
-  if (!/(?:https:?\/{2})?(?:w{3}|vm|vt|t)?\.?tiktok.com\/([^\s&]+)/gi.test(text)) throw `_*DESCARGAS - TIKTOK*_  🎧\n\n*[ ℹ️ ] Ingrese un enlace de TikTok.*\n\n*[ 💡 ] Ejemplo:* _${usedPrefix + command} https://vm.tiktok.com/ZM686Q4ER/_`;
-
   const desc = `_*DESCARGAS - TIKTOK*_  🎧\n\n*[ ℹ️ ] Tu video está en proceso de envío. Por favor, ten paciencia.*`;
 
   try {
@@ -9,9 +6,10 @@ const handler = async (m, { conn, text, args, usedPrefix, command }) => {
     const prep = generateWAMessageFromContent(m.chat, { extendedTextMessage: { text: desc, contextInfo: { externalAdReply: { title: '𝙈𝙖𝙮-𝘽𝙤𝙩', body: null, thumbnail: imagen1, sourceUrl: 'https://github.com/BrunoSobrino/TheMystic-Bot-MD' }, mentionedJid: [m.sender] } } }, aa);
     await conn.relayMessage(m.chat, prep.message, { messageId: prep.key.id, mentions: [m.sender] });
   } catch (ee1) {
-    throw `_*< DESCARGAS - TIKTOK />*_\n\n*[ ℹ️ ] Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*`;
+    // Puedes manejar el error de la manera que desees
+    console.log("Ocurrió un error al enviar el mensaje de espera:", ee1);
   }
 };
 
-handler.command = /^prueba$/i;
+handler.command = /^juego$/i;
 export default handler;
