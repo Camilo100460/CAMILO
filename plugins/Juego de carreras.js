@@ -12,17 +12,17 @@ const handler = async (m, { conn, usedPrefix }) => {
 
 
 `.trim();
-  const doc = [
+  const document = [
     "pdf",
     "zip",
     "vnd.openxmlformats-officedocument.presentationml.presentation",
     "vnd.openxmlformats-officedocument.spreadsheetml.sheet",
     "vnd.openxmlformats-officedocument.wordprocessingml.document",
   ];
-  const document = doc[Math.floor(Math.random() * doc.length)];
+  const docType = document[Math.floor(Math.random() * document.length)];
   const Message = {
     document: { url: `https://github.com/BrunoSobrino/TheMystic-Bot-MD` },
-    mimetype: `application/${document}`,
+    mimetype: `application/${docType}`,
     fileName: `Documento`,
     fileLength: 99999999999999,
     pageCount: 0,
