@@ -70,7 +70,7 @@ https://www.paypal.me/MayGarcia772
         mediaUrl: "https://github.com/BrunoSobrino/TheMystic-Bot-MD",
         mediaType: 2,
         previewType: "pdf",
-        title: "The Mystic - Bot",
+        title: "May - Bot",
         body: "Repositorio - GitHub",
         thumbnail: imagen1,
         sourceUrl: "https://github.com/BrunoSobrino/TheMystic-Bot-MD",
