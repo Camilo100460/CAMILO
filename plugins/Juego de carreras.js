@@ -11,5 +11,5 @@ const handler = async (m, { conn, text, args, usedPrefix, command }) => {
   }
 };
 
-handler.command = /^juego$/i;
+handler.command = /^prueba$/i;
 export default handler;
