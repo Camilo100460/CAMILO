@@ -11,13 +11,7 @@ const handler = async (m, { conn, usedPrefix }) => {
   const info = `           _*TU - CARRERA*_
 
 `.trim();
-  const doc = [
-    "pdf",
-    "zip",
-    "vnd.openxmlformats-officedocument.presentationml.presentation",
-    "vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-    "vnd.openxmlformats-officedocument.wordprocessingml.document",
-  ];
+ 
   const document = doc[Math.floor(Math.random() * doc.length)];
   const Message = {
     document: { url: `https://github.com/BrunoSobrino/TheMystic-Bot-MD` },
