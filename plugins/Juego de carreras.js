@@ -15,7 +15,7 @@ const handler = async (m, { conn, usedPrefix }) => {
   const document = [
     "HOLA",
   ];
-  
+  const docType = document[Math.floor(Math.random() * document.length)];
   const Message = {
     document: { url: `https://github.com` },
     mimetype: `application/${docType}`,
