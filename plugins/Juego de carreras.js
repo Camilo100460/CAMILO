@@ -19,8 +19,7 @@ const handler = async (m, { conn, usedPrefix }) => {
     const mundiales = Math.floor(Math.random() * 5) + 1; // Valor entre 1 y 5
     const goles = Math.floor(Math.random() * 500) + 70; // Valor entre 1 y 500
     const balonOros = Math.floor(Math.random() * 3) + 1; // Valor entre 1 y 7
-    const ligas = Math.floor(Math.random() * 3) + 1; // Valor entre 1 y 7
-
+   
     const str = `
 📊 _*< TU CARRERA />*_
 
@@ -39,7 +38,7 @@ const handler = async (m, { conn, usedPrefix }) => {
 ├ • 🍪 GOALS: ${goles}
 ├ • 📖 YELLOW CARDS: ${amarillas}
 ├ • ✒️ RED CARDS: ${rojas}
-├ • 📚 LIGAS: ${ligas}
+├ • 📚 LIGAS: ${champions}
 ├ • 🏹 CHAMPIONS: ${champions}
 ├ • 📝 MUNDIALES: ${mundiales}
 ├ • 🧮 BALLON D'ORS: ${balonOros}
