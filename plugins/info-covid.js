@@ -5,7 +5,7 @@ const handler = async (m, {text, usedPrefix, command}) => {
     if (!text) throw `*[❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴 𝚄𝙽 𝙿𝙰𝙸𝚂, 𝙴𝙹𝙴𝙼𝙿𝙻𝙾 ${usedPrefix + command} Mexico*`;
 
     const res = await fetch(global.API('https://covid19.mathdro.id', '/api/countries/'+ (text)));
-    if (!res.ok) throw await res.text();
+    if (!res.ok) throw 'Error en la API';
 
     const json = await res.json();
     if (!json.confirmed) throw 'País?';
@@ -18,7 +18,7 @@ const handler = async (m, {text, usedPrefix, command}) => {
 💌 Info Actualizada : ${json.lastUpdate}
 `.trim());
   } catch (error) {
-    m.reply(`Ha ocurrido un error: ${error}`);
+    m.reply(`_*Ha ocurrido un error en la API, volvemos pronto*_`);
   }
 };
 
