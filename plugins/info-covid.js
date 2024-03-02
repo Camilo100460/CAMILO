@@ -18,7 +18,7 @@ const handler = async (m, {text, usedPrefix, command}) => {
 💌 Info Actualizada : ${json.lastUpdate}
 `.trim());
   } catch (error) {
-    m.reply(`_*Ha ocurrido un error en la API, volvemos pronto*_`);
+    m.reply(`_*Ha ocurrido un error en la API, volvemos pronto.*_`);
   }
 };
 
