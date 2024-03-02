@@ -2,9 +2,9 @@ export function before(m) {
   const user = global.db.data.users[m.sender];
   if (user.afk > -1) {
     m.reply(`
-  _*[❗𝐈𝐍𝐅𝐎❗] DEJASTE DE ESTAR INACTIVO (AFK)${user.afkReason ? ' DESPUES DE ESTAR INACTIVO (AFK) POR EL MOTIVO: ' + user.afkReason : ''}*_
+  *[❗𝐈𝐍𝐅𝐎❗] DEJASTE DE ESTAR INACTIVO (AFK)${user.afkReason ? ' DESPUES DE ESTAR INACTIVO (AFK) POR EL MOTIVO: ' + user.afkReason : ''}*
   
-  _*⏰•  TIEMPO DE INACTIVIDAD (AFK): ${(new Date - user.afk).toTimeString()}*_
+  *⏰•  TIEMPO DE INACTIVIDAD (AFK): ${(new Date - user.afk).toTimeString()}*
   `.trim());
     user.afk = -1;
     user.afkReason = '';
@@ -22,9 +22,9 @@ export function before(m) {
     const reason = user.afkReason || '';
     m.reply(`*[❗] 𝙽𝙾 𝙻𝙾 𝙴𝚃𝙸𝚀𝚄𝙴𝚃𝙴𝚂 [❗]*
 
-_*🧑‍💻•  EL USUARIO QUE USTED ETIQUETO ESTA INACTIVO (AFK)*_     
-_*📝•  ${reason ? 'MOTIVO DE INACTIVIDAD (AFK): ' + reason : 'MOTIVO DE INACTIVIDAD (AFK): _EL USUARIO NO ESPECIFICO UN MOTIVO_'}*_
-_*⏰•  TIEMPO TRANSCURRIDO DE INACTIVIDAD (AFK): ${(new Date - afkTime).toTimeString()}*_
+*🧑‍💻•  EL USUARIO QUE USTED ETIQUETO ESTA INACTIVO (AFK)*   
+*📝•  ${reason ? 'MOTIVO DE INACTIVIDAD (AFK): ' + reason : 'MOTIVO DE INACTIVIDAD (AFK): _EL USUARIO NO ESPECIFICO UN MOTIVO_'}*
+*⏰•  TIEMPO TRANSCURRIDO DE INACTIVIDAD (AFK): ${(new Date - afkTime).toTimeString()}*
   `.trim());
   }
   return true;
