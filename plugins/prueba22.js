@@ -119,9 +119,7 @@ const handler = async (m, {conn, text, participants}) => {
 'La voz del culo no tiene remedio ni disimulo.',
 'Por más vueltas que das, el culo siempre te queda atrás.',
 'Hay un mundo mejor, pero es carísimo.',
-'Abogado, juez y doctor, cuanto más lejos, mejor.',
-'Celos y
-]; // Agrega tus mensajes aquí
+'Abogado, juez y doctor, cuanto más lejos, mejor.']; // Agrega tus mensajes aquí
   const htextos = `${text ? text : mensajes[Math.floor(Math.random() * mensajes.length)]}`; // Elige un mensaje al azar de la lista
   if ((isMedia && quoted.mtype === 'imageMessage') && htextos) {
     var mediax = await quoted.download?.();
