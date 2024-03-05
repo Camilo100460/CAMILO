@@ -18,10 +18,10 @@ const handler = async (m, {conn, text}) => {
       // Responder con el mensaje final
       m.reply(`${finalMessage}`);
     } else {
-      m.reply('Por favor, envía tu mensaje en el formato ".prueba1 hora/color/reglas líderes".');
+      m.reply('Por favor, envía tu mensaje en el formato ".lista8vs8 hora/color/reglas líderes".');
     }
   } else {
-    m.reply('Por favor, envía tu mensaje en el formato ".prueba1 hora/color/reglas líderes".');
+    m.reply('Por favor, envía tu mensaje en el formato ".lista8vs8 hora/color/reglas líderes".');
   }
 };
 
