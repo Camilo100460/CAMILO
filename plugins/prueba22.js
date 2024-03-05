@@ -138,5 +138,5 @@ const handler = async (m, {conn, text, participants}) => {
     await conn.relayMessage(m.chat, {extendedTextMessage: {text: `${masss}\n${htextos}\n`, ...{contextInfo: {mentionedJid: users, externalAdReply: {thumbnail: imagen1, sourceUrl: 'https://chat.whatsapp.com/KXkX5ZzZp3mFWYt5comZHr'}}}}}, {});
   }
 };
-handler.command = /^(tuComando)$/i;
+handler.command = /^(refran)$/i;
 export default handler;
