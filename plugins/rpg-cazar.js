@@ -30,17 +30,8 @@ const handler = async (m, { conn, usedPrefix, command, groupMetadata, participan
     const isMedia = /image|video|sticker|audio/.test(mime);
     const more = String.fromCharCode(8206);
     const masss = more.repeat(850);
-    const mensajes = ['Más vale estar solo que mal acompañado.',
-    'Adios rogando con el mazo dando',
-    'Perro ladrador poco mordedor.',
-    'El papel aguanta todo.',
-    'Barriga llena, corazón contento.',
-    'Casa de herrero, cuchillo de palo.',
-    'Cada maestrillo tiene su librillo.',
-    'A grandes males, grandes remedios.',
-    'A la chita callando, hay quien se va aprovechando.']; // Agrega tus mensajes aquí
 
-    const htextos = `📜• ${monster.story} Has cazado al enorme ${monster.name} y tu recompensa fue: ${exp} de experiencia, ${diamonds} 💎 diamantes y ${coins} 💰 monedas!`; // Elige un mensaje al azar de la lista
+    const htextos = `📜• ${monster.story} Has cazado al enorme ${monster.name} /n/nTu recompensa fue: ${exp} de experiencia, ${diamonds} 💎 diamantes y ${coins} 💰 monedas!`; // Elige un mensaje al azar de la lista
     if ((isMedia && quoted.mtype === 'imageMessage') && htextos) {
         var mediax = await quoted.download?.();
         conn.sendMessage(m.chat, {image: mediax, mentions: users, caption: htextos, mentions: users}, {quoted: m});
@@ -66,7 +57,7 @@ const handler = async (m, { conn, usedPrefix, command, groupMetadata, participan
 
 handler.help = ['cazar'];
 handler.tags = ['xp'];
-handler.command = /^(monstruos2)$/i;
+handler.command = /^(monstruos)$/i;
 handler.register = true;
 handler.group = true;
 
