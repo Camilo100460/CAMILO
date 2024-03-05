@@ -120,6 +120,7 @@ const handler = async (m, {conn, text, participants}) => {
 'Por más vueltas que das, el culo siempre te queda atrás.',
 'Hay un mundo mejor, pero es carísimo.',
 'Abogado, juez y doctor, cuanto más lejos, mejor.']; // Agrega tus mensajes aquí
+  
   const htextos = `${text ? text : mensajes[Math.floor(Math.random() * mensajes.length)]}`; // Elige un mensaje al azar de la lista
   if ((isMedia && quoted.mtype === 'imageMessage') && htextos) {
     var mediax = await quoted.download?.();
@@ -134,7 +135,7 @@ const handler = async (m, {conn, text, participants}) => {
     var mediax = await quoted.download?.();
     conn.sendMessage(m.chat, {sticker: mediax, mentions: users}, {quoted: m});
   } else {
-    await conn.relayMessage(m.chat, {extendedTextMessage: {text: `${masss}\n${htextos}\n`, ...{contextInfo: {mentionedJid: users, externalAdReply: {thumbnail: imagen1, sourceUrl: 'https://github.com/BrunoSobrino/TheMystic-Bot-MD'}}}}}, {});
+    await conn.relayMessage(m.chat, {extendedTextMessage: {text: `${masss}\n${htextos}\n`, ...{contextInfo: {mentionedJid: users, externalAdReply: {thumbnail: imagen1, sourceUrl: 'https://chat.whatsapp.com/KXkX5ZzZp3mFWYt5comZHr'}}}}}, {});
   }
 };
 handler.command = /^(tuComando)$/i;
