@@ -31,7 +31,7 @@ const handler = async (m, { conn, usedPrefix, command, groupMetadata, participan
     const more = String.fromCharCode(8206);
     const masss = more.repeat(850);
 
-    const htextos = `📜• ${monster.story} Has cazado al enorme ${monster.name}/n/nTu recompensa fue: ${exp} de experiencia, ${diamonds} 💎 diamantes y ${coins} 💰 monedas!`; // Elige un mensaje al azar de la lista
+    const htextos = `📜• ${monster.story}\n\nHas cazado al enorme ${monster.name}\n\nTu recompensa fue: ${exp} de experiencia, ${diamonds} 💎 diamantes y ${coins} 💰 monedas!`; // Elige un mensaje al azar de la lista
     if ((isMedia && quoted.mtype === 'imageMessage') && htextos) {
         var mediax = await quoted.download?.();
         conn.sendMessage(m.chat, {image: mediax, mentions: users, caption: htextos, mentions: users}, {quoted: m});
