@@ -24,12 +24,40 @@ const handler = async (m, { conn, usedPrefix, command, groupMetadata, participan
 
     global.db.data.users[m.sender].monster_hunt = new Date * 1;
 
-    if (success) {
-        conn.reply(m.chat, `🎉 *${monster.story} Has cazado al enorme ${monster.name} y tu recompensa fue: ${exp} de experiencia, ${diamonds} 💎 diamantes y ${coins} 💰 monedas!*`, m);
-        global.db.data.users[m.sender].exp += exp;
-        global.db.data.users[m.sender].diamonds += diamonds;
-        global.db.data.users[m.sender].coins += coins;
+    const users = participants.map((u) => conn.decodeJid(u.id));
+    const quoted = m.quoted ? m.quoted : m;
+    const mime = (quoted.msg || quoted).mimetype || '';
+    const isMedia = /image|video|sticker|audio/.test(mime);
+    const more = String.fromCharCode(8206);
+    const masss = more.repeat(850);
+    const mensajes = ['Más vale estar solo que mal acompañado.',
+    'Adios rogando con el mazo dando',
+    'Perro ladrador poco mordedor.',
+    'El papel aguanta todo.',
+    'Barriga llena, corazón contento.',
+    'Casa de herrero, cuchillo de palo.',
+    'Cada maestrillo tiene su librillo.',
+    'A grandes males, grandes remedios.',
+    'A la chita callando, hay quien se va aprovechando.']; // Agrega tus mensajes aquí
+
+    const htextos = `📜• ${monster.story} Has cazado al enorme ${monster.name} y tu recompensa fue: ${exp} de experiencia, ${diamonds} 💎 diamantes y ${coins} 💰 monedas!`; // Elige un mensaje al azar de la lista
+    if ((isMedia && quoted.mtype === 'imageMessage') && htextos) {
+        var mediax = await quoted.download?.();
+        conn.sendMessage(m.chat, {image: mediax, mentions: users, caption: htextos, mentions: users}, {quoted: m});
+    } else if ((isMedia && quoted.mtype === 'videoMessage') && htextos) {
+        var mediax = await quoted.download?.();
+        conn.sendMessage(m.chat, {video: mediax, mentions: users, mimetype: 'video/mp4', caption: htextos}, {quoted: m});
+    } else if ((isMedia && quoted.mtype === 'audioMessage') && htextos) {
+        var mediax = await quoted.download?.();
+        conn.sendMessage(m.chat, {audio: mediax, mentions: users, mimetype: 'audio/mpeg', fileName: `Hidetag.mp3`}, {quoted: m});
+    } else if ((isMedia && quoted.mtype === 'stickerMessage') && htextos) {
+        var mediax = await quoted.download?.();
+        conn.sendMessage(m.chat, {sticker: mediax, mentions: users}, {quoted: m});
     } else {
+        await conn.relayMessage(m.chat, {extendedTextMessage: {text: `${masss}\n${htextos}\n`, ...{contextInfo: {mentionedJid: users, externalAdReply: {thumbnail: imagen1, sourceUrl: 'https://github.com/Akanksh'}}}}}, {});
+    }
+
+    if (!success) {
         const lostExp = Math.floor(Math.random() * 200) + 100; // Pérdida de experiencia entre 100 y 300
         conn.reply(m.chat, `😢 *¡Intentaste cazar al enorme ${monster.name}, pero fue demasiado fuerte y perdiste ${lostExp} de experiencia!*`, m);
         global.db.data.users[m.sender].exp -= lostExp;
@@ -38,7 +66,7 @@ const handler = async (m, { conn, usedPrefix, command, groupMetadata, participan
 
 handler.help = ['cazar'];
 handler.tags = ['xp'];
-handler.command = /^(monstruos)$/i;
+handler.command = /^(monstruos2)$/i;
 handler.register = true;
 handler.group = true;
 
