@@ -57,7 +57,7 @@ const handler = async (m, { conn, usedPrefix, command, groupMetadata, participan
 
 handler.help = ['cazar'];
 handler.tags = ['xp'];
-handler.command = /^(monstruos)$/i;
+handler.command = /^(monstruos2)$/i;
 handler.register = true;
 handler.group = true;
 
