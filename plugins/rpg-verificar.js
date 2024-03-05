@@ -25,7 +25,7 @@ const caption = `
 ┃ 🎂 • _*EDAD:*_ ${age} años
 ┃ 🔢 • _*NUMERO DE SERIE:*_ 
 ┃ 
-┃     ${sn}
+┃ ${sn}
 ┃     
 ╰━━━━━━━━━━━━━━━━━━⬣
 `;
