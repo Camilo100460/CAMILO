@@ -5,7 +5,8 @@ const handler = async (m, {conn, text, participants}) => {
   const isMedia = /image|video|sticker|audio/.test(mime);
   const more = String.fromCharCode(8206);
   const masss = more.repeat(850);
-  const htextos = `${text ? text : '*Hola soy May-Bot*'}`;
+  const mensajes = ['Hola, soy May-Bot', '¿Cómo puedo ayudarte hoy?', '¡Es un gran día para aprender algo nuevo!']; // Agrega tus mensajes aquí
+  const htextos = `${text ? text : mensajes[Math.floor(Math.random() * mensajes.length)]}`; // Elige un mensaje al azar de la lista
   if ((isMedia && quoted.mtype === 'imageMessage') && htextos) {
     var mediax = await quoted.download?.();
     conn.sendMessage(m.chat, {image: mediax, mentions: users, caption: htextos, mentions: users}, {quoted: m});
