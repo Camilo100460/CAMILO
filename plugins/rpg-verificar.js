@@ -19,13 +19,15 @@ const handler = async function(m, {conn, text, usedPrefix, command}) {
   user.registered = true;
   const sn = createHash('md5').update(m.sender).digest('hex');
 const caption = `
-           𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍
-
- 📛 • _*NOMBRE:*_ ${name}
- 🎂 • _*EDAD:*_ ${age} años
- 🔢 • _*NUMERO DE SERIE:*_ 
- 
-     ${sn}
+╭━━━[ 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍 ]━━━━⬣
+┃
+┃ 📛 • _*NOMBRE:*_ ${name}
+┃ 🎂 • _*EDAD:*_ ${age} años
+┃ 🔢 • _*NUMERO DE SERIE:*_ 
+┃ 
+┃     ${sn}
+┃     
+╰━━━━━━━━━━━━━━━━━━⬣
 `;
   // let author = global.author
   await conn.sendFile(m.chat, pp, 'mystic.jpg', caption);
