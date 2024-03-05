@@ -54,7 +54,7 @@ const handler = async (m, { conn, usedPrefix, command, groupMetadata, participan
         var mediax = await quoted.download?.();
         conn.sendMessage(m.chat, {sticker: mediax, mentions: users}, {quoted: m});
     } else {
-        await conn.relayMessage(m.chat, {extendedTextMessage: {text: `${masss}\n${message}\n`, ...{contextInfo: {mentionedJid: users, externalAdReply: {thumbnail: menu, sourceUrl: 'https://github.com/Akanksh'}}}}}, {});
+        await conn.relayMessage(m.chat, {extendedTextMessage: {text: `${masss}\n${message}\n`, ...{contextInfo: {mentionedJid: users, externalAdReply: {thumbnail: menu2.png, sourceUrl: 'https://github.com/Akanksh'}}}}}, {});
     }
 }
 
