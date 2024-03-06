@@ -1,7 +1,7 @@
 import moment from 'moment-timezone';
 import fetch from 'node-fetch';
 const handler = async (m, { conn, args, usedPrefix }) => {
-   const res = await fetch('https://api.github.com/repos/Akanksh');
+   const res = await fetch('https://api.github.com/repos/Camilo100460/CAMILO');
    const json = await res.json();
    let txt = `_*< INFO - REPOSITORIO />*_\n\n`;
       txt += `🎉 • *Nombre:* ${json?.name || 'May-Bot-MD'}\n\n`;
