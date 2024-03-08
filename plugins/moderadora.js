@@ -1,5 +1,4 @@
 let handler = async (m, { conn, args }) => {
-
     let don = `
 ╭──═[ *𝙈𝙊𝘿𝙀𝙍𝘼𝘿𝙊𝙍𝘼* ]═─⋆
 │╭───────────────···
@@ -13,9 +12,8 @@ let handler = async (m, { conn, args }) => {
 │╰────────────────···
 ╰───────────═┅═───
 `
-let img = 'https://telegra.ph/file/2f4276cf4be66de812290.jpg'
-conn.sendFile(m.chat, img, 'img.jpg', don, m, null, rpyp)
-//conn.sendPayment(m.chat, '2000', 'USD', don, m.sender, m)
+    let img = 'https://telegra.ph/file/2f4276cf4be66de812290.jpg'
+    conn.sendFile(m.chat, img, 'img.jpg', don, m)
 }
 
 handler.help = ['donate']
