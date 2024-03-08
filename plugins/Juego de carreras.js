@@ -13,8 +13,6 @@ const handler = async (m, { conn, usedPrefix }) => {
     const equipoAleatorio = (etapa) => equipos[etapa][Math.floor(Math.random() * equipos[etapa].length)];
 
     const asistencias = Math.floor(Math.random() * 100) + 1; // Valor entre 1 y 100
-    const amarillas = Math.floor(Math.random() * 20) + 1; // Valor entre 1 y 20
-    const rojas = Math.floor(Math.random() * 5) + 1; // Valor entre 1 y 5
     const champions = Math.floor(Math.random() * 10) + 1; // Valor entre 1 y 10
     const mundiales = Math.floor(Math.random() * 5) + 1; // Valor entre 1 y 5
     const goles = Math.floor(Math.random() * 500) + 70; // Valor entre 1 y 500
@@ -34,11 +32,8 @@ const handler = async (m, { conn, usedPrefix }) => {
 ├ • 🐿️ *30:* ${equipoAleatorio("retiro")}
 ├ • 🧸 *33:* Retiro
 ├ • 🍄 *R:* ${equipoAleatorio("retiro")}
-├ • 🍂 *M:* ${equipoAleatorio("retiro")}
 ├ • 📺 *ASISTENCIAS:* ${asistencias}
 ├ • 🍪 *GOALS:* ${goles}
-├ • 📖 *YELLOW CARDS:* ${amarillas}
-├ • ✒️ *RED CARDS:* ${rojas}
 ├ • 📚 *LIGAS:* ${liga}
 ├ • 🏹 *CHAMPIONS:* ${champions}
 ├ • 📝 *MUNDIALES:* ${mundiales}
