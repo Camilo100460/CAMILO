@@ -22,9 +22,9 @@ const handler = async (m, {conn, usedPrefix}) => {
     'mimetype': `application/${document}`,
     'fileName': `「  𝙎𝙊𝙇𝙊 𝙈𝘼𝙔-𝘽𝙊𝙏 」`,
     'fileLength': 99999999999999,
-    'pageCount': 200,
+    'pageCount': 1,
     'contextInfo': {
-      'forwardingScore': 200,
+      'forwardingScore': 2,
       'isForwarded': true,
       'externalAdReply': {
         'mediaUrl': 'https://github.com/Akanksh',
