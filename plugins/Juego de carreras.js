@@ -16,7 +16,7 @@ const handler = async (m, { conn, usedPrefix }) => {
     const champions = Math.floor(Math.random() * 10) + 1; // Valor entre 1 y 10
     const mundiales = Math.floor(Math.random() * 5) + 1; // Valor entre 1 y 5
     const goles = Math.floor(Math.random() * 500) + 70; // Valor entre 1 y 500
-    const liga = Math.floor(Math.random() * 35) + 1; // Valor entre 1 y 100
+    const liga = Math.floor(Math.random() * 15) + 1; // Valor entre 1 y 15
     const balonOros = Math.floor(Math.random() * 3) + 1; // Valor entre 1 y 7
    
     const str = `
