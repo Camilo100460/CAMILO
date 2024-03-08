@@ -1,7 +1,7 @@
 const handler = async (m, {conn, usedPrefix}) => {
   const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
   const document = doc[Math.floor(Math.random() * doc.length)];
-  const text = `*𝑬𝑳 𝑵𝑼𝑴𝑬𝑹𝑶 𝑫𝑬 𝑴𝑰 𝑪𝑹𝑬𝑨𝑫𝑶𝑹 𝑬𝑺 wa.me/573145699786*`.trim();
+  const text = `*𝑬𝑳 𝑵𝑼𝑴𝑬𝑹𝑶 𝑫𝑬 𝑴𝑰 𝑪𝑹𝑬𝑨𝑫𝑶𝑹 𝑬𝑺 wa.me/573239900113*`.trim();
   const buttonMessage= {
     'document': {url: `https://github.com/Akanksh/`},
     'mimetype': `application/${document}`,
