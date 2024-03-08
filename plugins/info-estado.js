@@ -25,8 +25,8 @@ const handler = async (m, { conn, usedPrefix }) => {
   const wm = 'May-Bot';
   const info = `           _*INFO - ESTADO*_
 
-👥•  _*Propi:*_ VALENTINA Y CAMILO
-📞•  _*WA:*_ +573145456409
+👥•  _*Propi:*_ ANNA Y CAMILO
+📞•  _*WA:*_ +573239900113
 💳•  _*PayPal:*_ www.paypal.me/camildaza  
 https://www.paypal.me/MayGarcia772
 
@@ -83,7 +83,7 @@ https://www.paypal.me/MayGarcia772
   conn.sendMessage(m.chat, Message, { quoted: m });
 };
 
-handler.command = /^(ping|info|status|estado)$/i;
+handler.command = /^(ping|info|status|estado|infobot|INFOBOT)$/i;
 export default handler;
 
 function clockString(ms) {
