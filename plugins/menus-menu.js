@@ -33,7 +33,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
  💰 •  *MayCoins:* ${money}
  🎟️ •  *Tokens:* ${joincount}
  🎁 •  *Premium:* ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌') || ''} ${readMore}
- 🏖️ •  *.moderadora*
+ 🏖️ •  *Adquiere el bot con:*+573239900113
 
   _*< 📜 LISTA DE MENUS 📋 />*_
   
@@ -46,6 +46,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
  
  _*< 🤖 SOBRE EL BOT 📚 />*_
 
+  📝 _${usedPrefix}moderadora_
   📜 _${usedPrefix}terminosycondiciones_
   👥 _${usedPrefix}grupos_
   📊 _${usedPrefix}estado_
