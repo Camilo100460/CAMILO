@@ -34,6 +34,7 @@ const document = doc[Math.floor(Math.random() * doc.length)];
 │ _*< LISTA DE COMANDOS />*_
 │
 ├ • 🏖️ _${usedPrefix}robar_
+├ • 🍂 _${usedPrefix}micarrera_
 ├ • 📝 _${usedPrefix}minar_
 ├ • 🖌️ _${usedPrefix}cofre_
 ├ • 🧙‍♂️ _${usedPrefix}monstruos_
