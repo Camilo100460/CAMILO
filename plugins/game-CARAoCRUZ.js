@@ -20,7 +20,7 @@ let handler = async (m, { conn, text, command, usedPrefix, args }) => {
         let name = conn.getName(who) 
         let money0 = global.db.data.users[m.sender].money += 2
         let vs = ''; // Variable vs definida aquí
-        m.reply(`╭━━━━[ 𝙃𝘼 𝙂𝘼𝙉𝘼𝘿𝙊! 🎉 ]━━━⬣\n┃${name} 𝙀𝙡𝙚𝙜𝙞𝙨𝙩𝙚: ${text}\n┃🐱 𝙍𝙚𝙨𝙪𝙡𝙩𝙖𝙙𝙤𝙨: ${astro}\n┃💰 𝙋𝙧𝙚𝙢𝙞𝙤: ${[money0].getRandom()} 𝙆𝙖𝙩𝙖𝙨𝙝𝙞�𝘾𝙤𝙞𝙣𝙨\n╰━━━━━━[ ${vs} ] ━━━━━⬣`)
+        m.reply(`╭━━━━[ 𝙃𝘼 𝙂𝘼𝙉𝘼𝘿𝙊! 🎉 ]━━━⬣\n┃${name} 𝙀𝙡𝙚𝙜𝙞𝙨𝙩𝙚: ${text}\n┃🐱 𝙍𝙚𝙨𝙪𝙡𝙩𝙖𝙙𝙤𝙨: ${astro}\n┃💰 𝙋𝙧𝙚𝙢𝙞𝙤: ${[money0].getRandom()} 𝙈𝙖𝙮 𝘾𝙤𝙞𝙣𝙨\n╰━━━━━━[ ${vs} ] ━━━━━⬣`)
     } else if (text == 'cara') {
         if (astro == 'cara') {
             let who
@@ -29,7 +29,7 @@ let handler = async (m, { conn, text, command, usedPrefix, args }) => {
             let name = conn.getName(who) 
             let money0 = global.db.data.users[m.sender].money += 2
             let vs = ''; // Variable vs definida aquí
-            m.reply(`╭━━━━[ 𝙃𝘼 𝙂𝘼𝙉𝘼𝘿𝙊! 🎉 ]━━━⬣\n┃${name} 𝙀𝙡𝙚𝙜𝙞𝙨𝙩𝙚: ${text}\n┃🐱 𝙍𝙚𝙨𝙪𝙡𝙩𝙖𝙙𝙤𝙨: ${astro}\n┃💰 𝙋𝙧𝙚𝙢𝙞𝙤: ${[money0].getRandom()} 𝙆𝙖𝙩𝙖𝙨𝙝𝙞�𝘾𝙤𝙞𝙣𝙨\n╰━━━━━━[ ${vs} ] ━━━━━⬣`)
+            m.reply(`╭━━━━[ 𝙃𝘼 𝙂𝘼𝙉𝘼𝘿𝙊! 🎉 ]━━━⬣\n┃${name} 𝙀𝙡𝙚𝙜𝙞𝙨𝙩𝙚: ${text}\n┃🐱 𝙍𝙚𝙨𝙪𝙡𝙩𝙖𝙙𝙤𝙨: ${astro}\n┃💰 𝙋𝙧𝙚𝙢𝙞𝙤: ${[money0].getRandom()} 𝙈𝙖𝙮 𝘾𝙤𝙞𝙣𝙨\n╰━━━━━━[ ${vs} ] ━━━━━⬣`)
         } else {
             let who
             if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
@@ -37,7 +37,7 @@ let handler = async (m, { conn, text, command, usedPrefix, args }) => {
             let name = conn.getName(who) 
             let money0 = global.db.data.users[m.sender].money -= 300
             let vs = ''; // Variable vs definida aquí
-            m.reply(`╭━━━━[ 𝙃𝘼 𝙋𝙀𝙍𝘿𝙄𝘿𝙊! 🤡 ]━━⬣\n┃${name} 𝙀𝙡𝙚𝙜𝙞𝙨𝙩𝙚: ${text}\n┃🐱 𝙍𝙚𝙨𝙪𝙡𝙩𝙖𝙙𝙤𝙨: ${astro}\n┃📈 𝙋𝙚𝙧𝙙𝙞𝙙𝙖: ${[money0].getRandom()} 𝙆𝙖𝙩𝙖𝙨𝙝𝙞�𝘾𝙤𝙞𝙣𝙨\n╰━━━━━━[ ${vs} ] ━━━━━⬣`)
+            m.reply(`╭━━━━[ 𝙃𝘼 𝙋𝙀𝙍𝘿𝙄𝘿𝙊! 🤡 ]━━⬣\n┃${name} 𝙀𝙡𝙚𝙜𝙞𝙨𝙩𝙚: ${text}\n┃🐱 𝙍𝙚𝙨𝙪𝙡𝙩𝙖𝙙𝙤𝙨: ${astro}\n┃📈 𝙋𝙚𝙧𝙙𝙞𝙙𝙖: ${[money0].getRandom()} 𝙈𝙖𝙮 𝘾𝙤𝙞𝙣𝙨\n╰━━━━━━[ ${vs} ] ━━━━━⬣`)
         }
     } else if (text == 'cruz') {
         if (astro == 'cruz') {
@@ -47,7 +47,7 @@ let handler = async (m, { conn, text, command, usedPrefix, args }) => {
             let name = conn.getName(who) 
             let money0 = global.db.data.users[m.sender].money += 100
             let vs = ''; // Variable vs definida aquí
-            m.reply(`╭━━━━[ 𝙃𝘼 𝙂𝘼𝙉𝘼𝘿𝙊! 🎉 ]━━━⬣\n┃${name} 𝙀𝙡𝙚𝙜𝙞𝙨𝙩𝙚: ${text}\n┃🐱 𝙍𝙚𝙨𝙪𝙡𝙩𝙖𝙙𝙤𝙨: ${astro}\n┃💰 𝙋𝙧𝙚𝙢𝙞𝙤: ${[money0].getRandom()} 𝙆𝙖𝙩𝙖𝙨𝙝𝙞�𝘾𝙤𝙞𝙣𝙨\n╰━━━━━━[ ${vs} ] ━━━━━⬣`)
+            m.reply(`╭━━━━[ 𝙃𝘼 𝙂𝘼𝙉𝘼𝘿𝙊! 🎉 ]━━━⬣\n┃${name} 𝙀𝙡𝙚𝙜𝙞𝙨𝙩𝙚: ${text}\n┃🐱 𝙍𝙚𝙨𝙪𝙡𝙩𝙖𝙙𝙤𝙨: ${astro}\n┃💰 𝙋𝙧𝙚𝙢𝙞𝙤: ${[money0].getRandom()} 𝙈𝙖𝙮 𝘾𝙤𝙞𝙣𝙨\n╰━━━━━━[ ${vs} ] ━━━━━⬣`)
         } else {
             let who
             if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
@@ -55,7 +55,7 @@ let handler = async (m, { conn, text, command, usedPrefix, args }) => {
             let name = conn.getName(who) 
             let money0 = global.db.data.users[m.sender].money -= 300
             let vs = ''; // Variable vs definida aquí
-            m.reply(`╭━━━━[ 𝙃𝘼 𝙋𝙀𝙍𝘿𝙄𝘿𝙊! 🤡 ]━━⬣\n┃${name} 𝙀𝙡𝙚𝙜𝙞𝙨𝙩𝙚: ${text}\n┃🐱 𝙍𝙚𝙨𝙪𝙡𝙩𝙖𝙙𝙤𝙨: ${astro}\n┃📈 𝙋𝙚𝙧𝙙𝙞𝙙𝙖: ${[money0].getRandom()} 𝙆𝙖𝙩𝙖𝙨𝙝𝙞�𝘾𝙤𝙞𝙣𝙨\n╰━━━━━━[ ${vs} ] ━━━━━⬣`)
+            m.reply(`╭━━━━[ 𝙃𝘼 𝙋𝙀𝙍𝘿𝙄𝘿𝙊! 🤡 ]━━⬣\n┃${name} 𝙀𝙡𝙚𝙜𝙞𝙨𝙩𝙚: ${text}\n┃🐱 𝙍𝙚𝙨𝙪𝙡𝙩𝙖𝙙𝙤𝙨: ${astro}\n┃📈 𝙋𝙚𝙧𝙙𝙞𝙙𝙖: ${[money0].getRandom()} 𝙈𝙖𝙮 𝘾𝙤𝙞𝙣𝙨\n╰━━━━━━[ ${vs} ] ━━━━━⬣`)
         }
     }
     global.db.data.users[m.sender].wait = new Date * 1
