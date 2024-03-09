@@ -10,5 +10,5 @@ let coger = `🤤👅🥵 𝐀𝐂𝐀𝐁𝐀𝐒 𝐃𝐄 𝐅𝐎𝐋𝐋𝐀
 };
 handler.help = ["follar"];
 handler.tags = ["fun"];
-handler.command = /^(coger|violar|follar)$/i;
+handler.command = /^(cogera|violara|follara)$/i;
 export default handler;
