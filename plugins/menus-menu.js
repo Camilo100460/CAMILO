@@ -314,6 +314,7 @@ _*< 🕵️ CHAT ANÓNIMO />*_
 
  _*< 🛠️ HERRAMIENTAS />*_
 
+  🖌️ _${usedPrefix}wa *<num>*_
   🔍 _${usedPrefix}inspect *<wagc_url>*_
   💬 _${usedPrefix}chatgpt *<txt>*_
   🗑️ _${usedPrefix}delchatgpt
