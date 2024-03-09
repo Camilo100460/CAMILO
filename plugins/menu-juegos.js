@@ -34,6 +34,7 @@ const document = doc[Math.floor(Math.random() * doc.length)];
 │ _*< LISTA DE COMANDOS />*_
 │
 ├ • 🏖️ _${usedPrefix}robar_
+├ • 🎲 _${usedPrefix}lanzar_
 ├ • 🍂 _${usedPrefix}micarrera_
 ├ • 📝 _${usedPrefix}minar_
 ├ • 🖌️ _${usedPrefix}cofre_
@@ -73,7 +74,7 @@ const document = doc[Math.floor(Math.random() * doc.length)];
 ├ • 🕵️ _${usedPrefix}reto_
 ├ • 🧗 _${usedPrefix}cancion_
 ├ • 🏞️ _${usedPrefix}pista_
-├ • 🗿 _${usedPrefix}akinator_
+├ • 🗿 _${usedPrefix}follar_
 ├ • 🧩 _${usedPrefix}wordfind_
 │
 ╰━━━━━━ ◟◌◞ ━━━━━━╯`.trim();     if (m.isGroup) { 
