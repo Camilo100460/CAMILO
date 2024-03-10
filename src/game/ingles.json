@@ -202,6 +202,46 @@
     {
         "question": "¿Cómo se dice 'Ojos verdes' en inglés?",
         "response": "Green eyes"
+    },
+    {
+        "question": "¿Cómo se dice 'ser' en inglés?",
+        "response": "Be"
+    },
+    {
+        "question": "¿Cómo se dice 'empezar' en inglés?",
+        "response": "Begin"
+    },
+    {
+        "question": "¿Cómo se dice 'comenzo' en inglés?",
+        "response": "Began"
+    },
+    {
+        "question": "¿Cómo se dice 'mordio' en inglés?",
+        "response": "Bit"
+    },
+    {
+        "question": "¿Cómo se dice 'soplo' en inglés?",
+        "response": "Blew"
+    },
+    {
+        "question": "¿Cómo se dice 'romper' en inglés?",
+        "response": "Break"
+    },
+    {
+        "question": "¿Cómo se dice 'traer' en inglés?",
+        "response": "Bring"
+    },
+    {
+        "question": "¿Cómo se dice 'comprar' en inglés?",
+        "response": "Buy"
+    },
+    {
+        "question": "¿Cómo se dice 'elegir' en inglés?",
+        "response": "Choose"
+    },
+    {
+        "question": "cortar",
+        "response": "Cut"
         
         
     
