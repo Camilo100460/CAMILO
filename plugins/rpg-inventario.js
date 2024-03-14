@@ -2,87 +2,81 @@ import { canLevelUp, xpRange } from '../lib/levelling.js'
 import fs from 'fs'
 
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
-
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+
+    // Verificar si el usuario está definido en la base de datos
+    if (!global.db.data.users[who]) return m.reply(`El usuario no está registrado en la base de datos!`)
+
+    // Acceder a las propiedades del usuario
     let user = global.db.data.users[who]
+    let health = user.health
+    let armor = user.armor
+    let ardurability = user.armordurability
+    let sword = user.sword
+    let sdurability = user.sworddurability
+    let pickaxe = user.pickaxe
+    let pdurability = user.pickaxedurability
+    let axe = user.axe
+    let adurability = user.axedurability
+    let rod = user.fishingrod
+    let rdurability = user.fishingroddurability
 
-    let health = global.db.data.users[who].health
-    
-    let armor = global.db.data.users[who].armor
-    let ardurability = global.db.data.users[who].armordurability
-    let sword = global.db.data.users[who].sword
-    let sdurability = global.db.data.users[who].sworddurability
-    let pickaxe = global.db.data.users[who].pickaxe
-    let pdurability = global.db.data.users[who].pickaxedurability
-    let axe = global.db.data.users[who].axe
-    let adurability = global.db.data.users[who].axedurability
-    let rod = global.db.data.users[who].fishingrod
-    let rdurability = global.db.data.users[who].fishingroddurability
-    
     //Minerales
-    let emerald = global.db.data.users[who].emerald
-    let red_diamond = global.db.data.users[who].red_diamond
-    let diamond = global.db.data.users[who].diamond
-    let gold = global.db.data.users[who].gold
-    let iron = global.db.data.users[who].iron
-    let stone = global.db.data.users[who].rock
-    let tminerals = (emerald + red_diamond + diamond + gold + iron + stone)
-    
-    //Madera
-    let wood = global.db.data.users[who].wood
-    
-    //Frutas
-    let strawberry = global.db.data.users[who].strawberry
-    let watermelon = global.db.data.users[who].watermelon
-    let grape = global.db.data.users[who].grape
-    let kiwi = global.db.data.users[who].kiwi
-    
-    //Peces
-    let blowfish = global.db.data.users[who].blowfish
-    let tropicalfish = global.db.data.users[who].tropicalfish
-    let commonfish = global.db.data.users[who].commonfish
-    
-    //Cofres
-    let common = global.db.data.users[who].common
-    let uncommon = global.db.data.users[who].uncommon
-    let mythic = global.db.data.users[who].mythic
-    let legendary = global.db.data.users[who].legendary
-    let pet = global.db.data.users[who].pet
-    
-    //Mascotas 
-    let fox = global.db.data.users[who].fox
-    let _fox = global.db.data.users[who].foxexp
-    let dog = global.db.data.users[who].dog
-    let _dog = global.db.data.users[who].dogexp
-    let cat = global.db.data.users[who].cat
-    let _cat = global.db.data.users[who].catexp
-    let horse = global.db.data.users[who].horse
-    let _horse = global.db.data.users[who].horseexp
-    let loro = global.db.data.users[who].loro
-    let _loro = global.db.data.users[who].loroexp
-    
-    //Otros 
-    let seed = global.db.data.users[who].seed
-    let potion = global.db.data.users[who].potion
-    let chest = global.db.data.users[who].chest
-    let string = global.db.data.users[who].string
-    let box = global.db.data.users[who].box
-    let trash = global.db.data.users[who].trash
+    let emerald = user.emerald
+    let red_diamond = user.red_diamond
+    let diamond = user.diamond
+    let gold = user.gold
+    let iron = user.iron
+    let stone = user.rock
+    let tminerals = emerald + red_diamond + diamond + gold + iron + stone
 
-    let money = global.db.data.users[who].money
-    
-    let { name, exp, cookie, lastclaim, registered, regTime, age, level, role } = global.db.data.users[who]
-    let { min, xp, max } = xpRange(user.level, global.multiplier)
-  
-    //let invt = fs.readFileSync('./storage/image/inv.png')
-    if (global.db.data.users[who] == undefined) return m.reply(`El usuɑrio no estά registrɑdo en lɑ bɑse de dɑtos!`)
-    let items = (diamond + gold + iron + stone + wood + blowfish + tropicalfish + commonfish + potion + seed + trash)
- 
-    let _ardurability = Math.floor((ardurability * 100) / 5000)
-    let _sdurability = Math.floor((sdurability * 100) / 5000)
-    let _pdurability = Math.floor((pdurability * 100) / 5000)
-    let _adurability = Math.floor((adurability * 100) / 5000)
-    let _rdurability = Math.floor((rdurability * 100) / 5000)
+    //Madera
+    let wood = user.wood
+
+    //Frutas
+    let strawberry = user.strawberry
+    let watermelon = user.watermelon
+    let grape = user.grape
+    let kiwi = user.kiwi
+
+    //Peces
+    let blowfish = user.blowfish
+    let tropicalfish = user.tropicalfish
+    let commonfish = user.commonfish
+
+    //Cofres
+    let common = user.common
+    let uncommon = user.uncommon
+    let mythic = user.mythic
+    let legendary = user.legendary
+    let pet = user.pet
+
+    //Mascotas
+    let fox = user.fox
+    let _fox = user.foxexp
+    let dog = user.dog
+    let _dog = user.dogexp
+    let cat = user.cat
+    let _cat = user.catexp
+    let horse = user.horse
+    let _horse = user.horseexp
+    let loro = user.loro
+    let _loro = user.loroexp
+
+    //Otros
+    let seed = user.seed
+    let potion = user.potion
+    let chest = user.chest
+    let string = user.string
+    let box = user.box
+    let trash = user.trash
+
+    let money = user.money
+
+    let { name, exp, cookie, lastclaim, registered, regTime, age, level, role } = user
+    let { min, xp, max } = xpRange(level, global.multiplier)
+
+    if (global.db.data.users[who] == undefined) return m.reply(`El usuario no está registrado en la base de datos!`)
 
     let inv = `*Inventario de @${m.sender.split`@`[0]}*
 
@@ -176,32 +170,32 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 │🦜 *◜Loro◞* ${loro == 0 ? 'No tiene' : '' || loro > 0 && loro < 5 ? `nivel ${loro} ➯ ${loro + 1}\n│Exp: ${_loro} -> ${loro * 100}` : '' || loro == 5 ? 'Nivel maximo' : ''}
 ╰──────────────
 `
-//conn.reply(m.chat, reText(inv), m, { mentions: [who] })
 
-let buttonMessage= {
-'document': { url: `https://github.com/ALBERTO9883` },
-'mimetype': `application/pdf`,
-'fileName': `🐱⸽⃕NʏᴀɴCᴀᴛBᴏᴛ - MD🍁⃨፝⃕✰`,
-'fileLength': 99999999999999,
-'pageCount': 200,
-'contextInfo': {
-'forwardingScore': 200,
-'isForwarded': true,
-'externalAdReply': {
-'mediaUrl': 'https://github.com/ALBERTO9883',
-'mediaType': 2,
-'previewType': 'pdf',
-'title': `🎒₊• ̥ 𝗜𝗡𝗩𝗘𝗡𝗧𝗔𝗥𝗜𝗢  •̥₊🎒`,
-'body': ``,
-'thumbnail': global.imginv,
-'sourceUrl': 'https//wa.me/50499698072' }},
-'mentions': [m.sender],
-'caption': inv,
-'footer': `\n${global.saludo}`,
-'buttons':[
-{buttonId: `${usedPrefix}shop`, buttonText: {displayText: 'Tienda⛺'}, type: 1}],
-'headerType': 6 }
-conn.sendMessage(m.chat, buttonMessage, { quoted: m })
+    let buttonMessage= {
+    'document': { url: `https://github.com/ALBERTO9883` },
+    'mimetype': `application/pdf`,
+    'fileName': `🐱⸽⃕NʏᴀɴCᴀᴛBᴏᴛ - MD🍁⃨፝⃕✰`,
+    'fileLength': 99999999999999,
+    'pageCount': 200,
+    'contextInfo': {
+    'forwardingScore': 200,
+    'isForwarded': true,
+    'externalAdReply': {
+    'mediaUrl': 'https://github.com/ALBERTO9883',
+    'mediaType': 2,
+    'previewType': 'pdf',
+    'title': `🎒₊• ̥ 𝗜𝗡𝗩𝗘𝗡𝗧𝗔𝗥𝗜𝗢  •̥₊🎒`,
+    'body': ``,
+    'thumbnail': global.imginv,
+    'sourceUrl': 'https//wa.me/50499698072' }},
+    'mentions': [m.sender],
+    'caption': inv,
+    'footer': `\n${global.saludo}`,
+    'buttons':[
+    {buttonId: `${usedPrefix}shop`, buttonText: {displayText: 'Tienda⛺'}, type: 1}],
+    'headerType': 6 }
+
+    conn.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
 
 handler.help = ['inventario']
@@ -213,16 +207,16 @@ handler.restrict = true
 export default handler
 
 function reText(text) {
-return text.replace(/a/g, 'α')
+    return text.replace(/a/g, 'α')
 }
 
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
 
 function shortNum(num) {
-return new Intl.NumberFormat('en-GB', { notation: "compact", compactDisplay: "short" }).format(num)
+    return new Intl.NumberFormat('en-GB', { notation: "compact", compactDisplay: "short" }).format(num)
 }
 
 function priceNum(num) {
-return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(num).replace('.00', '').replace(/,/g, '.')
+    return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(num).replace('.00', '').replace(/,/g, '.')
 }
