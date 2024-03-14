@@ -126,53 +126,67 @@ let horoscopos = {
     ],
 }
 function agregarHoroscopo(signo, horoscopo) {
-    horoscopos[signo].push(horoscopo);
+    if (horoscopos[signo]) {
+        horoscopos[signo].push(horoscopo);
+    } else {
+        throw new Error(`El signo '${signo}' no existe en el sistema.`);
+    }
 }
 
 function obtenerHoroscopo(signo) {
     let horoscoposSigno = horoscopos[signo];
-    let indiceAleatorio = Math.floor(Math.random() * horoscoposSigno.length);
-    return horoscoposSigno[indiceAleatorio];
+    if (horoscoposSigno) {
+        let indiceAleatorio = Math.floor(Math.random() * horoscoposSigno.length);
+        return horoscoposSigno[indiceAleatorio];
+    } else {
+        throw new Error(`No se encontraron horóscopos para el signo '${signo}'.`);
+    }
 }
 
 let handler = (m, { command, text }) => {
-    if (!text) throw `Ejemplo: ${command} 2003 02 25`
+    try {
+        if (!text) throw new Error(`Ejemplo: ${command} 2003 02 25`);
 
-    const [year, month, day] = text.match(/\d+/g).map(Number)
-    const date = new Date(year, month - 1, day)
+        const [year, month, day] = text.match(/\d+/g).map(Number);
+        const date = new Date(year, month - 1, day);
 
-    if (isNaN(date)) throw `Fecha inválida, por favor usa el siguiente formato: AAAA MM DD. Por ejemplo: ${command} 2003 02 25`
+        if (isNaN(date)) throw new Error(`Fecha inválida, por favor usa el siguiente formato: AAAA MM DD. Por ejemplo: ${command} 2003 02 25`);
 
-    const today = new Date()
-    const currentYear = today.getFullYear()
-    const currentMonth = today.getMonth() + 1
-    const currentDay = today.getDate()
+        const today = new Date();
+        const currentYear = today.getFullYear();
+        const currentMonth = today.getMonth() + 1;
+        const currentDay = today.getDate();
 
-    const birth = [year, month, day]
-    const horoscopo = obtenerHoroscopo(getZodiac(month, day))
+        const birth = [year, month, day];
+        const signo = getZodiac(month, day);
+        const horoscopo = obtenerHoroscopo(signo);
 
-    const ageD = new Date(today - date)
-    const age = ageD.getFullYear() - new Date(1970, 0, 1).getFullYear()
+        const ageD = new Date(today - date);
+        const age = ageD.getFullYear() - new Date(1970, 0, 1).getFullYear();
 
-    const isBirthday = month === currentMonth && day === currentDay
-    const ageText = isBirthday ? `${age} - ¡Feliz cumpleaños! 🥳` : age
+        const isBirthday = month === currentMonth && day === currentDay;
+        const ageText = isBirthday ? `${age} - ¡Feliz cumpleaños! 🥳` : age;
 
-    const replyText = `
+        const replyText = `
 📊 _*< HORÓSCOPO PARA EL DÍA />*_
 
-📅• *Dia de nacimiento*: ${birth.join('-')}
+📅• *Día de nacimiento*: ${birth.join('-')}
 🎂• *Edad*: ${ageText}
-🔮• *Signo horóscopo*: ${getZodiac(month, day)}
+🔮• *Signo horóscopo*: ${signo}
 
 *Horóscopo*: ${horoscopo}
-`.trim()
+`.trim();
 
-    m.reply(replyText)
-}
+        m.reply(replyText);
+    } catch (error) {
+        console.error('Error:', error.message);
+        m.reply('Error en el comando. Por favor, verifica tu entrada.');
+    }
+};
 
-handler.help = ['horóscopo <AAAA MM DD>']
-handler.tags = ['tools']
-handler.command = /^hor[oó]scopo$/i
+handler.help = ['horóscopo <AAAA MM DD>'];
+handler.tags = ['tools'];
+handler.command = /^hor[oó]scopo$/i;
 
 const zodiak = [
     ["Capricornio", new Date(1970, 0, 1)],
@@ -188,11 +202,11 @@ const zodiak = [
     ["Scorpion", new Date(1970, 9, 23)],
     ["Sagitario", new Date(1970, 10, 22)],
     ["Capricornio", new Date(1970, 11, 22)]
-].reverse()
+].reverse();
 
 function getZodiac(month, day) {
-    let d = new Date(1970, month - 1, day)
-    return zodiak.find(([_, _d]) => d >= _d)[0]
+    let d = new Date(1970, month - 1, day);
+    return zodiak.find(([signo, fecha]) => d >= fecha)[0];
 }
 
-export default handler
+export default handler;
