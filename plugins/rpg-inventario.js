@@ -1,13 +1,11 @@
-import { canLevelUp, xpRange } from '../lib/levelling.js'
+import { xpRange } from '../lib/levelling.js'
 import fs from 'fs'
 
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 
-    // Verificar si el usuario está definido en la base de datos
     if (!global.db.data.users[who]) return m.reply(`El usuario no está registrado en la base de datos!`)
 
-    // Acceder a las propiedades del usuario
     let user = global.db.data.users[who]
     let health = user.health
     let armor = user.armor
@@ -21,62 +19,12 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
     let rod = user.fishingrod
     let rdurability = user.fishingroddurability
 
-    //Minerales
-    let emerald = user.emerald
-    let red_diamond = user.red_diamond
-    let diamond = user.diamond
-    let gold = user.gold
-    let iron = user.iron
-    let stone = user.rock
-    let tminerals = emerald + red_diamond + diamond + gold + iron + stone
-
-    //Madera
-    let wood = user.wood
-
-    //Frutas
-    let strawberry = user.strawberry
-    let watermelon = user.watermelon
-    let grape = user.grape
-    let kiwi = user.kiwi
-
-    //Peces
-    let blowfish = user.blowfish
-    let tropicalfish = user.tropicalfish
-    let commonfish = user.commonfish
-
-    //Cofres
-    let common = user.common
-    let uncommon = user.uncommon
-    let mythic = user.mythic
-    let legendary = user.legendary
-    let pet = user.pet
-
-    //Mascotas
-    let fox = user.fox
-    let _fox = user.foxexp
-    let dog = user.dog
-    let _dog = user.dogexp
-    let cat = user.cat
-    let _cat = user.catexp
-    let horse = user.horse
-    let _horse = user.horseexp
-    let loro = user.loro
-    let _loro = user.loroexp
-
-    //Otros
-    let seed = user.seed
-    let potion = user.potion
-    let chest = user.chest
-    let string = user.string
-    let box = user.box
-    let trash = user.trash
+    // Resto de las propiedades del usuario...
 
     let money = user.money
 
-    let { name, exp, cookie, lastclaim, registered, regTime, age, level, role } = user
+    let { name, exp, cookie, level } = user
     let { min, xp, max } = xpRange(level, global.multiplier)
-
-    if (global.db.data.users[who] == undefined) return m.reply(`El usuario no está registrado en la base de datos!`)
 
     let inv = `*Inventario de @${m.sender.split`@`[0]}*
 
@@ -104,98 +52,57 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 \t\t*᭥🎒️᭢ 𝕀𝕋𝔼𝕄𝕊*
 
 ──────────────
-*_► ⛰️ ◜Minerales◞_*
+*► ⛰️ Minerales*
 ──────────────
-*💎 • Diamante:* ${diamond}
-*🍀 • Esmeralda:* ${emerald}
-*🔩 • Hierro:* ${iron}
-*🪙 • Oro:* ${gold}
-*🪨 • Piedra:* ${stone}
+*💎 • Diamante:* ${user.diamond}
+*🍀 • Esmeralda:* ${user.emerald}
+*🔩 • Hierro:* ${user.iron}
+*🪙 • Oro:* ${user.gold}
+*🪨 • Piedra:* ${user.rock}
 
+*► 🫐 Frutas*
 ──────────────
-*_► 🫐 ◜Frutas◞_*
-──────────────
-*🍓 • Fresa:* ${strawberry}
-*🍉 • Sandía:* ${watermelon}
-*🍇 • Uva:* ${grape}
-*🥝 • Kiwi:* ${kiwi}
+*🍓 • Fresa:* ${user.strawberry}
+*🍉 • Sandía:* ${user.watermelon}
+*🍇 • Uva:* ${user.grape}
+*🥝 • Kiwi:* ${user.kiwi}
 
+*► 🐋 Peces*
 ──────────────
-*_► 🐋 ◜Peces◞_*
-──────────────
-*🐠 • Tropical:* ${tropicalfish}
-*🐡 • Globo:* ${blowfish}
-*🐟 • Comun:* ${commonfish}
-*🦀 • Cangrejo:* 
-*🦞 • Langosta:*
-*🦐 • Camarón:*
-*🦑 • Calamar:*
-*🐙 • Pulpo:*
+*🐠 • Tropical:* ${user.tropicalfish}
+*🐡 • Globo:* ${user.blowfish}
+*🐟 • Comun:* ${user.commonfish}
 
+*► 📦 Cofres*
 ──────────────
-*_► 📦 ◜Cofres◞_*
+*🥡 • Común:* ${user.common}
+*📦 • Poco común:* ${user.uncommon}
+*🎁 • Mítico:* ${user.mythic}
+*🧰 • Legendario:* ${user.legendary}
+*🐾 • Caja de mascotas:* ${user.pet}
+
+*► 🍱 Otros items*
 ──────────────
-*🥡 • Común:* ${common}
-*📦 • Poco común:* ${uncommon}
-*🎁 • Mítico:* ${mythic}
-*🧰 • Legendario:* ${legendary}
-*🐾 • Caja de mascotas:* ${pet}
+*🪵 • Madera:* ${user.wood}
+*🧪 • Poción:* ${user.potion}
+*🪢 • Cuerda:* ${user.string}
+*🗑️ • Basura:* ${user.trash}
 
-──────────────
-*_► 🍱 ◜Otros items◞_*
-──────────────
-*🪵 • Madera:* ${wood}
-*🧪 • Poción:* ${potion}
-*🪢 • Cuerda:* ${string}
-*🗑️ • Basura:* ${trash}
+*᭥📊᭢ ℙℝ𝕆𝔾ℝ𝔼𝕊𝕆*
+👤 *Tu nivel* ${level} ➯ ${level + 1}
+Exp: ${exp} -> ${max <= 0 ? `\nUse ${usedPrefix}levelup para subir de nivel!` : `${max}`}
 
-\t\t*᭥📊᭢ ℙℝ𝕆𝔾ℝ𝔼𝕊𝕆*
-╭──────────────
-│👤 *◜Tu nivel◞* ${level} ➯ ${level + 1}
-│Exp: ${exp} -> ${max <= 0 ? `\n│Use ${usedPrefix}levelup para subir de nivel!` : `${max}`}
-╰──────────────
-╭──────────────
-│🦊 *◜Zorro◞* ${fox == 0 ? 'No tiene' : '' || fox > 0 && fox < 5 ? `nivel ${fox} ➯ ${fox + 1}\n│Exp: ${_fox} -> ${fox * 100}` : '' || fox == 5 ? 'Nivel maximo' : ''}
-╰──────────────
-╭──────────────
-│🐺 *◜Lobo◞* ${dog == 0 ? 'No tiene' : '' || dog > 0 && dog < 5 ? `nivel ${dog} ➯ ${dog + 1}\n│Exp: ${_dog} -> ${dog * 100}` : '' || dog == 5 ? 'Nivel maximo' : ''}
-╰──────────────
-╭──────────────
-│🐱 *◜Gato◞* ${cat == 0 ? 'No tiene' : '' || cat > 0 && cat < 5 ? `nivel ${cat} ➯ ${cat + 1}\n│Exp: ${_cat} -> ${cat * 100}` : '' || cat == 5 ? 'Nivel maximo' : ''}
-╰──────────────
-╭──────────────
-│🐎 *◜Caballo◞* ${horse == 0 ? 'No tiene' : '' || horse > 0 && horse < 5 ? `nivel ${horse} ➯ ${horse + 1}\n│Exp: ${_horse} -> ${horse * 100}` : '' || horse == 5 ? 'Nivel maximo' : ''}
-╰──────────────
-╭──────────────
-│🦜 *◜Loro◞* ${loro == 0 ? 'No tiene' : '' || loro > 0 && loro < 5 ? `nivel ${loro} ➯ ${loro + 1}\n│Exp: ${_loro} -> ${loro * 100}` : '' || loro == 5 ? 'Nivel maximo' : ''}
-╰──────────────
-`
+🦊 *Zorro* ${user.fox == 0 ? 'No tiene' : '' || user.fox > 0 && user.fox < 5 ? `nivel ${user.fox} ➯ ${user.fox + 1}\nExp: ${user._fox} -> ${user.fox * 100}` : '' || user.fox == 5 ? 'Nivel máximo' : ''}
 
-    let buttonMessage= {
-    'document': { url: `https://github.com/ALBERTO9883` },
-    'mimetype': `application/pdf`,
-    'fileName': `🐱⸽⃕NʏᴀɴCᴀᴛBᴏᴛ - MD🍁⃨፝⃕✰`,
-    'fileLength': 99999999999999,
-    'pageCount': 200,
-    'contextInfo': {
-    'forwardingScore': 200,
-    'isForwarded': true,
-    'externalAdReply': {
-    'mediaUrl': 'https://github.com/ALBERTO9883',
-    'mediaType': 2,
-    'previewType': 'pdf',
-    'title': `🎒₊• ̥ 𝗜𝗡𝗩𝗘𝗡𝗧𝗔𝗥𝗜𝗢  •̥₊🎒`,
-    'body': ``,
-    'thumbnail': global.imginv,
-    'sourceUrl': 'https//wa.me/50499698072' }},
-    'mentions': [m.sender],
-    'caption': inv,
-    'footer': `\n${global.saludo}`,
-    'buttons':[
-    {buttonId: `${usedPrefix}shop`, buttonText: {displayText: 'Tienda⛺'}, type: 1}],
-    'headerType': 6 }
+🐺 *Lobo* ${user.dog == 0 ? 'No tiene' : '' || user.dog > 0 && user.dog < 5 ? `nivel ${user.dog} ➯ ${user.dog + 1}\nExp: ${user._dog} -> ${user.dog * 100}` : '' || user.dog == 5 ? 'Nivel máximo' : ''}
 
-    conn.sendMessage(m.chat, buttonMessage, { quoted: m })
+🐱 *Gato* ${user.cat == 0 ? 'No tiene' : '' || user.cat > 0 && user.cat < 5 ? `nivel ${user.cat} ➯ ${user.cat + 1}\nExp: ${user._cat} -> ${user.cat * 100}` : '' || user.cat == 5 ? 'Nivel máximo' : ''}
+
+🐎 *Caballo* ${user.horse == 0 ? 'No tiene' : '' || user.horse > 0 && user.horse < 5 ? `nivel ${user.horse} ➯ ${user.horse + 1}\nExp: ${user._horse} -> ${user.horse * 100}` : '' || user.horse == 5 ? 'Nivel máximo' : ''}
+
+🦜 *Loro* ${user.loro == 0 ? 'No tiene' : '' || user.loro > 0 && user.loro < 5 ? `nivel ${user.loro} ➯ ${user.loro + 1}\nExp: ${user._loro} -> ${user.loro * 100}` : '' || user.loro == 5 ? 'Nivel máximo' : ''}`
+
+    conn.reply(m.chat, inv, m)
 }
 
 handler.help = ['inventario']
@@ -205,18 +112,3 @@ handler.command = /^(inv|inventario)$/i
 handler.restrict = true
 
 export default handler
-
-function reText(text) {
-    return text.replace(/a/g, 'α')
-}
-
-const more = String.fromCharCode(8206)
-const readMore = more.repeat(4001)
-
-function shortNum(num) {
-    return new Intl.NumberFormat('en-GB', { notation: "compact", compactDisplay: "short" }).format(num)
-}
-
-function priceNum(num) {
-    return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(num).replace('.00', '').replace(/,/g, '.')
-}
