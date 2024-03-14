@@ -180,7 +180,7 @@ let handler = (m, { command, text }) => {
         m.reply(replyText);
     } catch (error) {
         console.error('Error:', error.message);
-        m.reply('Error en el comando. Por favor, verifica tu entrada.');
+        m.reply('Fecha inválida, por favor usa el siguiente formato: AAAA MM DD. Por ejemplo: ${command} 2003 02 25');
     }
 };
 
