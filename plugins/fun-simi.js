@@ -26,5 +26,5 @@ const handler = async (m, {text, command, args, usedPrefix}) => {
 };
 handler.help = ['simi', 'bot'].map((v) => v + ' <teks>');
 handler.tags = ['fun'];
-handler.command = /^((sim)?simi|bot|alexa|cortana)$/i;
+handler.command = /^((sim)?simi|bot|alexa|cortana|May|may)$/i;
 export default handler;
