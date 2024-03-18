@@ -1,5 +1,5 @@
 const handler = async (m, {conn, text, usedPrefix, command}) => {
-  if (!text) throw `🎌 *Escriba su reporte*\n\nEjemplo, !${command} el comando .infobot no funciona`;
+  if (!text) throw `🎌 *Escriba su reporte*\n\nEjemplo, .${command} el comando .infobot no funciona*`;
   if (text.length < 10) throw `🚩 *Mínimo 10 caracteres para hacer el reporte*`;
   if (text.length > 1000) throw `🚩 *Máximo 1000 caracteres para hacer el reporte.*`;
   const teks = `⚠️ *Reporte* ⚠️\n\n⬡ *Numero*\nWa.me/${m.sender.split`@`[0]}\n\n⬡ *Mensaje*\n${text}`;
