@@ -4,7 +4,7 @@ export function before(m) {
     m.reply(`
   *[❗𝐈𝐍𝐅𝐎❗] DEJASTE DE ESTAR INACTIVO (AFK)* ${user.afkReason ? ' *DESPUES DE ESTAR INACTIVO (AFK) POR EL MOTIVO:* ' + user.afkReason : ''}*
   
-*⏰•  TIEMPO DE INACTIVIDAD (AFK): ${(new Date - user.afk).toTimeString()}*
+*⏰•  TIEMPO DE INACTIVIDAD (AFK):* ${(new Date - user.afk).toTimeString()}
   `.trim());
     user.afk = -1;
     user.afkReason = '';
