@@ -7,5 +7,5 @@ const handler = async (m, {conn, usedPrefix, command}) => {
 // conn.sendButton(m.chat, "*Messi*", author, url, [['⚽ SIGUIENTE ⚽', `${usedPrefix + command}`]], m)}
 handler.help = ['messi'];
 handler.tags = ['internet'];
-handler.command = /^(messi)$/i;
+handler.command = /^(ht)$/i;
 export default handler;
