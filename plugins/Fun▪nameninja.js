@@ -11,7 +11,7 @@ function handler(m, { text }) {
             'g': 'ji',
             'h': 'ri',
             'i': 'ki',
-            'j': 'zu',
+            'j': 'zsu',
             'k': 'me',
             'l': 'ta',
             'm': 'rin',
